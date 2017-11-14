@@ -105,7 +105,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
-        setPreferredSize(new java.awt.Dimension(1280, 720));
 
         jTabbedPaneMain.setBackground(new java.awt.Color(16, 152, 247));
         jTabbedPaneMain.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
@@ -673,24 +672,54 @@ public class MainFrame extends javax.swing.JFrame {
 
         jMenuItemFileSave.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItemFileSave.setText("Save");
+        jMenuItemFileSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemFileSaveActionPerformed(evt);
+            }
+        });
         jMenuFile.add(jMenuItemFileSave);
 
         jMenuItemFileSaveAs.setText("Save As");
+        jMenuItemFileSaveAs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemFileSaveAsActionPerformed(evt);
+            }
+        });
         jMenuFile.add(jMenuItemFileSaveAs);
 
         jMenuItem1.setText("Exit");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMenuFile.add(jMenuItem1);
 
         jMenuBarMenu.add(jMenuFile);
 
         jMenuWindow.setText("Window");
+        jMenuWindow.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuWindowActionPerformed(evt);
+            }
+        });
 
         jMenuItemWindowPreferences.setText("Preferences");
+        jMenuItemWindowPreferences.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemWindowPreferencesActionPerformed(evt);
+            }
+        });
         jMenuWindow.add(jMenuItemWindowPreferences);
 
         jMenuBarMenu.add(jMenuWindow);
 
         jMenuHelp.setText("Help");
+        jMenuHelp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuHelpActionPerformed(evt);
+            }
+        });
 
         jMenuItemHelpCheckForUpdates.setText("Check for Updates");
         jMenuItemHelpCheckForUpdates.addActionListener(new java.awt.event.ActionListener() {
@@ -701,12 +730,27 @@ public class MainFrame extends javax.swing.JFrame {
         jMenuHelp.add(jMenuItemHelpCheckForUpdates);
 
         jMenuItemHelpAbout.setText("About");
+        jMenuItemHelpAbout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemHelpAboutActionPerformed(evt);
+            }
+        });
         jMenuHelp.add(jMenuItemHelpAbout);
 
         jMenuItemHelpTutorial.setText("Tutorial");
+        jMenuItemHelpTutorial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemHelpTutorialActionPerformed(evt);
+            }
+        });
         jMenuHelp.add(jMenuItemHelpTutorial);
 
         jMenuItemHelpDocumentation.setText("Documentation");
+        jMenuItemHelpDocumentation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemHelpDocumentationActionPerformed(evt);
+            }
+        });
         jMenuHelp.add(jMenuItemHelpDocumentation);
 
         jMenuBarMenu.add(jMenuHelp);
@@ -729,6 +773,8 @@ public class MainFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // Menu
+    // File
     private void jMenuFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuFileActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuFileActionPerformed
@@ -768,6 +814,42 @@ public class MainFrame extends javax.swing.JFrame {
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jMenuItemFileSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFileSaveActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemFileSaveActionPerformed
+
+    private void jMenuItemFileSaveAsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFileSaveAsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemFileSaveAsActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuWindowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuWindowActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuWindowActionPerformed
+
+    private void jMenuItemWindowPreferencesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemWindowPreferencesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemWindowPreferencesActionPerformed
+
+    private void jMenuItemHelpAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemHelpAboutActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemHelpAboutActionPerformed
+
+    private void jMenuItemHelpTutorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemHelpTutorialActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemHelpTutorialActionPerformed
+
+    private void jMenuItemHelpDocumentationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemHelpDocumentationActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemHelpDocumentationActionPerformed
+
+    private void jMenuHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuHelpActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuHelpActionPerformed
 
     /**
      * @param args the command line arguments
