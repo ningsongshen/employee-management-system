@@ -26,6 +26,7 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroupEmployeeType = new javax.swing.ButtonGroup();
         jTabbedPaneMain = new javax.swing.JTabbedPane();
         jPanelHome = new javax.swing.JPanel();
         jLabelHomeHeading = new javax.swing.JLabel();
@@ -66,9 +67,9 @@ public class MainFrame extends javax.swing.JFrame {
         jTextFieldAddPartTimeEmployeeHourlyWage = new javax.swing.JTextField();
         jLabelAddPartTimeEmployeeHourlyWage = new javax.swing.JLabel();
         jRadioButtonAddPartTimeEmployee = new javax.swing.JRadioButton();
+        jRadioButtonAddFullTimeEmployee = new javax.swing.JRadioButton();
         jTextFieldAddFullTimeEmployeeYearlySalary = new javax.swing.JTextField();
         jLabelAddFullTimeEmployeeYearlySalary = new javax.swing.JLabel();
-        jRadioButtonAddFullTimeEmployee = new javax.swing.JRadioButton();
         jComboBox1 = new javax.swing.JComboBox();
         jPanelSearch = new javax.swing.JPanel();
         jLabelSearchHeading = new javax.swing.JLabel();
@@ -94,7 +95,7 @@ public class MainFrame extends javax.swing.JFrame {
         jMenuItemFileOpen = new javax.swing.JMenuItem();
         jMenuItemFileSave = new javax.swing.JMenuItem();
         jMenuItemFileSaveAs = new javax.swing.JMenuItem();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItemFileExit = new javax.swing.JMenuItem();
         jMenuWindow = new javax.swing.JMenu();
         jMenuItemWindowPreferences = new javax.swing.JMenuItem();
         jMenuHelp = new javax.swing.JMenu();
@@ -314,13 +315,12 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelAddPartTimeEmployeeHoursPerWeek.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelAddPartTimeEmployeeHoursPerWeek.setText("Hours per Week:");
 
-        jTextFieldAddPartTimeEmployeeHourlyWage.setText("Will be uneditable if full time employee is selected");
-
         jLabelAddPartTimeEmployeeHourlyWage.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelAddPartTimeEmployeeHourlyWage.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelAddPartTimeEmployeeHourlyWage.setText("Hourly Wage:");
 
         jRadioButtonAddPartTimeEmployee.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroupEmployeeType.add(jRadioButtonAddPartTimeEmployee);
         jRadioButtonAddPartTimeEmployee.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jRadioButtonAddPartTimeEmployee.setText("Part Time Employee");
         jRadioButtonAddPartTimeEmployee.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -330,11 +330,8 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabelAddFullTimeEmployeeYearlySalary.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabelAddFullTimeEmployeeYearlySalary.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabelAddFullTimeEmployeeYearlySalary.setText("Yearly Salary:");
-
         jRadioButtonAddFullTimeEmployee.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroupEmployeeType.add(jRadioButtonAddFullTimeEmployee);
         jRadioButtonAddFullTimeEmployee.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jRadioButtonAddFullTimeEmployee.setText("Full Time Employee");
         jRadioButtonAddFullTimeEmployee.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -343,6 +340,10 @@ public class MainFrame extends javax.swing.JFrame {
                 jRadioButtonAddFullTimeEmployeeActionPerformed(evt);
             }
         });
+
+        jLabelAddFullTimeEmployeeYearlySalary.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelAddFullTimeEmployeeYearlySalary.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelAddFullTimeEmployeeYearlySalary.setText("Yearly Salary:");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Mississauga", "Toronto", "Ottawa", "Halifax", "Miami" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -687,13 +688,13 @@ public class MainFrame extends javax.swing.JFrame {
         });
         jMenuFile.add(jMenuItemFileSaveAs);
 
-        jMenuItem1.setText("Exit");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemFileExit.setText("Exit");
+        jMenuItemFileExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                jMenuItemFileExitActionPerformed(evt);
             }
         });
-        jMenuFile.add(jMenuItem1);
+        jMenuFile.add(jMenuItemFileExit);
 
         jMenuBarMenu.add(jMenuFile);
 
@@ -804,11 +805,17 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jRadioButtonAddPartTimeEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonAddPartTimeEmployeeActionPerformed
-        // TODO add your handling code here:
+        jTextFieldAddFullTimeEmployeeYearlySalary.setEnabled(false);
+        jTextFieldAddPartTimeEmployeeHourlyWage.setEnabled(true);
+        jTextFieldAddPartTimeEmployeeHoursPerWeek.setEnabled(true);
+        jTextFieldAddPartTimeEmployeeWeeksPerYear.setEnabled(true);
     }//GEN-LAST:event_jRadioButtonAddPartTimeEmployeeActionPerformed
 
     private void jRadioButtonAddFullTimeEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonAddFullTimeEmployeeActionPerformed
-        // TODO add your handling code here:
+        jTextFieldAddFullTimeEmployeeYearlySalary.setEnabled(true);
+        jTextFieldAddPartTimeEmployeeHourlyWage.setEnabled(false);
+        jTextFieldAddPartTimeEmployeeHoursPerWeek.setEnabled(false);
+        jTextFieldAddPartTimeEmployeeWeeksPerYear.setEnabled(false);
     }//GEN-LAST:event_jRadioButtonAddFullTimeEmployeeActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
@@ -823,9 +830,10 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemFileSaveAsActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    private void jMenuItemFileExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFileExitActionPerformed
+        setVisible(false); //you can't see me!
+        dispose(); //Destroy the JFrame object
+    }//GEN-LAST:event_jMenuItemFileExitActionPerformed
 
     private void jMenuWindowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuWindowActionPerformed
         // TODO add your handling code here:
@@ -886,6 +894,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroupEmployeeType;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
@@ -921,7 +930,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBarMenu;
     private javax.swing.JMenu jMenuFile;
     private javax.swing.JMenu jMenuHelp;
-    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItemFileExit;
     private javax.swing.JMenuItem jMenuItemFileNew;
     private javax.swing.JMenuItem jMenuItemFileOpen;
     private javax.swing.JMenuItem jMenuItemFileSave;
