@@ -27,6 +27,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroupEmployeeType = new javax.swing.ButtonGroup();
+        buttonGroupAddSex = new javax.swing.ButtonGroup();
         jTabbedPaneMain = new javax.swing.JTabbedPane();
         jPanelHome = new javax.swing.JPanel();
         jLabelHomeHeading = new javax.swing.JLabel();
@@ -71,6 +72,7 @@ public class MainFrame extends javax.swing.JFrame {
         jTextFieldAddFullTimeEmployeeYearlySalary = new javax.swing.JTextField();
         jLabelAddFullTimeEmployeeYearlySalary = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox();
+        jLabel4 = new javax.swing.JLabel();
         jPanelSearch = new javax.swing.JPanel();
         jLabelSearchHeading = new javax.swing.JLabel();
         jLabelSearchEmployeeNumber = new javax.swing.JLabel();
@@ -98,6 +100,7 @@ public class MainFrame extends javax.swing.JFrame {
         jMenuItemFileExit = new javax.swing.JMenuItem();
         jMenuWindow = new javax.swing.JMenu();
         jMenuItemWindowPreferences = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jMenuHelp = new javax.swing.JMenu();
         jMenuItemHelpCheckForUpdates = new javax.swing.JMenuItem();
         jMenuItemHelpAbout = new javax.swing.JMenuItem();
@@ -111,7 +114,8 @@ public class MainFrame extends javax.swing.JFrame {
         jTabbedPaneMain.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
         jTabbedPaneMain.setTabPlacement(javax.swing.JTabbedPane.LEFT);
         jTabbedPaneMain.setAutoscrolls(true);
-        jTabbedPaneMain.setMinimumSize(new java.awt.Dimension(100, 30));
+        jTabbedPaneMain.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jTabbedPaneMain.setMinimumSize(new java.awt.Dimension(200, 30));
 
         jPanelHome.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -202,7 +206,7 @@ public class MainFrame extends javax.swing.JFrame {
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jButtonHomeSaveCompanyInfo)))
-                        .addContainerGap(833, Short.MAX_VALUE))
+                        .addContainerGap(807, Short.MAX_VALUE))
                     .addGroup(jPanelHomeLayout.createSequentialGroup()
                         .addGroup(jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanelHomeLayout.createSequentialGroup()
@@ -210,7 +214,7 @@ public class MainFrame extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jButton4))
                             .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 694, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 488, Short.MAX_VALUE))))
+                        .addGap(0, 462, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelHomeLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel3)
@@ -277,6 +281,7 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelAddSex.setText("Sex:");
 
         jRadioButtonAddSexM.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroupAddSex.add(jRadioButtonAddSexM);
         jRadioButtonAddSexM.setText("M");
         jRadioButtonAddSexM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -285,12 +290,15 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jRadioButtonAddSexF.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroupAddSex.add(jRadioButtonAddSexF);
         jRadioButtonAddSexF.setText("F");
 
         jRadioButtonAddSexOther.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroupAddSex.add(jRadioButtonAddSexOther);
         jRadioButtonAddSexOther.setText("Other");
 
         jRadioButtonAddSexPreferNot.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroupAddSex.add(jRadioButtonAddSexPreferNot);
         jRadioButtonAddSexPreferNot.setText("Prefer Not To Say");
 
         jLabelAddLocation.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -301,7 +309,12 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelAddDeductRate.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelAddDeductRate.setText("Deduct Rate:");
 
-        jTextFieldAddDeductRate.setText("10");
+        jTextFieldAddDeductRate.setText("21");
+        jTextFieldAddDeductRate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldAddDeductRateActionPerformed(evt);
+            }
+        });
 
         jButtonAddSubmit.setBackground(new java.awt.Color(0, 0, 0));
         jButtonAddSubmit.setForeground(new java.awt.Color(255, 255, 255));
@@ -351,6 +364,8 @@ public class MainFrame extends javax.swing.JFrame {
                 jComboBox1ActionPerformed(evt);
             }
         });
+
+        jLabel4.setText("%");
 
         javax.swing.GroupLayout jPanelAddLayout = new javax.swing.GroupLayout(jPanelAdd);
         jPanelAdd.setLayout(jPanelAddLayout);
@@ -407,8 +422,10 @@ public class MainFrame extends javax.swing.JFrame {
                                     .addGroup(jPanelAddLayout.createSequentialGroup()
                                         .addComponent(jLabelAddDeductRate)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jTextFieldAddDeductRate, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(124, 124, 124)
+                                        .addComponent(jTextFieldAddDeductRate, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel4)))))
+                        .addGap(101, 101, 101)
                         .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanelAddLayout.createSequentialGroup()
                                 .addGap(48, 48, 48)
@@ -431,7 +448,7 @@ public class MainFrame extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jTextFieldAddPartTimeEmployeeWeeksPerYear, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addComponent(jRadioButtonAddPartTimeEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(500, Short.MAX_VALUE))
+                .addContainerGap(474, Short.MAX_VALUE))
         );
         jPanelAddLayout.setVerticalGroup(
             jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -464,7 +481,8 @@ public class MainFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelAddDeductRate)
-                    .addComponent(jTextFieldAddDeductRate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldAddDeductRate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
                 .addGap(70, 70, 70)
                 .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelAddLayout.createSequentialGroup()
@@ -556,7 +574,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jLabelSearchHeading)
                     .addComponent(jScrollPane2)
                     .addComponent(jButtonSearchSubmit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(543, Short.MAX_VALUE))
+                .addContainerGap(517, Short.MAX_VALUE))
         );
         jPanelSearchLayout.setVerticalGroup(
             jPanelSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -584,6 +602,9 @@ public class MainFrame extends javax.swing.JFrame {
         jTabbedPaneMain.addTab("Search", jPanelSearch);
 
         jPanelView.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelView.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jPanelView.setMinimumSize(new java.awt.Dimension(100, 30));
+        jPanelView.setOpaque(false);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -631,7 +652,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jScrollPaneViewAllEmployees, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 411, Short.MAX_VALUE))
+                .addGap(0, 385, Short.MAX_VALUE))
         );
         jPanelViewLayout.setVerticalGroup(
             jPanelViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -712,6 +733,9 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         jMenuWindow.add(jMenuItemWindowPreferences);
+
+        jMenuItem1.setText("Close Window");
+        jMenuWindow.add(jMenuItem1);
 
         jMenuBarMenu.add(jMenuWindow);
 
@@ -859,6 +883,10 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuHelpActionPerformed
 
+    private void jTextFieldAddDeductRateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldAddDeductRateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldAddDeductRateActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -894,6 +922,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroupAddSex;
     private javax.swing.ButtonGroup buttonGroupEmployeeType;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -907,6 +936,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabelAddDeductRate;
     private javax.swing.JLabel jLabelAddEmployeeNumber;
     private javax.swing.JLabel jLabelAddFirstName;
@@ -930,6 +960,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBarMenu;
     private javax.swing.JMenu jMenuFile;
     private javax.swing.JMenu jMenuHelp;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItemFileExit;
     private javax.swing.JMenuItem jMenuItemFileNew;
     private javax.swing.JMenuItem jMenuItemFileOpen;
