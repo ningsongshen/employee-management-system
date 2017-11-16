@@ -30,7 +30,16 @@ public class MainFrame extends javax.swing.JFrame {
         buttonGroupEmployeeType = new javax.swing.ButtonGroup();
         buttonGroupAddSex = new javax.swing.ButtonGroup();
         jDialogAddConfirm = new javax.swing.JDialog();
-        jButton3 = new javax.swing.JButton();
+        jButtonAddConfirmYes = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabelAddConfirmEmpNum = new javax.swing.JLabel();
+        jLabelAddConfirmName = new javax.swing.JLabel();
+        jLabelAddConfirmSex = new javax.swing.JLabel();
+        jLabelAddConfirmWorkLoc = new javax.swing.JLabel();
+        jLabelAddConfirmDeductRate = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jButtonAddConfirmNo = new javax.swing.JButton();
+        jLabelAddConfirmSalary = new javax.swing.JLabel();
         jTabbedPaneMain = new javax.swing.JTabbedPane();
         jPanelHome = new javax.swing.JPanel();
         jLabelHomeHeading = new javax.swing.JLabel();
@@ -106,25 +115,100 @@ public class MainFrame extends javax.swing.JFrame {
         jMenuItemHelpTutorial = new javax.swing.JMenuItem();
         jMenuItemHelpDocumentation = new javax.swing.JMenuItem();
 
-        jDialogAddConfirm.setMinimumSize(new java.awt.Dimension(600, 500));
+        jDialogAddConfirm.setBounds(new java.awt.Rectangle(550, 300, 0, 0));
+        jDialogAddConfirm.setMinimumSize(new java.awt.Dimension(400, 300));
 
-        jButton3.setText("OK");
+        jButtonAddConfirmYes.setText("Yes");
+        jButtonAddConfirmYes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pressedAddConfirmYes(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel4.setText("Are you sure you want to add this employee?");
+        jLabel4.setName("Confirm Employee"); // NOI18N
+
+        jLabelAddConfirmEmpNum.setText("jLabel5");
+
+        jLabelAddConfirmName.setText("jLabel6");
+
+        jLabelAddConfirmSex.setText("jLabel7");
+
+        jLabelAddConfirmWorkLoc.setText("jLabel5");
+
+        jLabelAddConfirmDeductRate.setText("jLabel6");
+
+        jLabel5.setText("You will be able to to edit or remove this employee later on.");
+
+        jButtonAddConfirmNo.setText("No");
+        jButtonAddConfirmNo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pressedAddConfirmNo(evt);
+            }
+        });
+
+        jLabelAddConfirmSalary.setText("jLabel6");
 
         javax.swing.GroupLayout jDialogAddConfirmLayout = new javax.swing.GroupLayout(jDialogAddConfirm.getContentPane());
         jDialogAddConfirm.getContentPane().setLayout(jDialogAddConfirmLayout);
         jDialogAddConfirmLayout.setHorizontalGroup(
             jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDialogAddConfirmLayout.createSequentialGroup()
-                .addGap(147, 147, 147)
-                .addComponent(jButton3)
-                .addContainerGap(206, Short.MAX_VALUE))
+                .addGap(22, 22, 22)
+                .addGroup(jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jDialogAddConfirmLayout.createSequentialGroup()
+                        .addGroup(jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jDialogAddConfirmLayout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addGroup(jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jDialogAddConfirmLayout.createSequentialGroup()
+                                .addGroup(jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jLabelAddConfirmSex, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabelAddConfirmWorkLoc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabelAddConfirmDeductRate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(jLabelAddConfirmEmpNum, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabelAddConfirmName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jDialogAddConfirmLayout.createSequentialGroup()
+                                .addComponent(jLabelAddConfirmSalary, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 30, Short.MAX_VALUE)))))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogAddConfirmLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonAddConfirmYes, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonAddConfirmNo, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29))
         );
         jDialogAddConfirmLayout.setVerticalGroup(
             jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogAddConfirmLayout.createSequentialGroup()
-                .addContainerGap(237, Short.MAX_VALUE)
-                .addComponent(jButton3)
-                .addGap(40, 40, 40))
+                .addGap(25, 25, 25)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5)
+                .addGap(18, 18, 18)
+                .addGroup(jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelAddConfirmEmpNum)
+                    .addComponent(jLabelAddConfirmName))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabelAddConfirmSex)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabelAddConfirmWorkLoc)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabelAddConfirmDeductRate)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabelAddConfirmSalary)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                .addGroup(jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonAddConfirmYes)
+                    .addComponent(jButtonAddConfirmNo))
+                .addGap(21, 21, 21))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -895,19 +979,53 @@ public class MainFrame extends javax.swing.JFrame {
         // determine which employee type was selected
         if (jRadioButtonAddFullTimeEmployee.isSelected() == true){
             double yearlySalary = Double.parseDouble(jTextFieldAddFullTimeEmployeeYearlySalary.getText());
-            FullTimeEmployee FTEmployee = new FullTimeEmployee(empNum, firstName, lastName, sex, workLoc, deductRate, yearlySalary);
+            jLabelAddConfirmSalary.setText("Yearly Salary: " + yearlySalary);
         }
         else {
             double hourlyWage = Double.parseDouble(jTextFieldAddPartTimeEmployeeHourlyWage.getText());
             int hoursPerWeek = Integer.parseInt(jTextFieldAddPartTimeEmployeeHoursPerWeek.getText());
             int weeksPerYear = Integer.parseInt(jTextFieldAddPartTimeEmployeeWeeksPerYear.getText());
-            PartTimeEmployee PTEmployee = new PartTimeEmployee(empNum, firstName, lastName, sex, workLoc, deductRate, hourlyWage, hoursPerWeek, weeksPerYear);
+            jLabelAddConfirmSalary.setText("Hourly Pay: " + hourlyWage + " Hours per Week: " + hoursPerWeek + " Weeks per Year: " + weeksPerYear);
         }
-        
+        jLabelAddConfirmEmpNum.setText("Employee Number: " + Integer.toString(empNum));
+        jLabelAddConfirmName.setText("Name: " + firstName + " " + lastName);
+        jLabelAddConfirmSex.setText("Sex: " + sex);
+        jLabelAddConfirmWorkLoc.setText("Work Location: " + workLoc);
+        jLabelAddConfirmDeductRate.setText("Deduction Rate: " + deductRate);
         jDialogAddConfirm.setVisible(true);
         
-        
     }//GEN-LAST:event_jButtonAddSubmitActionPerformed
+
+    private void pressedAddConfirmNo(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pressedAddConfirmNo
+        jDialogAddConfirm.setVisible(false);
+    }//GEN-LAST:event_pressedAddConfirmNo
+
+    private void pressedAddConfirmYes(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pressedAddConfirmYes
+
+        if (jRadioButtonAddFullTimeEmployee.isSelected() == true){
+            int empNum = Integer.parseInt(jTextFieldAddEmployeeNumber.getText());
+            String firstName = jTextFieldAddFirstName.getText();
+            String lastName = jTextFieldAddLastName.getText();
+            int sex = jComboBoxAddSex.getSelectedIndex();
+            int workLoc = jComboBoxAddWorkLoc.getSelectedIndex();
+            double deductRate = Double.parseDouble(jTextFieldAddDeductRate.getText());
+            double yearlySalary = Double.parseDouble(jTextFieldAddFullTimeEmployeeYearlySalary.getText());
+            FullTimeEmployee FTEmployee = new FullTimeEmployee(empNum, firstName, lastName, sex, workLoc, deductRate, yearlySalary);
+        }
+        else {
+            int empNum = Integer.parseInt(jTextFieldAddEmployeeNumber.getText());
+            String firstName = jTextFieldAddFirstName.getText();
+            String lastName = jTextFieldAddLastName.getText();
+            int sex = jComboBoxAddSex.getSelectedIndex();
+            int workLoc = jComboBoxAddWorkLoc.getSelectedIndex();
+            double deductRate = Double.parseDouble(jTextFieldAddDeductRate.getText());
+            double hourlyWage = Double.parseDouble(jTextFieldAddPartTimeEmployeeHourlyWage.getText());
+            int hoursPerWeek = Integer.parseInt(jTextFieldAddPartTimeEmployeeHoursPerWeek.getText());
+            int weeksPerYear = Integer.parseInt(jTextFieldAddPartTimeEmployeeWeeksPerYear.getText());
+            PartTimeEmployee PTEmployee = new PartTimeEmployee(empNum, firstName, lastName, sex, workLoc, deductRate, hourlyWage, hoursPerWeek, weeksPerYear);
+        }
+        jDialogAddConfirm.setVisible(false);
+    }//GEN-LAST:event_pressedAddConfirmYes
 
     /**
      * @param args the command line arguments
@@ -948,8 +1066,9 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroupEmployeeType;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButtonAddConfirmNo;
+    private javax.swing.JButton jButtonAddConfirmYes;
     private javax.swing.JButton jButtonAddSubmit;
     private javax.swing.JButton jButtonHomeExit;
     private javax.swing.JButton jButtonHomeSaveCompanyInfo;
@@ -961,6 +1080,14 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabelAddConfirmDeductRate;
+    private javax.swing.JLabel jLabelAddConfirmEmpNum;
+    private javax.swing.JLabel jLabelAddConfirmName;
+    private javax.swing.JLabel jLabelAddConfirmSalary;
+    private javax.swing.JLabel jLabelAddConfirmSex;
+    private javax.swing.JLabel jLabelAddConfirmWorkLoc;
     private javax.swing.JLabel jLabelAddDeductRate;
     private javax.swing.JLabel jLabelAddEmployeeNumber;
     private javax.swing.JLabel jLabelAddFirstName;
