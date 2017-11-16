@@ -9,13 +9,13 @@
  */
 import java.lang.*;
 public class MainFrame extends javax.swing.JFrame {
-
+    
+    MyHashTable theHashTable = new MyHashTable(2);
     /**
      * Creates new form main_frame
      */
     public MainFrame() {
         initComponents();
-        MyHashTable theHashTable = new MyHashTable(2);
     }
 
     /**
@@ -90,7 +90,7 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelSearchOR = new javax.swing.JLabel();
         jButtonSearchSubmit = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jTextAreaSearchDisplayEmployee = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jPanelView = new javax.swing.JPanel();
@@ -604,11 +604,21 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabelSearchEmployeeNumber.setText("Employee Number");
 
-        jTextFieldSearchEmployeeNumber.setText("jTextField4");
+        jTextFieldSearchEmployeeNumber.setMinimumSize(new java.awt.Dimension(50, 20));
+        jTextFieldSearchEmployeeNumber.setPreferredSize(new java.awt.Dimension(70, 20));
+        jTextFieldSearchEmployeeNumber.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldSearchEmployeeNumberKeyTyped(evt);
+            }
+        });
 
         jLabelSearchEmployeeName.setText("Employee Name");
 
-        jTextFieldSearchEmployeeName.setText("jTextField5");
+        jTextFieldSearchEmployeeName.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldSearchEmployeeNameKeyTyped(evt);
+            }
+        });
 
         jLabelSearchOR.setText("OR");
 
@@ -621,10 +631,10 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Employee Info:\nAsdf Asdf\nLocation: Mississauga\netc.\n\n");
-        jScrollPane2.setViewportView(jTextArea1);
+        jTextAreaSearchDisplayEmployee.setColumns(20);
+        jTextAreaSearchDisplayEmployee.setRows(5);
+        jTextAreaSearchDisplayEmployee.setText("Employee Info:\nAsdf Asdf\nLocation: Mississauga\netc.\n\n");
+        jScrollPane2.setViewportView(jTextAreaSearchDisplayEmployee);
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -648,8 +658,8 @@ public class MainFrame extends javax.swing.JFrame {
                     .addGroup(jPanelSearchLayout.createSequentialGroup()
                         .addComponent(jLabelSearchEmployeeNumber)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextFieldSearchEmployeeNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(50, 50, 50)
+                        .addComponent(jTextFieldSearchEmployeeNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40)
                         .addComponent(jLabelSearchOR)
                         .addGap(64, 64, 64)
                         .addComponent(jLabelSearchEmployeeName)
@@ -658,7 +668,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jLabelSearchHeading)
                     .addComponent(jScrollPane2)
                     .addComponent(jButtonSearchSubmit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(517, Short.MAX_VALUE))
+                .addContainerGap(506, Short.MAX_VALUE))
         );
         jPanelSearchLayout.setVerticalGroup(
             jPanelSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -898,6 +908,13 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonSearchSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchSubmitActionPerformed
         // TODO add your handling code here:
+        if (jTextFieldSearchEmployeeNumber.getText() == null) {
+            
+        } else {
+            // this isn't working
+            int searchTest = theHashTable.searchByEmployeeNumber(Integer.parseInt(jTextFieldSearchEmployeeNumber.getText()));
+            jTextAreaSearchDisplayEmployee.setText(Integer.toString(searchTest));
+        }
     }//GEN-LAST:event_jButtonSearchSubmitActionPerformed
 
     private void jButtonHomeExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHomeExitActionPerformed
@@ -1011,6 +1028,7 @@ public class MainFrame extends javax.swing.JFrame {
             double deductRate = Double.parseDouble(jTextFieldAddDeductRate.getText());
             double yearlySalary = Double.parseDouble(jTextFieldAddFullTimeEmployeeYearlySalary.getText());
             FullTimeEmployee FTEmployee = new FullTimeEmployee(empNum, firstName, lastName, sex, workLoc, deductRate, yearlySalary);
+            theHashTable.addEmployee(FTEmployee);
         }
         else {
             int empNum = Integer.parseInt(jTextFieldAddEmployeeNumber.getText());
@@ -1023,9 +1041,21 @@ public class MainFrame extends javax.swing.JFrame {
             int hoursPerWeek = Integer.parseInt(jTextFieldAddPartTimeEmployeeHoursPerWeek.getText());
             int weeksPerYear = Integer.parseInt(jTextFieldAddPartTimeEmployeeWeeksPerYear.getText());
             PartTimeEmployee PTEmployee = new PartTimeEmployee(empNum, firstName, lastName, sex, workLoc, deductRate, hourlyWage, hoursPerWeek, weeksPerYear);
+            theHashTable.addEmployee(PTEmployee);
         }
+        
         jDialogAddConfirm.setVisible(false);
     }//GEN-LAST:event_pressedAddConfirmYes
+
+    private void jTextFieldSearchEmployeeNumberKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldSearchEmployeeNumberKeyTyped
+        // TODO add your handling code here:
+        jTextFieldSearchEmployeeName.setText(null);
+    }//GEN-LAST:event_jTextFieldSearchEmployeeNumberKeyTyped
+
+    private void jTextFieldSearchEmployeeNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldSearchEmployeeNameKeyTyped
+        // TODO add your handling code here:
+        jTextFieldSearchEmployeeNumber.setText(null);
+    }//GEN-LAST:event_jTextFieldSearchEmployeeNameKeyTyped
 
     /**
      * @param args the command line arguments
@@ -1053,10 +1083,13 @@ public class MainFrame extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
         /* Create and display the form */
+        
+        
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                
                 new MainFrame().setVisible(true);
             }
         });
@@ -1137,8 +1170,8 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTabbedPane jTabbedPaneMain;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextAreaHomeCompanyInfo;
+    private javax.swing.JTextArea jTextAreaSearchDisplayEmployee;
     private javax.swing.JTextField jTextFieldAddDeductRate;
     private javax.swing.JTextField jTextFieldAddEmployeeNumber;
     private javax.swing.JTextField jTextFieldAddFirstName;
