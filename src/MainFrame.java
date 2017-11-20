@@ -8,9 +8,11 @@
  * @author 562021
  */
 import java.lang.*;
+
 public class MainFrame extends javax.swing.JFrame {
-    
+
     MyHashTable theHashTable = new MyHashTable(2);
+
     /**
      * Creates new form main_frame
      */
@@ -638,7 +640,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jTextAreaSearchDisplayEmployee.setColumns(20);
         jTextAreaSearchDisplayEmployee.setRows(5);
-        jTextAreaSearchDisplayEmployee.setText("Employee Info:\nAsdf Asdf\nLocation: Mississauga\netc.\n\n");
+        jTextAreaSearchDisplayEmployee.setText("Employee Type:\nName:\nSex:\nWork Location:\nDeduction Rate:\n\n");
         jScrollPane2.setViewportView(jTextAreaSearchDisplayEmployee);
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
@@ -924,9 +926,23 @@ public class MainFrame extends javax.swing.JFrame {
         if (jTextFieldSearchEmployeeNumber.getText() == null) {
             System.out.println("Please enter something for the employee number");
         } else {
-            // this isn't working
-            int searchTest = theHashTable.searchByEmployeeNumber(Integer.parseInt(jTextFieldSearchEmployeeNumber.getText()));
-            jTextAreaSearchDisplayEmployee.setText(Integer.toString(searchTest));
+            try {
+                EmployeeInfo empSearched = theHashTable.getEmployee(Integer.parseInt(jTextFieldSearchEmployeeNumber.getText()));
+
+                if (empSearched instanceof FullTimeEmployee) {
+                    FullTimeEmployee FTEmpSearched = (FullTimeEmployee) empSearched;
+                    jTextAreaSearchDisplayEmployee.setText("Employee Type: Full Time" + "\nName: " + FTEmpSearched.getFirstName() + " " + FTEmpSearched.getLastName()
+                            + "\nSex: " + FTEmpSearched.getSex() + "\nWork Location: " + FTEmpSearched.getWorkLoc() + "\nDeduction Rate: " + FTEmpSearched.getDeductRate()
+                            + "\n\nYearly Salary: " + FTEmpSearched.getYearlySalary());
+                } else {
+                    PartTimeEmployee PTEmpSearched = (PartTimeEmployee) empSearched;
+                    jTextAreaSearchDisplayEmployee.setText("Employee Type: Part Time" + "\nName: " + PTEmpSearched.getFirstName() + " " + PTEmpSearched.getLastName()
+                            + "\nSex: " + PTEmpSearched.getSex() + "\nWork Location: " + PTEmpSearched.getWorkLoc() + "\nDeduction Rate: " + PTEmpSearched.getDeductRate()
+                            + "\n\nHourly Wage: " + PTEmpSearched.getHourlyWage() + "\nHours per Week: " + PTEmpSearched.getHoursPerWeek() + "\nWeeks per Year:" + PTEmpSearched.getWeeksPerYear());
+                }
+            } catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
+                jTextAreaSearchDisplayEmployee.setText("Employee not found");
+            }
         }
     }//GEN-LAST:event_jButtonSearchSubmitActionPerformed
 
@@ -999,20 +1015,19 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonAddSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddSubmitActionPerformed
         // get info from fields after hitting submit
-        
+
         int empNum = Integer.parseInt(jTextFieldAddEmployeeNumber.getText());
         String firstName = jTextFieldAddFirstName.getText();
         String lastName = jTextFieldAddLastName.getText();
         int sex = jComboBoxAddSex.getSelectedIndex();
         int workLoc = jComboBoxAddWorkLoc.getSelectedIndex();
         double deductRate = Double.parseDouble(jTextFieldAddDeductRate.getText());
-        
+
         // determine which employee type was selected
-        if (jRadioButtonAddFullTimeEmployee.isSelected() == true){
+        if (jRadioButtonAddFullTimeEmployee.isSelected() == true) {
             double yearlySalary = Double.parseDouble(jTextFieldAddFullTimeEmployeeYearlySalary.getText());
             jLabelAddConfirmSalary.setText("Yearly Salary: " + yearlySalary);
-        }
-        else {
+        } else {
             double hourlyWage = Double.parseDouble(jTextFieldAddPartTimeEmployeeHourlyWage.getText());
             int hoursPerWeek = Integer.parseInt(jTextFieldAddPartTimeEmployeeHoursPerWeek.getText());
             int weeksPerYear = Integer.parseInt(jTextFieldAddPartTimeEmployeeWeeksPerYear.getText());
@@ -1024,7 +1039,7 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelAddConfirmWorkLoc.setText("Work Location: " + workLoc);
         jLabelAddConfirmDeductRate.setText("Deduction Rate: " + deductRate);
         jDialogAddConfirm.setVisible(true);
-        
+
     }//GEN-LAST:event_jButtonAddSubmitActionPerformed
 
     private void pressedAddConfirmNo(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pressedAddConfirmNo
@@ -1033,9 +1048,9 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void pressedAddConfirmYes(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pressedAddConfirmYes
 
-        if (jRadioButtonAddFullTimeEmployee.isSelected() == true){
+        if (jRadioButtonAddFullTimeEmployee.isSelected() == true) {
             int empNum = Integer.parseInt(jTextFieldAddEmployeeNumber.getText());
-            
+
             String firstName = jTextFieldAddFirstName.getText();
             String lastName = jTextFieldAddLastName.getText();
             int sex = jComboBoxAddSex.getSelectedIndex();
@@ -1045,8 +1060,7 @@ public class MainFrame extends javax.swing.JFrame {
             FullTimeEmployee FTEmployee = new FullTimeEmployee(empNum, firstName, lastName, sex, workLoc, deductRate, yearlySalary);
             theHashTable.addEmployee(FTEmployee);
             jTextFieldAddFullTimeEmployeeYearlySalary.setText(null);
-        }
-        else {
+        } else {
             int empNum = Integer.parseInt(jTextFieldAddEmployeeNumber.getText());
             String firstName = jTextFieldAddFirstName.getText();
             String lastName = jTextFieldAddLastName.getText();
@@ -1062,7 +1076,7 @@ public class MainFrame extends javax.swing.JFrame {
             jTextFieldAddPartTimeEmployeeHoursPerWeek.setText(null);
             jTextFieldAddPartTimeEmployeeWeeksPerYear.setText(null);
         }
-        
+
         jDialogAddConfirm.setVisible(false);
         jTextFieldAddEmployeeNumber.setText(null);
         jTextFieldAddFirstName.setText(null);
@@ -1109,12 +1123,12 @@ public class MainFrame extends javax.swing.JFrame {
         }
         //</editor-fold>
         /* Create and display the form */
-        
-        
-        
+
+
+
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                
+
                 new MainFrame().setVisible(true);
             }
         });

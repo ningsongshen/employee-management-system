@@ -1128,7 +1128,7 @@
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="rows" type="int" value="5"/>
-                    <Property name="text" type="java.lang.String" value="Employee Info:&#xa;Asdf Asdf&#xa;Location: Mississauga&#xa;etc.&#xa;&#xa;"/>
+                    <Property name="text" type="java.lang.String" value="Employee Type:&#xa;Name:&#xa;Sex:&#xa;Work Location:&#xa;Deduction Rate:&#xa;&#xa;"/>
                   </Properties>
                 </Component>
               </SubComponents>
