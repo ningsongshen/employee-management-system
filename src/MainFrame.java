@@ -81,6 +81,7 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelAddFullTimeEmployeeYearlySalary = new javax.swing.JLabel();
         jComboBoxAddWorkLoc = new javax.swing.JComboBox();
         jComboBoxAddSex = new javax.swing.JComboBox();
+        jLabelAddEmployeeNumberError = new javax.swing.JLabel();
         jPanelSearch = new javax.swing.JPanel();
         jLabelSearchHeading = new javax.swing.JLabel();
         jLabelSearchEmployeeNumber = new javax.swing.JLabel();
@@ -461,7 +462,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jComboBoxAddSex.setModel(new javax.swing.DefaultComboBoxModel(new String[] { " ", "Male", "Female", "Other", "Prefer not to say" }));
+        jComboBoxAddSex.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "", "Male", "Female", "Other", "Prefer not to say" }));
 
         javax.swing.GroupLayout jPanelAddLayout = new javax.swing.GroupLayout(jPanelAdd);
         jPanelAdd.setLayout(jPanelAddLayout);
@@ -471,23 +472,26 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(38, 38, 38)
                 .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelAddHeading, javax.swing.GroupLayout.PREFERRED_SIZE, 685, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelAddLayout.createSequentialGroup()
-                            .addGap(49, 49, 49)
-                            .addComponent(jLabelAddLastName)
-                            .addGap(18, 18, 18)
-                            .addComponent(jTextFieldAddLastName))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelAddLayout.createSequentialGroup()
-                            .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanelAddLayout.createSequentialGroup()
-                                    .addComponent(jLabelAddEmployeeNumber)
-                                    .addGap(18, 18, 18))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelAddLayout.createSequentialGroup()
-                                    .addComponent(jLabelAddFirstName)
-                                    .addGap(21, 21, 21)))
-                            .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jTextFieldAddFirstName)
-                                .addComponent(jTextFieldAddEmployeeNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanelAddLayout.createSequentialGroup()
+                        .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelAddLayout.createSequentialGroup()
+                                .addGap(49, 49, 49)
+                                .addComponent(jLabelAddLastName)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextFieldAddLastName))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelAddLayout.createSequentialGroup()
+                                .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanelAddLayout.createSequentialGroup()
+                                        .addComponent(jLabelAddEmployeeNumber)
+                                        .addGap(18, 18, 18))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelAddLayout.createSequentialGroup()
+                                        .addComponent(jLabelAddFirstName)
+                                        .addGap(21, 21, 21)))
+                                .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTextFieldAddFirstName)
+                                    .addComponent(jTextFieldAddEmployeeNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabelAddEmployeeNumberError))
                     .addGroup(jPanelAddLayout.createSequentialGroup()
                         .addGap(88, 88, 88)
                         .addComponent(jLabelAddSex)
@@ -546,7 +550,8 @@ public class MainFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelAddEmployeeNumber)
-                    .addComponent(jTextFieldAddEmployeeNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldAddEmployeeNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelAddEmployeeNumberError))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelAddFirstName)
@@ -710,7 +715,15 @@ public class MainFrame extends javax.swing.JFrame {
             new String [] {
                 "Employee Number", "First Name", "Last Name", "Location", "Net Income"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
         jScrollPaneViewAllEmployees.setViewportView(jTable1);
 
         jLabel12.setText("Use tiles to display employee information if <br/>capable of doing so with code to repeat the tiles");
@@ -909,7 +922,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void jButtonSearchSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchSubmitActionPerformed
         // TODO add your handling code here:
         if (jTextFieldSearchEmployeeNumber.getText() == null) {
-            
+            System.out.println("Please enter something for the employee number");
         } else {
             // this isn't working
             int searchTest = theHashTable.searchByEmployeeNumber(Integer.parseInt(jTextFieldSearchEmployeeNumber.getText()));
@@ -986,6 +999,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonAddSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddSubmitActionPerformed
         // get info from fields after hitting submit
+        
         int empNum = Integer.parseInt(jTextFieldAddEmployeeNumber.getText());
         String firstName = jTextFieldAddFirstName.getText();
         String lastName = jTextFieldAddLastName.getText();
@@ -1021,6 +1035,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         if (jRadioButtonAddFullTimeEmployee.isSelected() == true){
             int empNum = Integer.parseInt(jTextFieldAddEmployeeNumber.getText());
+            
             String firstName = jTextFieldAddFirstName.getText();
             String lastName = jTextFieldAddLastName.getText();
             int sex = jComboBoxAddSex.getSelectedIndex();
@@ -1029,6 +1044,7 @@ public class MainFrame extends javax.swing.JFrame {
             double yearlySalary = Double.parseDouble(jTextFieldAddFullTimeEmployeeYearlySalary.getText());
             FullTimeEmployee FTEmployee = new FullTimeEmployee(empNum, firstName, lastName, sex, workLoc, deductRate, yearlySalary);
             theHashTable.addEmployee(FTEmployee);
+            jTextFieldAddFullTimeEmployeeYearlySalary.setText(null);
         }
         else {
             int empNum = Integer.parseInt(jTextFieldAddEmployeeNumber.getText());
@@ -1042,9 +1058,18 @@ public class MainFrame extends javax.swing.JFrame {
             int weeksPerYear = Integer.parseInt(jTextFieldAddPartTimeEmployeeWeeksPerYear.getText());
             PartTimeEmployee PTEmployee = new PartTimeEmployee(empNum, firstName, lastName, sex, workLoc, deductRate, hourlyWage, hoursPerWeek, weeksPerYear);
             theHashTable.addEmployee(PTEmployee);
+            jTextFieldAddPartTimeEmployeeHourlyWage.setText(null);
+            jTextFieldAddPartTimeEmployeeHoursPerWeek.setText(null);
+            jTextFieldAddPartTimeEmployeeWeeksPerYear.setText(null);
         }
         
         jDialogAddConfirm.setVisible(false);
+        jTextFieldAddEmployeeNumber.setText(null);
+        jTextFieldAddFirstName.setText(null);
+        jTextFieldAddLastName.setText(null);
+        jComboBoxAddSex.setSelectedItem("");
+        jComboBoxAddWorkLoc.setSelectedItem("Mississauga");
+        jTextFieldAddDeductRate.setText("0.21");
     }//GEN-LAST:event_pressedAddConfirmYes
 
     private void jTextFieldSearchEmployeeNumberKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldSearchEmployeeNumberKeyTyped
@@ -1123,6 +1148,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelAddConfirmWorkLoc;
     private javax.swing.JLabel jLabelAddDeductRate;
     private javax.swing.JLabel jLabelAddEmployeeNumber;
+    private javax.swing.JLabel jLabelAddEmployeeNumberError;
     private javax.swing.JLabel jLabelAddFirstName;
     private javax.swing.JLabel jLabelAddFullTimeEmployeeYearlySalary;
     private javax.swing.JLabel jLabelAddHeading;
