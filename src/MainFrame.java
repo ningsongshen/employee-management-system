@@ -8,9 +8,11 @@
  * @author 562021
  */
 import java.lang.*;
+
 public class MainFrame extends javax.swing.JFrame {
-    
+
     MyHashTable theHashTable = new MyHashTable(2);
+
     /**
      * Creates new form main_frame
      */
@@ -40,6 +42,11 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jButtonAddConfirmNo = new javax.swing.JButton();
         jLabelAddConfirmSalary = new javax.swing.JLabel();
+        jDialogSearchDeleteConfirm = new javax.swing.JDialog();
+        jButtonSearchDeleteConfirmYes = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jButtonSearchDeleteConfirmNo = new javax.swing.JButton();
         jTabbedPaneMain = new javax.swing.JTabbedPane();
         jPanelHome = new javax.swing.JPanel();
         jLabelHomeHeading = new javax.swing.JLabel();
@@ -209,6 +216,60 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonAddConfirmYes)
                     .addComponent(jButtonAddConfirmNo))
+                .addGap(21, 21, 21))
+        );
+
+        jDialogSearchDeleteConfirm.setBounds(new java.awt.Rectangle(550, 300, 0, 0));
+        jDialogSearchDeleteConfirm.setMinimumSize(new java.awt.Dimension(400, 300));
+
+        jButtonSearchDeleteConfirmYes.setText("Yes");
+        jButtonSearchDeleteConfirmYes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSearchDeleteConfirmYespressedAddConfirmYes(evt);
+            }
+        });
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel6.setText("Are you sure you want to remove this employee?");
+        jLabel6.setName("Confirm Employee"); // NOI18N
+
+        jLabel7.setText("This action is irreversible.");
+
+        jButtonSearchDeleteConfirmNo.setText("No");
+        jButtonSearchDeleteConfirmNo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSearchDeleteConfirmNopressedAddConfirmNo(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jDialogSearchDeleteConfirmLayout = new javax.swing.GroupLayout(jDialogSearchDeleteConfirm.getContentPane());
+        jDialogSearchDeleteConfirm.getContentPane().setLayout(jDialogSearchDeleteConfirmLayout);
+        jDialogSearchDeleteConfirmLayout.setHorizontalGroup(
+            jDialogSearchDeleteConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogSearchDeleteConfirmLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(jDialogSearchDeleteConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel7))
+                .addContainerGap(46, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogSearchDeleteConfirmLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonSearchDeleteConfirmYes, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonSearchDeleteConfirmNo, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29))
+        );
+        jDialogSearchDeleteConfirmLayout.setVerticalGroup(
+            jDialogSearchDeleteConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogSearchDeleteConfirmLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addGroup(jDialogSearchDeleteConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonSearchDeleteConfirmYes)
+                    .addComponent(jButtonSearchDeleteConfirmNo))
                 .addGap(21, 21, 21))
         );
 
@@ -638,7 +699,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jTextAreaSearchDisplayEmployee.setColumns(20);
         jTextAreaSearchDisplayEmployee.setRows(5);
-        jTextAreaSearchDisplayEmployee.setText("Employee Info:\nAsdf Asdf\nLocation: Mississauga\netc.\n\n");
+        jTextAreaSearchDisplayEmployee.setText("Employee Type:\nName:\nSex:\nWork Location:\nDeduction Rate:\n\n");
         jScrollPane2.setViewportView(jTextAreaSearchDisplayEmployee);
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
@@ -648,6 +709,11 @@ public class MainFrame extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(0, 0, 0));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Delete");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelSearchLayout = new javax.swing.GroupLayout(jPanelSearch);
         jPanelSearch.setLayout(jPanelSearchLayout);
@@ -924,9 +990,23 @@ public class MainFrame extends javax.swing.JFrame {
         if (jTextFieldSearchEmployeeNumber.getText() == null) {
             System.out.println("Please enter something for the employee number");
         } else {
-            // this isn't working
-            int searchTest = theHashTable.searchByEmployeeNumber(Integer.parseInt(jTextFieldSearchEmployeeNumber.getText()));
-            jTextAreaSearchDisplayEmployee.setText(Integer.toString(searchTest));
+            try {
+                EmployeeInfo empSearched = theHashTable.getEmployee(Integer.parseInt(jTextFieldSearchEmployeeNumber.getText()));
+
+                if (empSearched instanceof FullTimeEmployee) {
+                    FullTimeEmployee FTEmpSearched = (FullTimeEmployee) empSearched;
+                    jTextAreaSearchDisplayEmployee.setText("Employee Type: Full Time" + "\nName: " + FTEmpSearched.getFirstName() + " " + FTEmpSearched.getLastName()
+                            + "\nSex: " + FTEmpSearched.getSex() + "\nWork Location: " + FTEmpSearched.getWorkLoc() + "\nDeduction Rate: " + FTEmpSearched.getDeductRate()
+                            + "\n\nYearly Salary: " + FTEmpSearched.getYearlySalary());
+                } else {
+                    PartTimeEmployee PTEmpSearched = (PartTimeEmployee) empSearched;
+                    jTextAreaSearchDisplayEmployee.setText("Employee Type: Part Time" + "\nName: " + PTEmpSearched.getFirstName() + " " + PTEmpSearched.getLastName()
+                            + "\nSex: " + PTEmpSearched.getSex() + "\nWork Location: " + PTEmpSearched.getWorkLoc() + "\nDeduction Rate: " + PTEmpSearched.getDeductRate()
+                            + "\n\nHourly Wage: " + PTEmpSearched.getHourlyWage() + "\nHours per Week: " + PTEmpSearched.getHoursPerWeek() + "\nWeeks per Year:" + PTEmpSearched.getWeeksPerYear());
+                }
+            } catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
+                jTextAreaSearchDisplayEmployee.setText("Employee not found");
+            }
         }
     }//GEN-LAST:event_jButtonSearchSubmitActionPerformed
 
@@ -999,20 +1079,19 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonAddSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddSubmitActionPerformed
         // get info from fields after hitting submit
-        
+
         int empNum = Integer.parseInt(jTextFieldAddEmployeeNumber.getText());
         String firstName = jTextFieldAddFirstName.getText();
         String lastName = jTextFieldAddLastName.getText();
         int sex = jComboBoxAddSex.getSelectedIndex();
         int workLoc = jComboBoxAddWorkLoc.getSelectedIndex();
         double deductRate = Double.parseDouble(jTextFieldAddDeductRate.getText());
-        
+
         // determine which employee type was selected
-        if (jRadioButtonAddFullTimeEmployee.isSelected() == true){
+        if (jRadioButtonAddFullTimeEmployee.isSelected() == true) {
             double yearlySalary = Double.parseDouble(jTextFieldAddFullTimeEmployeeYearlySalary.getText());
             jLabelAddConfirmSalary.setText("Yearly Salary: " + yearlySalary);
-        }
-        else {
+        } else {
             double hourlyWage = Double.parseDouble(jTextFieldAddPartTimeEmployeeHourlyWage.getText());
             int hoursPerWeek = Integer.parseInt(jTextFieldAddPartTimeEmployeeHoursPerWeek.getText());
             int weeksPerYear = Integer.parseInt(jTextFieldAddPartTimeEmployeeWeeksPerYear.getText());
@@ -1024,7 +1103,7 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelAddConfirmWorkLoc.setText("Work Location: " + workLoc);
         jLabelAddConfirmDeductRate.setText("Deduction Rate: " + deductRate);
         jDialogAddConfirm.setVisible(true);
-        
+
     }//GEN-LAST:event_jButtonAddSubmitActionPerformed
 
     private void pressedAddConfirmNo(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pressedAddConfirmNo
@@ -1033,9 +1112,9 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void pressedAddConfirmYes(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pressedAddConfirmYes
 
-        if (jRadioButtonAddFullTimeEmployee.isSelected() == true){
+        if (jRadioButtonAddFullTimeEmployee.isSelected() == true) {
             int empNum = Integer.parseInt(jTextFieldAddEmployeeNumber.getText());
-            
+
             String firstName = jTextFieldAddFirstName.getText();
             String lastName = jTextFieldAddLastName.getText();
             int sex = jComboBoxAddSex.getSelectedIndex();
@@ -1045,8 +1124,7 @@ public class MainFrame extends javax.swing.JFrame {
             FullTimeEmployee FTEmployee = new FullTimeEmployee(empNum, firstName, lastName, sex, workLoc, deductRate, yearlySalary);
             theHashTable.addEmployee(FTEmployee);
             jTextFieldAddFullTimeEmployeeYearlySalary.setText(null);
-        }
-        else {
+        } else {
             int empNum = Integer.parseInt(jTextFieldAddEmployeeNumber.getText());
             String firstName = jTextFieldAddFirstName.getText();
             String lastName = jTextFieldAddLastName.getText();
@@ -1062,7 +1140,7 @@ public class MainFrame extends javax.swing.JFrame {
             jTextFieldAddPartTimeEmployeeHoursPerWeek.setText(null);
             jTextFieldAddPartTimeEmployeeWeeksPerYear.setText(null);
         }
-        
+
         jDialogAddConfirm.setVisible(false);
         jTextFieldAddEmployeeNumber.setText(null);
         jTextFieldAddFirstName.setText(null);
@@ -1081,6 +1159,24 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         jTextFieldSearchEmployeeNumber.setText(null);
     }//GEN-LAST:event_jTextFieldSearchEmployeeNameKeyTyped
+
+    private void jButtonSearchDeleteConfirmYespressedAddConfirmYes(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchDeleteConfirmYespressedAddConfirmYes
+        // TODO add your handling code here:
+        theHashTable.removeEmployee(Integer.parseInt(jTextFieldSearchEmployeeNumber.getText()));
+        jDialogSearchDeleteConfirm.setVisible(false);
+        jTextAreaSearchDisplayEmployee.setText("");
+    }//GEN-LAST:event_jButtonSearchDeleteConfirmYespressedAddConfirmYes
+
+    private void jButtonSearchDeleteConfirmNopressedAddConfirmNo(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchDeleteConfirmNopressedAddConfirmNo
+        // TODO add your handling code here:
+        jDialogSearchDeleteConfirm.setVisible(false);
+    }//GEN-LAST:event_jButtonSearchDeleteConfirmNopressedAddConfirmNo
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        jDialogSearchDeleteConfirm.setVisible(true);
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1109,12 +1205,12 @@ public class MainFrame extends javax.swing.JFrame {
         }
         //</editor-fold>
         /* Create and display the form */
-        
-        
-        
+
+
+
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                
+
                 new MainFrame().setVisible(true);
             }
         });
@@ -1130,16 +1226,21 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButtonAddSubmit;
     private javax.swing.JButton jButtonHomeExit;
     private javax.swing.JButton jButtonHomeSaveCompanyInfo;
+    private javax.swing.JButton jButtonSearchDeleteConfirmNo;
+    private javax.swing.JButton jButtonSearchDeleteConfirmYes;
     private javax.swing.JButton jButtonSearchSubmit;
     private javax.swing.JComboBox jComboBoxAddSex;
     private javax.swing.JComboBox jComboBoxAddWorkLoc;
     private javax.swing.JDialog jDialogAddConfirm;
+    private javax.swing.JDialog jDialogSearchDeleteConfirm;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabelAddConfirmDeductRate;
     private javax.swing.JLabel jLabelAddConfirmEmpNum;
     private javax.swing.JLabel jLabelAddConfirmName;
