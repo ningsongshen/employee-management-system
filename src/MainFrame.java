@@ -1169,7 +1169,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonSearchDeleteConfirmNopressedAddConfirmNo(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchDeleteConfirmNopressedAddConfirmNo
         // TODO add your handling code here:
-        jDialogSearchDeleteConfirm.setVisible(false);
+        jDialogSearchDeleteConfirm.setVisible(false); 
     }//GEN-LAST:event_jButtonSearchDeleteConfirmNopressedAddConfirmNo
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
