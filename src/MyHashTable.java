@@ -98,13 +98,6 @@ public class MyHashTable {
 		return null;
 
 	}
-        
-        public EmployeeInfo getEmployee(int empNum) {
-            int bucketPosition = calcBucket(empNum);
-            int arraylistPosition = searchByEmployeeNumber(empNum);
-            EmployeeInfo theEmp = buckets[bucketPosition].get(arraylistPosition);
-            return theEmp;
-        }
 
 	public void displayContents() {
 		// Print the employee numbers for the employees stored in each bucket's
