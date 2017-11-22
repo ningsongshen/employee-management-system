@@ -130,5 +130,33 @@ public class MyHashTable {
 		} // end for
 
 	} // end method displayContents
+        
+	public String[][] exportContents() {
+		// Print the employee numbers for the employees stored in each bucket's
+		// ArrayList, starting with bucket 0, then bucket 1, and so on.
+                int employeeCount = 10;
+                int employeesAdded = 0;
+                String[][] allEmployees = new String[6][employeeCount];
+                
+		for (int i = 0; i < buckets.length; i++) {
+			int listSize = buckets[i].size();
+			if (listSize == 0) {
+			} else {
+				for (int j = 0; j < listSize; j++) {
+					EmployeeInfo theEmp = buckets[i].get(j);
+					allEmployees[0][employeesAdded] = Integer.toString(theEmp.getEmpNum());
+                                        allEmployees[1][employeesAdded] = theEmp.getFirstName();
+                                        allEmployees[2][employeesAdded] = theEmp.getLastName();
+                                        allEmployees[3][employeesAdded] = Integer.toString(theEmp.getSex());
+                                        allEmployees[4][employeesAdded] = Integer.toString(theEmp.getWorkLoc());
+                                        allEmployees[5][employeesAdded] = Double.toString(theEmp.getDeductRate());
+                                        employeesAdded++;
+				} // end for
+
+			} // end else
+
+		} // end for
+                return allEmployees;
+	} // end method exportContents
 
 } // end class MyHashTable

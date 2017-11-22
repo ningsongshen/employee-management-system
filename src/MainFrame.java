@@ -12,7 +12,6 @@ import java.lang.*;
 public class MainFrame extends javax.swing.JFrame {
 
     MyHashTable theHashTable = new MyHashTable(2);
-
     /**
      * Creates new form main_frame
      */
@@ -129,10 +128,11 @@ public class MainFrame extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jPanelView = new javax.swing.JPanel();
         jScrollPaneViewAllEmployees = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jTableViewAll = new javax.swing.JTable();
         jPanel3 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jMenuBarMenu = new javax.swing.JMenuBar();
         jMenuFile = new javax.swing.JMenu();
         jMenuItemFileNew = new javax.swing.JMenuItem();
@@ -149,10 +149,8 @@ public class MainFrame extends javax.swing.JFrame {
         jMenuItemHelpTutorial = new javax.swing.JMenuItem();
         jMenuItemHelpDocumentation = new javax.swing.JMenuItem();
 
-        jDialogAddConfirm.setBackground(java.awt.Color.white);
         jDialogAddConfirm.setBounds(new java.awt.Rectangle(550, 300, 0, 0));
         jDialogAddConfirm.setMinimumSize(new java.awt.Dimension(648, 400));
-        jDialogAddConfirm.setPreferredSize(new java.awt.Dimension(648, 400));
 
         jButtonAddConfirmYes.setText("OK");
         jButtonAddConfirmYes.addActionListener(new java.awt.event.ActionListener() {
@@ -300,7 +298,6 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(21, 21, 21))
         );
 
-        jDialogSearchEdit.setBackground(java.awt.Color.white);
         jDialogSearchEdit.setMinimumSize(new java.awt.Dimension(900, 900));
 
         jLabelAddHeading1.setFont(new java.awt.Font("Franklin Gothic Medium Cond", 0, 24)); // NOI18N
@@ -1050,26 +1047,49 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelView.setMinimumSize(new java.awt.Dimension(100, 30));
         jPanelView.setOpaque(false);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTableViewAll.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Employee Number", "First Name", "Last Name", "Location", "Net Income"
+                "Employee Number", "First Name", "Last Name", "Sex", "Location", "Net Income"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
         });
-        jScrollPaneViewAllEmployees.setViewportView(jTable1);
+        jScrollPaneViewAllEmployees.setViewportView(jTableViewAll);
 
         jLabel12.setText("Use tiles to display employee information if <br/>capable of doing so with code to repeat the tiles");
 
@@ -1093,6 +1113,13 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Franklin Gothic Medium Cond", 0, 24)); // NOI18N
         jLabel1.setText("View All");
 
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanelViewLayout = new javax.swing.GroupLayout(jPanelView);
         jPanelView.setLayout(jPanelViewLayout);
         jPanelViewLayout.setHorizontalGroup(
@@ -1102,8 +1129,13 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(jPanelViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPaneViewAllEmployees, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanelViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelViewLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelViewLayout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(jButton1)))
                 .addGap(0, 385, Short.MAX_VALUE))
         );
         jPanelViewLayout.setVerticalGroup(
@@ -1115,7 +1147,10 @@ public class MainFrame extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jScrollPaneViewAllEmployees, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelViewLayout.createSequentialGroup()
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addComponent(jButton1)))
                 .addContainerGap(241, Short.MAX_VALUE))
         );
 
@@ -1540,6 +1575,13 @@ public class MainFrame extends javax.swing.JFrame {
         jDialogSearchEdit.setVisible(false);
     }//GEN-LAST:event_jButtonEditCancelActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String[] columnNames = {"Employee Number", "First Name", "Last Name", "Sex", "Work Location", "Deduction Rate"};
+        jTableViewAll = new javax.swing.JTable (theHashTable.exportContents(), columnNames);
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1580,6 +1622,7 @@ public class MainFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroupAddSex;
     private javax.swing.ButtonGroup buttonGroupEmployeeType;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButtonAddConfirmNo;
@@ -1676,7 +1719,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPaneViewAllEmployees;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTabbedPane jTabbedPaneMain;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTableViewAll;
     private javax.swing.JTextArea jTextAreaHomeCompanyInfo;
     private javax.swing.JTextArea jTextAreaSearchDisplayEmployee;
     private javax.swing.JTextField jTextFieldAddDeductRate;
