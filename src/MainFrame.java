@@ -33,13 +33,13 @@ public class MainFrame extends javax.swing.JFrame {
         buttonGroupAddSex = new javax.swing.ButtonGroup();
         jDialogAddConfirm = new javax.swing.JDialog();
         jButtonAddConfirmYes = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        jLabelAreYouSure = new javax.swing.JLabel();
         jLabelAddConfirmEmpNum = new javax.swing.JLabel();
         jLabelAddConfirmName = new javax.swing.JLabel();
         jLabelAddConfirmSex = new javax.swing.JLabel();
         jLabelAddConfirmWorkLoc = new javax.swing.JLabel();
         jLabelAddConfirmDeductRate = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jLabelAreYouSureNote = new javax.swing.JLabel();
         jButtonAddConfirmNo = new javax.swing.JButton();
         jLabelAddConfirmSalary = new javax.swing.JLabel();
         jDialogSearchDeleteConfirm = new javax.swing.JDialog();
@@ -149,19 +149,21 @@ public class MainFrame extends javax.swing.JFrame {
         jMenuItemHelpTutorial = new javax.swing.JMenuItem();
         jMenuItemHelpDocumentation = new javax.swing.JMenuItem();
 
+        jDialogAddConfirm.setBackground(java.awt.Color.white);
         jDialogAddConfirm.setBounds(new java.awt.Rectangle(550, 300, 0, 0));
-        jDialogAddConfirm.setMinimumSize(new java.awt.Dimension(400, 300));
+        jDialogAddConfirm.setMinimumSize(new java.awt.Dimension(648, 400));
+        jDialogAddConfirm.setPreferredSize(new java.awt.Dimension(648, 400));
 
-        jButtonAddConfirmYes.setText("Yes");
+        jButtonAddConfirmYes.setText("OK");
         jButtonAddConfirmYes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pressedAddConfirmYes(evt);
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel4.setText("Are you sure you want to add this employee?");
-        jLabel4.setName("Confirm Employee"); // NOI18N
+        jLabelAreYouSure.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabelAreYouSure.setText("Are you sure you want to add this employee?");
+        jLabelAreYouSure.setName("Confirm Employee"); // NOI18N
 
         jLabelAddConfirmEmpNum.setText("jLabel5");
 
@@ -173,9 +175,10 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabelAddConfirmDeductRate.setText("jLabel6");
 
-        jLabel5.setText("You will be able to to edit or remove this employee later on.");
+        jLabelAreYouSureNote.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelAreYouSureNote.setText("The employee number will be permanent, however other fields may be edited.");
 
-        jButtonAddConfirmNo.setText("No");
+        jButtonAddConfirmNo.setText("Cancel");
         jButtonAddConfirmNo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pressedAddConfirmNo(evt);
@@ -183,6 +186,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jLabelAddConfirmSalary.setText("jLabel6");
+        jLabelAddConfirmSalary.setMinimumSize(new java.awt.Dimension(500, 300));
 
         javax.swing.GroupLayout jDialogAddConfirmLayout = new javax.swing.GroupLayout(jDialogAddConfirm.getContentPane());
         jDialogAddConfirm.getContentPane().setLayout(jDialogAddConfirmLayout);
@@ -193,24 +197,21 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jDialogAddConfirmLayout.createSequentialGroup()
                         .addGroup(jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5))
+                            .addComponent(jLabelAreYouSure)
+                            .addComponent(jLabelAreYouSureNote))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jDialogAddConfirmLayout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addGroup(jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelAddConfirmName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jDialogAddConfirmLayout.createSequentialGroup()
-                                .addGroup(jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jLabelAddConfirmSex, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLabelAddConfirmWorkLoc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLabelAddConfirmDeductRate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addComponent(jLabelAddConfirmEmpNum, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabelAddConfirmName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(jDialogAddConfirmLayout.createSequentialGroup()
-                                .addComponent(jLabelAddConfirmSalary, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 30, Short.MAX_VALUE)))))
+                                .addGroup(jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabelAddConfirmSalary, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+                                    .addComponent(jLabelAddConfirmEmpNum, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabelAddConfirmDeductRate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabelAddConfirmWorkLoc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabelAddConfirmSex, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogAddConfirmLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -223,13 +224,13 @@ public class MainFrame extends javax.swing.JFrame {
             jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogAddConfirmLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(jLabel4)
+                .addComponent(jLabelAreYouSure)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5)
+                .addComponent(jLabelAreYouSureNote)
                 .addGap(18, 18, 18)
-                .addGroup(jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelAddConfirmEmpNum)
-                    .addComponent(jLabelAddConfirmName))
+                .addComponent(jLabelAddConfirmEmpNum)
+                .addGap(12, 12, 12)
+                .addComponent(jLabelAddConfirmName)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabelAddConfirmSex)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -237,8 +238,8 @@ public class MainFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabelAddConfirmDeductRate)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabelAddConfirmSalary)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                .addComponent(jLabelAddConfirmSalary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addGroup(jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonAddConfirmYes)
                     .addComponent(jButtonAddConfirmNo))
@@ -299,6 +300,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(21, 21, 21))
         );
 
+        jDialogSearchEdit.setBackground(java.awt.Color.white);
         jDialogSearchEdit.setMinimumSize(new java.awt.Dimension(900, 900));
 
         jLabelAddHeading1.setFont(new java.awt.Font("Franklin Gothic Medium Cond", 0, 24)); // NOI18N
@@ -307,6 +309,9 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelAddEmployeeNumber1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelAddEmployeeNumber1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelAddEmployeeNumber1.setText("Employee Number:");
+
+        jTextFieldEditEmployeeNumber.setEditable(false);
+        jTextFieldEditEmployeeNumber.setEnabled(false);
 
         jLabelAddFirstName1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelAddFirstName1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -1599,8 +1604,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabelAddConfirmDeductRate;
@@ -1632,6 +1635,8 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelAddSex1;
     private javax.swing.JLabel jLabelAddWorkLoc;
     private javax.swing.JLabel jLabelAddWorkLoc1;
+    private javax.swing.JLabel jLabelAreYouSure;
+    private javax.swing.JLabel jLabelAreYouSureNote;
     private javax.swing.JLabel jLabelHomeCurrentCEO;
     private javax.swing.JLabel jLabelHomeEmployeeCount;
     private javax.swing.JLabel jLabelHomeHeading;

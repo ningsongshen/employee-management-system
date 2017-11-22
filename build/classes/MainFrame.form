@@ -8,11 +8,17 @@
     </Component>
     <Container class="javax.swing.JDialog" name="jDialogAddConfirm">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" id="white" palette="1" red="ff" type="palette"/>
+        </Property>
         <Property name="bounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
           <Rectangle value="[550, 300, 0, 0]"/>
         </Property>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[400, 300]"/>
+          <Dimension value="[648, 400]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[648, 400]"/>
         </Property>
       </Properties>
 
@@ -24,29 +30,24 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelAreYouSure" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelAreYouSureNote" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
-                      <Group type="102" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabelAddConfirmName" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jLabelAddConfirmSex" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jLabelAddConfirmWorkLoc" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jLabelAddConfirmDeductRate" alignment="0" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Component id="jLabelAddConfirmEmpNum" min="-2" pref="82" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jLabelAddConfirmSalary" alignment="0" pref="600" max="32767" attributes="0"/>
+                                      <Component id="jLabelAddConfirmEmpNum" alignment="0" min="-2" pref="348" max="-2" attributes="0"/>
+                                      <Component id="jLabelAddConfirmDeductRate" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jLabelAddConfirmWorkLoc" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jLabelAddConfirmSex" alignment="0" max="32767" attributes="0"/>
                                   </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jLabelAddConfirmName" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="jLabelAddConfirmSalary" min="-2" pref="352" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="30" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -66,14 +67,13 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelAreYouSure" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelAreYouSureNote" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabelAddConfirmEmpNum" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabelAddConfirmName" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="jLabelAddConfirmEmpNum" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                  <Component id="jLabelAddConfirmName" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jLabelAddConfirmSex" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -82,7 +82,7 @@
                   <Component id="jLabelAddConfirmDeductRate" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jLabelAddConfirmSalary" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="65" max="32767" attributes="0"/>
+                  <EmptySpace pref="39" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jButtonAddConfirmYes" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jButtonAddConfirmNo" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -95,13 +95,13 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="jButtonAddConfirmYes">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Yes"/>
+            <Property name="text" type="java.lang.String" value="OK"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pressedAddConfirmYes"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="jLabelAreYouSure">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="11" style="1"/>
@@ -135,14 +135,17 @@
             <Property name="text" type="java.lang.String" value="jLabel6"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JLabel" name="jLabelAreYouSureNote">
           <Properties>
-            <Property name="text" type="java.lang.String" value="You will be able to to edit or remove this employee later on."/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="The employee number will be permanent, however other fields may be edited."/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonAddConfirmNo">
           <Properties>
-            <Property name="text" type="java.lang.String" value="No"/>
+            <Property name="text" type="java.lang.String" value="Cancel"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pressedAddConfirmNo"/>
@@ -151,6 +154,9 @@
         <Component class="javax.swing.JLabel" name="jLabelAddConfirmSalary">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel6"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[500, 300]"/>
+            </Property>
           </Properties>
         </Component>
       </SubComponents>
@@ -237,6 +243,9 @@
     </Container>
     <Container class="javax.swing.JDialog" name="jDialogSearchEdit">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" id="white" palette="1" red="ff" type="palette"/>
+        </Property>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[900, 900]"/>
         </Property>
@@ -443,6 +452,10 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextFieldEditEmployeeNumber">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="enabled" type="boolean" value="false"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextFieldEditFirstName">
         </Component>
