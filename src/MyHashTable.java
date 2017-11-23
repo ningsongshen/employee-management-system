@@ -139,9 +139,14 @@ public class MyHashTable {
     public String[][] exportContents() {
         // Returns an two dimensional array with employee numbers and their information
         // To be used with the table in the view all jframe
+        
+        // A counter to determine the number of rows we need
         int employeesAdded = 0;
+        
+        // Create the two dimensional array to be returned, employee count is the number of employees, 6 is number of infos
         String[][] allEmployees = new String[employeeCount][6];
 
+        // go through the hashtable
         for (int i = 0; i < buckets.length; i++) {
             int listSize = buckets[i].size();
             if (listSize == 0) {

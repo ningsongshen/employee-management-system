@@ -12,6 +12,7 @@ import java.lang.*;
 public class MainFrame extends javax.swing.JFrame {
 
     MyHashTable theHashTable = new MyHashTable(2);
+
     /**
      * Creates new form main_frame
      */
@@ -114,6 +115,7 @@ public class MainFrame extends javax.swing.JFrame {
         jComboBoxAddWorkLoc = new javax.swing.JComboBox();
         jComboBoxAddSex = new javax.swing.JComboBox();
         jLabelAddEmployeeNumberError = new javax.swing.JLabel();
+        jFileChooser1 = new javax.swing.JFileChooser();
         jPanelSearch = new javax.swing.JPanel();
         jLabelSearchHeading = new javax.swing.JLabel();
         jLabelSearchEmployeeNumber = new javax.swing.JLabel();
@@ -831,26 +833,28 @@ public class MainFrame extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jComboBoxAddSex, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanelAddLayout.createSequentialGroup()
+                        .addGap(35, 35, 35)
                         .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanelAddLayout.createSequentialGroup()
-                                .addGap(59, 59, 59)
-                                .addComponent(jLabelAddWorkLoc)
-                                .addGap(18, 18, 18)
-                                .addComponent(jComboBoxAddWorkLoc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(19, 19, 19)
+                                .addComponent(jLabelAddFullTimeEmployeeYearlySalary)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jTextFieldAddFullTimeEmployeeYearlySalary, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jRadioButtonAddFullTimeEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanelAddLayout.createSequentialGroup()
-                                .addGap(35, 35, 35)
                                 .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanelAddLayout.createSequentialGroup()
-                                        .addGap(19, 19, 19)
-                                        .addComponent(jLabelAddFullTimeEmployeeYearlySalary)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jTextFieldAddFullTimeEmployeeYearlySalary, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jRadioButtonAddFullTimeEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(24, 24, 24)
+                                        .addComponent(jLabelAddWorkLoc)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jComboBoxAddWorkLoc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanelAddLayout.createSequentialGroup()
                                         .addComponent(jLabelAddDeductRate)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jTextFieldAddDeductRate, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(101, 101, 101)
+                                        .addComponent(jTextFieldAddDeductRate, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jFileChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanelAddLayout.createSequentialGroup()
                                 .addGap(48, 48, 48)
@@ -873,7 +877,7 @@ public class MainFrame extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jTextFieldAddPartTimeEmployeeWeeksPerYear, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addComponent(jRadioButtonAddPartTimeEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(474, Short.MAX_VALUE))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
         jPanelAddLayout.setVerticalGroup(
             jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -898,14 +902,17 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jLabelAddSex)
                     .addComponent(jComboBoxAddSex, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelAddWorkLoc)
-                    .addComponent(jComboBoxAddWorkLoc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelAddDeductRate)
-                    .addComponent(jTextFieldAddDeductRate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(70, 70, 70)
+                .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelAddLayout.createSequentialGroup()
+                        .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabelAddWorkLoc)
+                            .addComponent(jComboBoxAddWorkLoc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabelAddDeductRate)
+                            .addComponent(jTextFieldAddDeductRate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jFileChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelAddLayout.createSequentialGroup()
                         .addComponent(jRadioButtonAddFullTimeEmployee)
@@ -927,7 +934,7 @@ public class MainFrame extends javax.swing.JFrame {
                         .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabelAddPartTimeEmployeeWeeksPerYear)
                             .addComponent(jTextFieldAddPartTimeEmployeeWeeksPerYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 214, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButtonAddSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22))
         );
@@ -1332,6 +1339,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jRadioButtonAddPartTimeEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonAddPartTimeEmployeeActionPerformed
+       // Set the full time employee fields to disabled to prevent editing
         jTextFieldAddFullTimeEmployeeYearlySalary.setEnabled(false);
         jTextFieldAddPartTimeEmployeeHourlyWage.setEnabled(true);
         jTextFieldAddPartTimeEmployeeHoursPerWeek.setEnabled(true);
@@ -1339,6 +1347,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButtonAddPartTimeEmployeeActionPerformed
 
     private void jRadioButtonAddFullTimeEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonAddFullTimeEmployeeActionPerformed
+       // Set the part time employee fields to disabled to prevent editing
         jTextFieldAddFullTimeEmployeeYearlySalary.setEnabled(true);
         jTextFieldAddPartTimeEmployeeHourlyWage.setEnabled(false);
         jTextFieldAddPartTimeEmployeeHoursPerWeek.setEnabled(false);
@@ -1355,11 +1364,45 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jMenuItemFileSaveAsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFileSaveAsActionPerformed
         // TODO add your handling code here:
+        // Open a file chooser dialog
+        javax.swing.JFileChooser fileChooser = new javax.swing.JFileChooser();
+        fileChooser.setDialogTitle("Specify a file to save");
+
+        // Set the file chooser to save
+        int userSelection = fileChooser.showSaveDialog(jFileChooser1);
+        
+        // Create a textarea to prepare the text to be written to the file. JTextcomponents have the ability to write to a file, and a text area is a JTextComponent
+        javax.swing.JTextArea asdf = new javax.swing.JTextArea();
+        
+        // Sample text
+        asdf.setText("qwerw");
+        
+        
+        if (userSelection == javax.swing.JFileChooser.APPROVE_OPTION) {
+            // If the user says ok to saving the file
+            java.io.File fileToSave = fileChooser.getSelectedFile();
+            if (fileToSave == null) {
+                return;
+            }
+            
+            // Append .txt to the file name
+            if (fileToSave.getName().toLowerCase().endsWith(".txt")) {
+                fileToSave = new java.io.File(fileToSave.getParentFile(), fileToSave.getName() + ".txt");
+            }
+            try {
+                // Try saving the file, then opening the file
+                asdf.write(new java.io.OutputStreamWriter(new java.io.FileOutputStream(fileToSave),
+                        "utf-8"));
+                java.awt.Desktop.getDesktop().open(fileToSave);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }//GEN-LAST:event_jMenuItemFileSaveAsActionPerformed
 
     private void jMenuItemFileExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFileExitActionPerformed
-        setVisible(false); //you can't see me!
-        dispose(); //Destroy the JFrame object
+        setVisible(false); // you can't see me!
+        dispose(); // Destroy the JFrame object
     }//GEN-LAST:event_jMenuItemFileExitActionPerformed
 
     private void jMenuWindowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuWindowActionPerformed
@@ -1410,6 +1453,8 @@ public class MainFrame extends javax.swing.JFrame {
             int weeksPerYear = Integer.parseInt(jTextFieldAddPartTimeEmployeeWeeksPerYear.getText());
             jLabelAddConfirmSalary.setText("Hourly Pay: " + hourlyWage + " Hours per Week: " + hoursPerWeek + " Weeks per Year: " + weeksPerYear);
         }
+        
+        // Display the confirmation dialiog
         jLabelAddConfirmEmpNum.setText("Employee Number: " + Integer.toString(empNum));
         jLabelAddConfirmName.setText("Name: " + firstName + " " + lastName);
         jLabelAddConfirmSex.setText("Sex: " + sex);
@@ -1424,7 +1469,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_pressedAddConfirmNo
 
     private void pressedAddConfirmYes(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pressedAddConfirmYes
-
+        // If when adding an employee the user clicks yes to the confirmation dialog, add the employee to the hashtable.
         if (jRadioButtonAddFullTimeEmployee.isSelected() == true) {
             int empNum = Integer.parseInt(jTextFieldAddEmployeeNumber.getText());
 
@@ -1482,13 +1527,13 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonSearchDeleteConfirmNopressedAddConfirmNo(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchDeleteConfirmNopressedAddConfirmNo
         // TODO add your handling code here:
-        jDialogSearchDeleteConfirm.setVisible(false); 
+        jDialogSearchDeleteConfirm.setVisible(false);
     }//GEN-LAST:event_jButtonSearchDeleteConfirmNopressedAddConfirmNo
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         jDialogSearchDeleteConfirm.setVisible(true);
-        
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jComboBoxEditWorkLocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxEditWorkLocActionPerformed
@@ -1538,7 +1583,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonSearchEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchEditActionPerformed
         // TODO add your handling code here:
-        jDialogSearchEdit.setVisible(true); 
+        jDialogSearchEdit.setVisible(true);
         EmployeeInfo empSearched = theHashTable.getEmployee(Integer.parseInt(jTextFieldSearchEmployeeNumber.getText()));
         jTextFieldEditEmployeeNumber.setText(Integer.toString(empSearched.getEmpNum()));
         jTextFieldEditFirstName.setText(empSearched.getFirstName());
@@ -1553,7 +1598,7 @@ public class MainFrame extends javax.swing.JFrame {
             jTextFieldEditPartTimeEmployeeHourlyWage.setEnabled(false);
             jTextFieldEditPartTimeEmployeeHoursPerWeek.setEnabled(false);
             jTextFieldEditPartTimeEmployeeWeeksPerYear.setEnabled(false);
-            FullTimeEmployee FTEmpSearched = (FullTimeEmployee) empSearched; 
+            FullTimeEmployee FTEmpSearched = (FullTimeEmployee) empSearched;
             jTextFieldEditFullTimeEmployeeYearlySalary.setText(Double.toString(FTEmpSearched.getYearlySalary()));
         } else {
             jRadioButtonEditFullTimeEmployee.setSelected(false);
@@ -1642,6 +1687,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JDialog jDialogAddConfirm;
     private javax.swing.JDialog jDialogSearchDeleteConfirm;
     private javax.swing.JDialog jDialogSearchEdit;
+    private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
