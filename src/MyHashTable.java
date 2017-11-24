@@ -8,6 +8,14 @@ public class MyHashTable {
     // EmployeeInfo object.
     private ArrayList<EmployeeInfo>[] buckets;
     private int employeeCount;
+    private double yearlyPayroll;
+    
+    public int getEmployeeCount(){
+        return employeeCount;
+    }
+    public double getYearlyPayroll(){
+        return yearlyPayroll;
+    }
     
     // CONSTRUCTOR
     public MyHashTable(int howManyBuckets) {
@@ -52,9 +60,17 @@ public class MyHashTable {
 
         // Add the employee to the array based on the calcBucket result
         buckets[calcBucket(theEmployee.getEmpNum())].add(theEmployee);
-        
+
         // Increase tally of number of employees
         employeeCount++;
+        
+        if (theEmployee instanceof FullTimeEmployee) {
+            FullTimeEmployee theFTEmployee = (FullTimeEmployee) theEmployee;
+            yearlyPayroll += theFTEmployee.calcGrossAnnualIncome();
+        } else {
+            PartTimeEmployee thePTEmployee = (PartTimeEmployee) theEmployee;
+            yearlyPayroll += thePTEmployee.calcGrossAnnualIncome();
+        }
         
         // Search for the employee number in the array to confirm it has been
         // added.
@@ -64,7 +80,7 @@ public class MyHashTable {
         } else {
             return false;
         }
-        
+       
     }
 
     public int searchByEmployeeNumber(int employeeNum) {
