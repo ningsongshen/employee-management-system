@@ -183,4 +183,47 @@ public class MyHashTable {
         } // end for
         return allEmployees;
     } // end method exportContents
+
+    public String[][] exportHashTable() {
+        // returns a 2D array of all the data in the hash table
+        // A counter to determine the number of employees we've added so far
+        int employeesAdded = 0;
+        
+        // Create the two dimensional array to be returned, employee count is the number of employees, 11 is number of info types
+        String[][] allEmployees = new String[employeeCount][11];
+
+        // Run through the hashtable
+        for (int i = 0; i < buckets.length; i++) {
+            int listSize = buckets[i].size();
+            if (listSize == 0) {
+            } else {
+                for (int j = 0; j < listSize; j++) {
+                    EmployeeInfo theEmp = buckets[i].get(j);
+                    // Conditional data collection depending on employee type. The employee type is the first data point on each row
+                    if (theEmp instanceof FullTimeEmployee) {
+                        FullTimeEmployee theFTEmp = (FullTimeEmployee) theEmp;
+                        allEmployees[employeesAdded][0] = "FTE";
+                        allEmployees[employeesAdded][7] = Double.toString(theFTEmp.getYearlySalary());
+                    } else {
+                        PartTimeEmployee thePTEmp = (PartTimeEmployee) theEmp;
+                        allEmployees[employeesAdded][0] = "PTE";
+                        allEmployees[employeesAdded][8] = Double.toString(thePTEmp.getHourlyWage());
+                        allEmployees[employeesAdded][9] = Double.toString(thePTEmp.getHoursPerWeek());
+                        allEmployees[employeesAdded][10] = Integer.toString(thePTEmp.getWeeksPerYear());
+                    }
+                    allEmployees[employeesAdded][1] = Integer.toString(theEmp.getEmpNum());
+                    allEmployees[employeesAdded][2] = theEmp.getFirstName();
+                    allEmployees[employeesAdded][3] = theEmp.getLastName();
+                    allEmployees[employeesAdded][4] = Integer.toString(theEmp.getSex());
+                    allEmployees[employeesAdded][5] = Integer.toString(theEmp.getWorkLoc());
+                    allEmployees[employeesAdded][6] = Double.toString(theEmp.getDeductRate());
+                    employeesAdded++;
+                } // end for
+
+            } // end else
+
+        } // end for
+        return allEmployees;
+    } // end method exportHashTable
+    
 } // end class MyHashTable

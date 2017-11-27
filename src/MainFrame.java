@@ -655,7 +655,7 @@ public class MainFrame extends javax.swing.JFrame {
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jButtonHomeSaveCompanyInfo)))
-                        .addContainerGap(807, Short.MAX_VALUE))
+                        .addContainerGap(775, Short.MAX_VALUE))
                     .addGroup(jPanelHomeLayout.createSequentialGroup()
                         .addGroup(jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanelHomeLayout.createSequentialGroup()
@@ -663,7 +663,7 @@ public class MainFrame extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jButton4))
                             .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 694, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 462, Short.MAX_VALUE))))
+                        .addGap(0, 430, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelHomeLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel3)
@@ -674,9 +674,9 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelHomeLayout.setVerticalGroup(
             jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelHomeLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabelHomeHeading)
                 .addGap(18, 18, 18)
+                .addComponent(jLabelHomeHeading)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -698,7 +698,7 @@ public class MainFrame extends javax.swing.JFrame {
                         .addGroup(jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButtonHomeExit)
                             .addComponent(jButton4))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 246, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 261, Short.MAX_VALUE)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanelHomeLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -895,7 +895,7 @@ public class MainFrame extends javax.swing.JFrame {
                                 .addComponent(jLabelAddEmployeeNumberError)))
                         .addGap(277, 277, 277)
                         .addComponent(jFileChooser, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelAddLayout.setVerticalGroup(
             jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -956,7 +956,7 @@ public class MainFrame extends javax.swing.JFrame {
                             .addComponent(jTextFieldAddPartTimeEmployeeWeeksPerYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(50, 50, 50)
                 .addComponent(jButtonAddSubmit)
-                .addContainerGap(207, Short.MAX_VALUE))
+                .addContainerGap(222, Short.MAX_VALUE))
         );
 
         jTabbedPaneMain.addTab("Add", jPanelAdd);
@@ -1044,7 +1044,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jLabelSearchHeading)
                     .addComponent(jScrollPane2)
                     .addComponent(jButtonSearchSubmit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(503, Short.MAX_VALUE))
+                .addContainerGap(471, Short.MAX_VALUE))
         );
         jPanelSearchLayout.setVerticalGroup(
             jPanelSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1061,7 +1061,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jButtonSearchSubmit)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 432, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 447, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanelSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonSearchEdit)
@@ -1121,6 +1121,8 @@ public class MainFrame extends javax.swing.JFrame {
         jTableViewAll.setEnabled(false);
         jScrollPaneViewAllEmployees.setViewportView(jTableViewAll);
 
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+
         jLabel12.setText("Use tiles to display employee information if <br/>capable of doing so with code to repeat the tiles");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -1166,7 +1168,7 @@ public class MainFrame extends javax.swing.JFrame {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButtonViewAllUpdateTable))
                         .addComponent(jScrollPaneViewAllEmployees, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 746, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 410, Short.MAX_VALUE))
+                .addGap(0, 378, Short.MAX_VALUE))
         );
         jPanelViewLayout.setVerticalGroup(
             jPanelViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1174,15 +1176,15 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPaneViewAllEmployees, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPaneViewAllEmployees, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanelViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelViewLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
+                        .addGap(27, 27, 27)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanelViewLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
+                        .addGap(19, 19, 19)
                         .addComponent(jButtonViewAllUpdateTable)))
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addContainerGap(138, Short.MAX_VALUE))
         );
 
         jTabbedPaneMain.addTab("View All", jPanelView);
@@ -1309,7 +1311,7 @@ public class MainFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPaneMain, javax.swing.GroupLayout.DEFAULT_SIZE, 1280, Short.MAX_VALUE)
+            .addComponent(jTabbedPaneMain, javax.swing.GroupLayout.DEFAULT_SIZE, 1194, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1403,11 +1405,18 @@ public class MainFrame extends javax.swing.JFrame {
         int userSelection = fileChooser.showSaveDialog(jFileChooser);
         
         // Create a textarea to prepare the text to be written to the file. JTextcomponents have the ability to write to a file, and a text area is a JTextComponent
-        javax.swing.JTextArea asdf = new javax.swing.JTextArea();
+        javax.swing.JTextArea hashTableData = new javax.swing.JTextArea();
         
-        // Sample text
-        asdf.setText("qwerw");
-        
+        // Converting the exported hashTableArray into strings that can be printed into a txt file
+        String[][] hashTableArray = theHashTable.exportHashTable();
+        // Run through the entire has table in the same way as display contents and use # as separator
+        // NOTE: unused indices are filled in with null
+        for (int i = 0; i < theHashTable.getEmployeeCount(); i++){
+            for (int j = 0; j < 11; j++) {
+                hashTableData.append(hashTableArray[i][j] + "/");
+            }
+             hashTableData.append("\n");
+        }
         
         if (userSelection == javax.swing.JFileChooser.APPROVE_OPTION) {
             // If the user says ok to saving the file
@@ -1415,14 +1424,16 @@ public class MainFrame extends javax.swing.JFrame {
             if (fileToSave == null) {
                 return;
             }
-            
             // Append .txt to the file name
-            if (fileToSave.getName().toLowerCase().endsWith(".txt")) {
-                fileToSave = new java.io.File(fileToSave.getParentFile(), fileToSave.getName() + ".txt");
-            }
+            
+            // Automatically save the file as a txt file
+            fileToSave = new java.io.File(fileToSave.getParentFile(), fileToSave.getName() + ".txt");
+
+            // >>> WHY DO WE NEED TO OPEN THE FILE? <<<
+            
             try {
                 // Try saving the file, then opening the file
-                asdf.write(new java.io.OutputStreamWriter(new java.io.FileOutputStream(fileToSave),
+                hashTableData.write(new java.io.OutputStreamWriter(new java.io.FileOutputStream(fileToSave),
                         "utf-8"));
                 java.awt.Desktop.getDesktop().open(fileToSave);
             } catch (Exception e) {
