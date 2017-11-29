@@ -13,11 +13,13 @@ public class MainFrame extends javax.swing.JFrame {
 
     MyHashTable theHashTable = new MyHashTable(2);
 
+
     /**
      * Creates new form main_frame
      */
     public MainFrame() {
         initComponents();
+        this.setDefaultCloseOperation(javax.swing.JFrame.DISPOSE_ON_CLOSE);
     }
 
     /**
@@ -80,22 +82,23 @@ public class MainFrame extends javax.swing.JFrame {
         jButtonOpenConfirmCancel = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jDialogExitConfrirm = new javax.swing.JDialog();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jButtonExitConfirmExit = new javax.swing.JButton();
+        jButtonExitConfirmCancel = new javax.swing.JButton();
         jTabbedPaneMain = new javax.swing.JTabbedPane();
         jPanelHome = new javax.swing.JPanel();
         jLabelHomeHeading = new javax.swing.JLabel();
         jLabelHomeEmployeeCount = new javax.swing.JLabel();
         jLabelHomePayrollTotal = new javax.swing.JLabel();
-        jLabelHomeWorkforceHours = new javax.swing.JLabel();
-        jLabelHomeCurrentCEO = new javax.swing.JLabel();
-        jButtonHomeExit = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextAreaHomeCompanyInfo = new javax.swing.JTextArea();
         jLabel3 = new javax.swing.JLabel();
-        jButtonHomeSaveCompanyInfo = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
         jPanelAdd = new javax.swing.JPanel();
         jLabelAddHeading = new javax.swing.JLabel();
         jLabelAddEmployeeNumber = new javax.swing.JLabel();
@@ -137,8 +140,6 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelView = new javax.swing.JPanel();
         jScrollPaneViewAllEmployees = new javax.swing.JScrollPane();
         jTableViewAll = new javax.swing.JTable();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jButtonViewAllUpdateTable = new javax.swing.JButton();
         jMenuBarMenu = new javax.swing.JMenuBar();
@@ -615,6 +616,53 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jDialogExitConfrirm.setMinimumSize(new java.awt.Dimension(400, 100));
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel9.setText("Are you sure you want to exit the program?");
+
+        jLabel10.setText("Anything not saved will be lost.");
+
+        jButtonExitConfirmExit.setText("Exit");
+        jButtonExitConfirmExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonExitConfirmExitActionPerformed(evt);
+            }
+        });
+
+        jButtonExitConfirmCancel.setText("Cancel");
+
+        javax.swing.GroupLayout jDialogExitConfrirmLayout = new javax.swing.GroupLayout(jDialogExitConfrirm.getContentPane());
+        jDialogExitConfrirm.getContentPane().setLayout(jDialogExitConfrirmLayout);
+        jDialogExitConfrirmLayout.setHorizontalGroup(
+            jDialogExitConfrirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogExitConfrirmLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(jDialogExitConfrirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel9))
+                .addContainerGap(127, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogExitConfrirmLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonExitConfirmExit)
+                .addGap(39, 39, 39)
+                .addComponent(jButtonExitConfirmCancel)
+                .addGap(52, 52, 52))
+        );
+        jDialogExitConfrirmLayout.setVerticalGroup(
+            jDialogExitConfrirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogExitConfrirmLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(jLabel9)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                .addGroup(jDialogExitConfrirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonExitConfirmExit)
+                    .addComponent(jButtonExitConfirmCancel))
+                .addGap(40, 40, 40))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -634,28 +682,13 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabelHomeHeading.setFont(new java.awt.Font("Franklin Gothic Medium Cond", 0, 36)); // NOI18N
         jLabelHomeHeading.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabelHomeHeading.setText("CompanyA Employee Database");
+        jLabelHomeHeading.setText("Company Employee Database");
 
         jLabelHomeEmployeeCount.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabelHomeEmployeeCount.setText("100 Employees");
+        jLabelHomeEmployeeCount.setText("Employees: ");
 
         jLabelHomePayrollTotal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabelHomePayrollTotal.setText("$1,000,000 yearly payroll");
-
-        jLabelHomeWorkforceHours.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabelHomeWorkforceHours.setText("300 weekly hours");
-
-        jLabelHomeCurrentCEO.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabelHomeCurrentCEO.setText("Current CEO: Asdf Asdf");
-
-        jButtonHomeExit.setBackground(new java.awt.Color(0, 0, 0));
-        jButtonHomeExit.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonHomeExit.setText("Exit");
-        jButtonHomeExit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonHomeExitActionPerformed(evt);
-            }
-        });
+        jLabelHomePayrollTotal.setText("Yearly Payroll: $0");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -668,15 +701,6 @@ public class MainFrame extends javax.swing.JFrame {
             .addGap(0, 38, Short.MAX_VALUE)
         );
 
-        jButton4.setBackground(new java.awt.Color(0, 0, 0));
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Change System");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-
         jLabel2.setText("Company Information:");
 
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -688,52 +712,42 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel3.setText("Powered by");
 
-        jButtonHomeSaveCompanyInfo.setBackground(new java.awt.Color(0, 0, 0));
-        jButtonHomeSaveCompanyInfo.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonHomeSaveCompanyInfo.setText("Save Info");
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel8.setText("Employee Statistics");
 
         javax.swing.GroupLayout jPanelHomeLayout = new javax.swing.GroupLayout(jPanelHome);
         jPanelHome.setLayout(jPanelHomeLayout);
         jPanelHomeLayout.setHorizontalGroup(
             jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelHomeLayout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addGroup(jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelHomeEmployeeCount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanelHomeLayout.createSequentialGroup()
-                        .addGroup(jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelHomePayrollTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanelHomeLayout.createSequentialGroup()
-                                .addGroup(jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabelHomeWorkforceHours, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabelHomeCurrentCEO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(40, 40, 40)))
-                        .addGap(275, 275, 275))
-                    .addGroup(jPanelHomeLayout.createSequentialGroup()
-                        .addComponent(jLabelHomeHeading, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(102, 102, 102))
-                    .addGroup(jPanelHomeLayout.createSequentialGroup()
-                        .addGroup(jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addGroup(jPanelHomeLayout.createSequentialGroup()
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButtonHomeSaveCompanyInfo)))
-                        .addContainerGap(958, Short.MAX_VALUE))
-                    .addGroup(jPanelHomeLayout.createSequentialGroup()
-                        .addGroup(jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelHomeLayout.createSequentialGroup()
-                                .addComponent(jButtonHomeExit)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton4))
-                            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 694, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 613, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelHomeLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50))
+            .addGroup(jPanelHomeLayout.createSequentialGroup()
+                .addGap(64, 64, 64)
+                .addGroup(jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelHomeEmployeeCount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanelHomeLayout.createSequentialGroup()
+                        .addComponent(jLabelHomePayrollTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(275, 275, 275)))
+                .addContainerGap())
+            .addGroup(jPanelHomeLayout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addGroup(jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelHomeLayout.createSequentialGroup()
+                        .addComponent(jLabelHomeHeading, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(102, 102, 102))
+                    .addGroup(jPanelHomeLayout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addContainerGap(1199, Short.MAX_VALUE))
+                    .addGroup(jPanelHomeLayout.createSequentialGroup()
+                        .addGroup(jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jScrollPane1)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 694, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanelHomeLayout.setVerticalGroup(
             jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -743,30 +757,19 @@ public class MainFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonHomeSaveCompanyInfo))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel8)
                 .addGap(18, 18, 18)
                 .addComponent(jLabelHomeEmployeeCount)
                 .addGap(18, 18, 18)
+                .addComponent(jLabelHomePayrollTotal)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 341, Short.MAX_VALUE)
                 .addGroup(jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelHomeLayout.createSequentialGroup()
-                        .addComponent(jLabelHomePayrollTotal)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabelHomeWorkforceHours)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabelHomeCurrentCEO)
-                        .addGap(36, 36, 36)
-                        .addGroup(jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButtonHomeExit)
-                            .addComponent(jButton4))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 246, Short.MAX_VALUE)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelHomeLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel3)))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(27, 27, 27))
         );
 
@@ -1180,27 +1183,6 @@ public class MainFrame extends javax.swing.JFrame {
         jTableViewAll.setEnabled(false);
         jScrollPaneViewAllEmployees.setViewportView(jTableViewAll);
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel12.setText("Use tiles to display employee information if <br/>capable of doing so with code to repeat the tiles");
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(71, 71, 71))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(27, Short.MAX_VALUE))
-        );
-
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Franklin Gothic Medium Cond", 0, 24)); // NOI18N
         jLabel1.setText("View All");
@@ -1222,11 +1204,8 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(41, 41, 41)
                 .addGroup(jPanelViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanelViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(jPanelViewLayout.createSequentialGroup()
-                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButtonViewAllUpdateTable))
+                    .addGroup(jPanelViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jButtonViewAllUpdateTable)
                         .addComponent(jScrollPaneViewAllEmployees, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 746, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 561, Short.MAX_VALUE))
         );
@@ -1237,14 +1216,9 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPaneViewAllEmployees, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanelViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelViewLayout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelViewLayout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(jButtonViewAllUpdateTable)))
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addGap(19, 19, 19)
+                .addComponent(jButtonViewAllUpdateTable)
+                .addContainerGap(208, Short.MAX_VALUE))
         );
 
         jTabbedPaneMain.addTab("View All", jPanelView);
@@ -1266,6 +1240,11 @@ public class MainFrame extends javax.swing.JFrame {
 
         jMenuItemFileNew.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItemFileNew.setText("New");
+        jMenuItemFileNew.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemFileNewActionPerformed(evt);
+            }
+        });
         jMenuFile.add(jMenuItemFileNew);
 
         jMenuItemFileOpen.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_MASK));
@@ -1423,14 +1402,6 @@ public class MainFrame extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jButtonSearchSubmitActionPerformed
-
-    private void jButtonHomeExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHomeExitActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonHomeExitActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jRadioButtonAddPartTimeEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonAddPartTimeEmployeeActionPerformed
         // Set the full time employee fields to disabled to prevent editing
@@ -1893,6 +1864,16 @@ public class MainFrame extends javax.swing.JFrame {
         jDialogFileOpenConfirm.setVisible(false);
     }//GEN-LAST:event_jButtonOpenConfirmCancelActionPerformed
 
+    private void jMenuItemFileNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFileNewActionPerformed
+        // TODO add your handling code here:
+        MainFrame newFrame = new MainFrame();
+        newFrame.setVisible(true);
+    }//GEN-LAST:event_jMenuItemFileNewActionPerformed
+
+    private void jButtonExitConfirmExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitConfirmExitActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonExitConfirmExitActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1933,20 +1914,20 @@ public class MainFrame extends javax.swing.JFrame {
             public void run() {
 
                 new MainFrame().setVisible(true);
+              
             }
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroupAddSex;
     private javax.swing.ButtonGroup buttonGroupEmployeeType;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButtonAddConfirmNo;
     private javax.swing.JButton jButtonAddConfirmYes;
     private javax.swing.JButton jButtonAddSubmit;
     private javax.swing.JButton jButtonEditCancel;
     private javax.swing.JButton jButtonEditSubmit;
-    private javax.swing.JButton jButtonHomeExit;
-    private javax.swing.JButton jButtonHomeSaveCompanyInfo;
+    private javax.swing.JButton jButtonExitConfirmCancel;
+    private javax.swing.JButton jButtonExitConfirmExit;
     private javax.swing.JButton jButtonOpenConfirmCancel;
     private javax.swing.JButton jButtonOpenConfirmOK;
     private javax.swing.JButton jButtonSearchDelete;
@@ -1960,19 +1941,22 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JComboBox jComboBoxEditSex;
     private javax.swing.JComboBox jComboBoxEditWorkLoc;
     private javax.swing.JDialog jDialogAddConfirm;
+    private javax.swing.JDialog jDialogExitConfrirm;
     private javax.swing.JDialog jDialogFileOpenConfirm;
     private javax.swing.JDialog jDialogSearchDeleteConfirm;
     private javax.swing.JDialog jDialogSearchEdit;
     private javax.swing.JFileChooser jFileChooserOpenFile;
     private javax.swing.JFileChooser jFileChooserSaveFile;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelAddConfirmDeductRate;
     private javax.swing.JLabel jLabelAddConfirmEmpNum;
     private javax.swing.JLabel jLabelAddConfirmName;
@@ -2004,11 +1988,9 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelAddWorkLoc1;
     private javax.swing.JLabel jLabelAreYouSure;
     private javax.swing.JLabel jLabelAreYouSureNote;
-    private javax.swing.JLabel jLabelHomeCurrentCEO;
     private javax.swing.JLabel jLabelHomeEmployeeCount;
     private javax.swing.JLabel jLabelHomeHeading;
     private javax.swing.JLabel jLabelHomePayrollTotal;
-    private javax.swing.JLabel jLabelHomeWorkforceHours;
     private javax.swing.JLabel jLabelSearchEmployeeName;
     private javax.swing.JLabel jLabelSearchEmployeeNumber;
     private javax.swing.JLabel jLabelSearchHeading;
@@ -2029,7 +2011,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemWindowPreferences;
     private javax.swing.JMenu jMenuWindow;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanelAdd;
     private javax.swing.JPanel jPanelHome;
     private javax.swing.JPanel jPanelSearch;
