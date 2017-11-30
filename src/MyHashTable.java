@@ -9,14 +9,15 @@ public class MyHashTable {
     private ArrayList<EmployeeInfo>[] buckets;
     private int employeeCount;
     private double yearlyPayroll;
-    
-    public int getEmployeeCount(){
+
+    public int getEmployeeCount() {
         return employeeCount;
     }
-    public double getYearlyPayroll(){
+
+    public double getYearlyPayroll() {
         return yearlyPayroll;
     }
-    
+
     // CONSTRUCTOR
     public MyHashTable(int howManyBuckets) {
         // Construct the hash table (open hashing/closed addressing) as an array
@@ -63,7 +64,7 @@ public class MyHashTable {
 
         // Increase tally of number of employees
         employeeCount++;
-        
+
         if (theEmployee instanceof FullTimeEmployee) {
             FullTimeEmployee theFTEmployee = (FullTimeEmployee) theEmployee;
             yearlyPayroll += theFTEmployee.calcGrossAnnualIncome();
@@ -71,7 +72,7 @@ public class MyHashTable {
             PartTimeEmployee thePTEmployee = (PartTimeEmployee) theEmployee;
             yearlyPayroll += thePTEmployee.calcGrossAnnualIncome();
         }
-        
+
         // Search for the employee number in the array to confirm it has been
         // added.
         if (searchByEmployeeNumber(theEmployee.getEmpNum()) == theEmployee
@@ -80,7 +81,7 @@ public class MyHashTable {
         } else {
             return false;
         }
-       
+
     }
 
     public int searchByEmployeeNumber(int employeeNum) {
@@ -114,7 +115,7 @@ public class MyHashTable {
                 return removed;
             }
         }
-       
+
         return null;
 
     }
@@ -155,10 +156,10 @@ public class MyHashTable {
     public String[][] exportContents() {
         // Returns an two dimensional array with employee numbers and their information
         // To be used with the table in the view all jframe
-        
+
         // A counter to determine the number of rows we need
         int employeesAdded = 0;
-        
+
         // Create the two dimensional array to be returned, employee count is the number of employees, 6 is number of infos
         String[][] allEmployees = new String[employeeCount][6];
 
@@ -169,11 +170,50 @@ public class MyHashTable {
             } else {
                 for (int j = 0; j < listSize; j++) {
                     EmployeeInfo theEmp = buckets[i].get(j);
+                    String sexText;
+                    String workLocText;
+                    switch (theEmp.getSex()) {
+                        case 1:
+                            sexText = "Male";
+                            break;
+                        case 2:
+                            sexText = "Female";
+                            break;
+                        case 3:
+                            sexText = "Other";
+                            break;
+                        case 4:
+                            sexText = "Prefer not to say";
+                            break;
+                        default:
+                            sexText = "Unknown";
+                            break;
+                    }
+                    switch (theEmp.getWorkLoc()) {
+                        case 1:
+                            workLocText = "Mississauga";
+                            break;
+                        case 2:
+                            workLocText = "Toronto";
+                            break;
+                        case 3:
+                            workLocText = "Ottawa";
+                            break;
+                        case 4:
+                            workLocText = "Halifax";
+                            break;
+                        case 5:
+                            workLocText = "Miami";
+                            break;
+                        default:
+                            workLocText = "Unknown";
+                            break;
+                    }
                     allEmployees[employeesAdded][0] = Integer.toString(theEmp.getEmpNum());
                     allEmployees[employeesAdded][1] = theEmp.getFirstName();
                     allEmployees[employeesAdded][2] = theEmp.getLastName();
-                    allEmployees[employeesAdded][3] = Integer.toString(theEmp.getSex());
-                    allEmployees[employeesAdded][4] = Integer.toString(theEmp.getWorkLoc());
+                    allEmployees[employeesAdded][3] = sexText;
+                    allEmployees[employeesAdded][4] = workLocText;
                     allEmployees[employeesAdded][5] = Double.toString(theEmp.getDeductRate());
                     employeesAdded++;
                 } // end for
@@ -188,7 +228,7 @@ public class MyHashTable {
         // returns a 2D array of all the data in the hash table
         // A counter to determine the number of employees we've added so far
         int employeesAdded = 0;
-        
+
         // Create the two dimensional array to be returned, employee count is the number of employees, 11 is number of info types
         String[][] allEmployees = new String[employeeCount][11];
 
@@ -225,5 +265,4 @@ public class MyHashTable {
         } // end for
         return allEmployees;
     } // end method exportHashTable
-    
 } // end class MyHashTable

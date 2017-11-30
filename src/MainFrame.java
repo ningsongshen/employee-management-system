@@ -13,7 +13,6 @@ public class MainFrame extends javax.swing.JFrame {
 
     MyHashTable theHashTable = new MyHashTable(2);
 
-
     /**
      * Creates new form main_frame
      */
@@ -87,6 +86,11 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jButtonExitConfirmExit = new javax.swing.JButton();
         jButtonExitConfirmCancel = new javax.swing.JButton();
+        jDialogCheckUpdates = new javax.swing.JDialog();
+        jButton1 = new javax.swing.JButton();
+        jProgressBar1 = new javax.swing.JProgressBar();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
         jTabbedPaneMain = new javax.swing.JTabbedPane();
         jPanelHome = new javax.swing.JPanel();
         jLabelHomeHeading = new javax.swing.JLabel();
@@ -151,7 +155,6 @@ public class MainFrame extends javax.swing.JFrame {
         jMenuItemFileExit = new javax.swing.JMenuItem();
         jMenuWindow = new javax.swing.JMenu();
         jMenuItemWindowPreferences = new javax.swing.JMenuItem();
-        jMenuItem1 = new javax.swing.JMenuItem();
         jMenuHelp = new javax.swing.JMenu();
         jMenuItemHelpCheckForUpdates = new javax.swing.JMenuItem();
         jMenuItemHelpAbout = new javax.swing.JMenuItem();
@@ -200,33 +203,32 @@ public class MainFrame extends javax.swing.JFrame {
         jDialogAddConfirmLayout.setHorizontalGroup(
             jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(jDialogAddConfirmLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
                 .addGroup(jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jDialogAddConfirmLayout.createSequentialGroup()
-                        .addGap(22, 22, 22)
                         .addGroup(jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelAreYouSure)
+                            .addComponent(jLabelAreYouSureNote))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jDialogAddConfirmLayout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addGroup(jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelAddConfirmName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jDialogAddConfirmLayout.createSequentialGroup()
-                                .addGroup(jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabelAreYouSure)
-                                    .addComponent(jLabelAreYouSureNote))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(jDialogAddConfirmLayout.createSequentialGroup()
-                                .addGap(16, 16, 16)
-                                .addGroup(jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabelAddConfirmName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(jDialogAddConfirmLayout.createSequentialGroup()
-                                        .addGroup(jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jLabelAddConfirmSalary, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
-                                            .addComponent(jLabelAddConfirmEmpNum, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabelAddConfirmDeductRate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLabelAddConfirmWorkLoc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLabelAddConfirmSex, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addGap(0, 0, Short.MAX_VALUE))))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogAddConfirmLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonAddConfirmYes, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonAddConfirmNo, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabelAddConfirmSalary, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+                                    .addComponent(jLabelAddConfirmEmpNum, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabelAddConfirmDeductRate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabelAddConfirmWorkLoc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabelAddConfirmSex, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap())
+            .addGroup(jDialogAddConfirmLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonAddConfirmYes, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonAddConfirmNo, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(101, 101, 101))
         );
         jDialogAddConfirmLayout.setVerticalGroup(
             jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -247,11 +249,11 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jLabelAddConfirmDeductRate)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabelAddConfirmSalary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addGroup(jDialogAddConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonAddConfirmYes)
                     .addComponent(jButtonAddConfirmNo))
-                .addGap(21, 21, 21))
+                .addGap(24, 24, 24))
         );
 
         jDialogSearchDeleteConfirm.setBounds(new java.awt.Rectangle(550, 300, 0, 0));
@@ -663,6 +665,48 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(40, 40, 40))
         );
 
+        jDialogCheckUpdates.setMinimumSize(new java.awt.Dimension(400, 100));
+
+        jButton1.setText("OK");
+
+        jLabel11.setText("Checking for updates...");
+
+        jLabel12.setText("Please do not close the program or shut down your computer.");
+
+        javax.swing.GroupLayout jDialogCheckUpdatesLayout = new javax.swing.GroupLayout(jDialogCheckUpdates.getContentPane());
+        jDialogCheckUpdates.getContentPane().setLayout(jDialogCheckUpdatesLayout);
+        jDialogCheckUpdatesLayout.setHorizontalGroup(
+            jDialogCheckUpdatesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogCheckUpdatesLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(41, 41, 41))
+            .addGroup(jDialogCheckUpdatesLayout.createSequentialGroup()
+                .addGroup(jDialogCheckUpdatesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jDialogCheckUpdatesLayout.createSequentialGroup()
+                        .addGap(94, 94, 94)
+                        .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jDialogCheckUpdatesLayout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addGroup(jDialogCheckUpdatesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel12)
+                            .addComponent(jLabel11))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jDialogCheckUpdatesLayout.setVerticalGroup(
+            jDialogCheckUpdatesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogCheckUpdatesLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
+                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(66, 66, 66)
+                .addComponent(jButton1)
+                .addGap(22, 22, 22))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -812,8 +856,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jButtonAddSubmit.setBackground(new java.awt.Color(0, 0, 0));
-        jButtonAddSubmit.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonAddSubmit.setBackground(new java.awt.Color(255, 255, 255));
         jButtonAddSubmit.setText("Submit");
         jButtonAddSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -866,7 +909,7 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelAddFullTimeEmployeeYearlySalary.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelAddFullTimeEmployeeYearlySalary.setText("Yearly Salary:");
 
-        jComboBoxAddWorkLoc.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Mississauga", "Toronto", "Ottawa", "Halifax", "Miami" }));
+        jComboBoxAddWorkLoc.setModel(new javax.swing.DefaultComboBoxModel(new String[] { " ", "Mississauga", "Toronto", "Ottawa", "Halifax", "Miami" }));
         jComboBoxAddWorkLoc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxAddWorkLocActionPerformed(evt);
@@ -874,6 +917,11 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jComboBoxAddSex.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "", "Male", "Female", "Other", "Prefer not to say" }));
+        jComboBoxAddSex.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxAddSexActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelAddLayout = new javax.swing.GroupLayout(jPanelAdd);
         jPanelAdd.setLayout(jPanelAddLayout);
@@ -1050,8 +1098,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabelSearchOR.setText("OR");
 
-        jButtonSearchSubmit.setBackground(new java.awt.Color(0, 0, 0));
-        jButtonSearchSubmit.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonSearchSubmit.setBackground(new java.awt.Color(255, 255, 255));
         jButtonSearchSubmit.setText("Search");
         jButtonSearchSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1064,8 +1111,7 @@ public class MainFrame extends javax.swing.JFrame {
         jTextAreaSearchDisplayEmployee.setText("Employee Type:\nName:\nSex:\nWork Location:\nDeduction Rate:\n\n");
         jScrollPane2.setViewportView(jTextAreaSearchDisplayEmployee);
 
-        jButtonSearchEdit.setBackground(new java.awt.Color(0, 0, 0));
-        jButtonSearchEdit.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonSearchEdit.setBackground(new java.awt.Color(255, 255, 255));
         jButtonSearchEdit.setText("Edit");
         jButtonSearchEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1073,8 +1119,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jButtonSearchDelete.setBackground(new java.awt.Color(0, 0, 0));
-        jButtonSearchDelete.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonSearchDelete.setBackground(new java.awt.Color(255, 255, 255));
         jButtonSearchDelete.setText("Delete");
         jButtonSearchDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1187,8 +1232,7 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Franklin Gothic Medium Cond", 0, 24)); // NOI18N
         jLabel1.setText("View All");
 
-        jButtonViewAllUpdateTable.setBackground(new java.awt.Color(0, 0, 0));
-        jButtonViewAllUpdateTable.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonViewAllUpdateTable.setBackground(new java.awt.Color(255, 255, 255));
         jButtonViewAllUpdateTable.setText("Refresh Table");
         jButtonViewAllUpdateTable.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1298,9 +1342,6 @@ public class MainFrame extends javax.swing.JFrame {
         });
         jMenuWindow.add(jMenuItemWindowPreferences);
 
-        jMenuItem1.setText("Close Window");
-        jMenuWindow.add(jMenuItem1);
-
         jMenuBarMenu.add(jMenuWindow);
 
         jMenuHelp.setText("Help");
@@ -1370,32 +1411,81 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jMenuItemFileOpenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFileOpenActionPerformed
         // TODO add your handling code here:
-        
+
         jDialogFileOpenConfirm.setVisible(true);
 
     }//GEN-LAST:event_jMenuItemFileOpenActionPerformed
     private void jMenuItemHelpCheckForUpdatesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemHelpCheckForUpdatesActionPerformed
         // TODO add your handling code here:
+        jDialogCheckUpdates.setVisible(true);
+        jProgressBar1.setIndeterminate(true);
+        jProgressBar1.setMaximum(10);
     }//GEN-LAST:event_jMenuItemHelpCheckForUpdatesActionPerformed
 
     private void jButtonSearchSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchSubmitActionPerformed
         // TODO add your handling code here:
         if (jTextFieldSearchEmployeeNumber.getText() == null) {
-            System.out.println("Please enter something for the employee number");
+            jTextAreaSearchDisplayEmployee.setText("Please enter an employee number");
         } else {
             try {
                 EmployeeInfo empSearched = theHashTable.getEmployee(Integer.parseInt(jTextFieldSearchEmployeeNumber.getText()));
-
+                String sexText;
+                String workLocText;
+                switch (empSearched.getSex()) {
+                    case 1:
+                        sexText = "Male";
+                        break;
+                    case 2:
+                        sexText = "Female";
+                        break;
+                    case 3:
+                        sexText = "Other";
+                        break;
+                    case 4:
+                        sexText = "Prefer not to say";
+                        break;
+                    default:
+                        sexText = "Unknown";
+                        break;
+                }
+                switch (empSearched.getWorkLoc()) {
+                    case 1:
+                        workLocText = "Mississauga";
+                        break;
+                    case 2:
+                        workLocText = "Toronto";
+                        break;
+                    case 3:
+                        workLocText = "Ottawa";
+                        break;
+                    case 4:
+                        workLocText = "Halifax";
+                        break;
+                    case 5:
+                        workLocText = "Miami";
+                        break;
+                    default:
+                        workLocText = "Unknown";
+                        break;
+                }
                 if (empSearched instanceof FullTimeEmployee) {
                     FullTimeEmployee FTEmpSearched = (FullTimeEmployee) empSearched;
-                    jTextAreaSearchDisplayEmployee.setText("Employee Type: Full Time" + "\nName: " + FTEmpSearched.getFirstName() + " " + FTEmpSearched.getLastName()
-                            + "\nSex: " + FTEmpSearched.getSex() + "\nWork Location: " + FTEmpSearched.getWorkLoc() + "\nDeduction Rate: " + FTEmpSearched.getDeductRate()
+                    jTextAreaSearchDisplayEmployee.setText("Employee Type: Full Time"
+                            + "\nName: " + FTEmpSearched.getFirstName() + " " + FTEmpSearched.getLastName()
+                            + "\nSex: " + sexText
+                            + "\nWork Location: " + workLocText
+                            + "\nDeduction Rate: " + FTEmpSearched.getDeductRate()
                             + "\n\nYearly Salary: " + FTEmpSearched.getYearlySalary());
                 } else {
                     PartTimeEmployee PTEmpSearched = (PartTimeEmployee) empSearched;
-                    jTextAreaSearchDisplayEmployee.setText("Employee Type: Part Time" + "\nName: " + PTEmpSearched.getFirstName() + " " + PTEmpSearched.getLastName()
-                            + "\nSex: " + PTEmpSearched.getSex() + "\nWork Location: " + PTEmpSearched.getWorkLoc() + "\nDeduction Rate: " + PTEmpSearched.getDeductRate()
-                            + "\n\nHourly Wage: " + PTEmpSearched.getHourlyWage() + "\nHours per Week: " + PTEmpSearched.getHoursPerWeek() + "\nWeeks per Year:" + PTEmpSearched.getWeeksPerYear());
+                    jTextAreaSearchDisplayEmployee.setText("Employee Type: Part Time"
+                            + "\nName: " + PTEmpSearched.getFirstName() + " " + PTEmpSearched.getLastName()
+                            + "\nSex: " + sexText
+                            + "\nWork Location: " + workLocText
+                            + "\nDeduction Rate: " + PTEmpSearched.getDeductRate()
+                            + "\n\nHourly Wage: " + PTEmpSearched.getHourlyWage()
+                            + "\nHours per Week: " + PTEmpSearched.getHoursPerWeek()
+                            + "\nWeeks per Year:" + PTEmpSearched.getWeeksPerYear());
                 }
             } catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
                 jTextAreaSearchDisplayEmployee.setText("Employee not found");
@@ -1460,7 +1550,7 @@ public class MainFrame extends javax.swing.JFrame {
             // Append .txt to the file name
 
             // Automatically save the file as a txt file
-            fileToSave = new java.io.File(fileToSave.getParentFile(), fileToSave.getName() + ".txt");
+            fileToSave = new java.io.File(fileToSave.getParentFile(), fileToSave.getName() + "-[DO NOT EDIT].txt");
 
 
             try {
@@ -1474,7 +1564,6 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemFileSaveAsActionPerformed
 
     private void jMenuItemFileExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFileExitActionPerformed
-        setVisible(false); // you can't see me!
         dispose(); // Destroy the JFrame object
     }//GEN-LAST:event_jMenuItemFileExitActionPerformed
 
@@ -1516,6 +1605,46 @@ public class MainFrame extends javax.swing.JFrame {
         int workLoc = jComboBoxAddWorkLoc.getSelectedIndex();
         double deductRate = Double.parseDouble(jTextFieldAddDeductRate.getText());
 
+        String sexText;
+        String workLocText;
+        switch (sex) {
+            case 1:
+                sexText = "Male";
+                break;
+            case 2:
+                sexText = "Female";
+                break;
+            case 3:
+                sexText = "Other";
+                break;
+            case 4:
+                sexText = "Prefer not to say";
+                break;
+            default:
+                sexText = "Unknown";
+                break;
+        }
+        switch (workLoc) {
+            case 1:
+                workLocText = "Mississauga";
+                break;
+            case 2:
+                workLocText = "Toronto";
+                break;
+            case 3:
+                workLocText = "Ottawa";
+                break;
+            case 4:
+                workLocText = "Halifax";
+                break;
+            case 5:
+                workLocText = "Miami";
+                break;
+            default:
+                workLocText = "Unknown";
+                break;
+        }
+
         // determine which employee type was selected
         if (jRadioButtonAddFullTimeEmployee.isSelected() == true) {
             double yearlySalary = Double.parseDouble(jTextFieldAddFullTimeEmployeeYearlySalary.getText());
@@ -1530,8 +1659,8 @@ public class MainFrame extends javax.swing.JFrame {
         // Display the confirmation dialiog
         jLabelAddConfirmEmpNum.setText("Employee Number: " + Integer.toString(empNum));
         jLabelAddConfirmName.setText("Name: " + firstName + " " + lastName);
-        jLabelAddConfirmSex.setText("Sex: " + sex);
-        jLabelAddConfirmWorkLoc.setText("Work Location: " + workLoc);
+        jLabelAddConfirmSex.setText("Sex: " + sexText);
+        jLabelAddConfirmWorkLoc.setText("Work Location: " + workLocText);
         jLabelAddConfirmDeductRate.setText("Deduction Rate: " + deductRate);
         jDialogAddConfirm.setVisible(true);
 
@@ -1732,7 +1861,7 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         // Close the confirmation dialog
         jDialogFileOpenConfirm.setVisible(false);
-        
+
         javax.swing.JFileChooser fileChooser = new javax.swing.JFileChooser();
         fileChooser.setDialogTitle("Specify a file to open");
 
@@ -1874,6 +2003,10 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonExitConfirmExitActionPerformed
 
+    private void jComboBoxAddSexActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxAddSexActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxAddSexActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1885,12 +2018,11 @@ public class MainFrame extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+
+                    javax.swing.UIManager.setLookAndFeel(javax.swing.UIManager.getSystemLookAndFeelClassName());
                     break;
-
-
-                }
+                    // This was the original code, the above lines were contained in this if statement
+                    // if ("Nimbus".equals(info.getName())) {...
             }
         } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(MainFrame.class
@@ -1914,13 +2046,14 @@ public class MainFrame extends javax.swing.JFrame {
             public void run() {
 
                 new MainFrame().setVisible(true);
-              
+
             }
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroupAddSex;
     private javax.swing.ButtonGroup buttonGroupEmployeeType;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonAddConfirmNo;
     private javax.swing.JButton jButtonAddConfirmYes;
     private javax.swing.JButton jButtonAddSubmit;
@@ -1941,6 +2074,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JComboBox jComboBoxEditSex;
     private javax.swing.JComboBox jComboBoxEditWorkLoc;
     private javax.swing.JDialog jDialogAddConfirm;
+    private javax.swing.JDialog jDialogCheckUpdates;
     private javax.swing.JDialog jDialogExitConfrirm;
     private javax.swing.JDialog jDialogFileOpenConfirm;
     private javax.swing.JDialog jDialogSearchDeleteConfirm;
@@ -1949,6 +2083,8 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JFileChooser jFileChooserSaveFile;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1998,7 +2134,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBarMenu;
     private javax.swing.JMenu jMenuFile;
     private javax.swing.JMenu jMenuHelp;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItemFileExit;
     private javax.swing.JMenuItem jMenuItemFileNew;
     private javax.swing.JMenuItem jMenuItemFileOpen;
@@ -2015,6 +2150,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelHome;
     private javax.swing.JPanel jPanelSearch;
     private javax.swing.JPanel jPanelView;
+    private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JRadioButton jRadioButtonAddFullTimeEmployee;
     private javax.swing.JRadioButton jRadioButtonAddPartTimeEmployee;
     private javax.swing.JRadioButton jRadioButtonEditFullTimeEmployee;
