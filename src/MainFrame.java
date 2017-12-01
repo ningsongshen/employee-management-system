@@ -87,7 +87,6 @@ public class MainFrame extends javax.swing.JFrame {
         jButtonExitConfirmExit = new javax.swing.JButton();
         jButtonExitConfirmCancel = new javax.swing.JButton();
         jDialogCheckUpdates = new javax.swing.JDialog();
-        jButton1 = new javax.swing.JButton();
         jProgressBar1 = new javax.swing.JProgressBar();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -665,9 +664,8 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(40, 40, 40))
         );
 
-        jDialogCheckUpdates.setMinimumSize(new java.awt.Dimension(400, 100));
-
-        jButton1.setText("OK");
+        jDialogCheckUpdates.setMinimumSize(new java.awt.Dimension(363, 200));
+        jDialogCheckUpdates.setPreferredSize(new java.awt.Dimension(363, 200));
 
         jLabel11.setText("Checking for updates...");
 
@@ -678,20 +676,12 @@ public class MainFrame extends javax.swing.JFrame {
         jDialogCheckUpdatesLayout.setHorizontalGroup(
             jDialogCheckUpdatesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogCheckUpdatesLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(41, 41, 41))
-            .addGroup(jDialogCheckUpdatesLayout.createSequentialGroup()
+                .addContainerGap(38, Short.MAX_VALUE)
                 .addGroup(jDialogCheckUpdatesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jDialogCheckUpdatesLayout.createSequentialGroup()
-                        .addGap(94, 94, 94)
-                        .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jDialogCheckUpdatesLayout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addGroup(jDialogCheckUpdatesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel12)
-                            .addComponent(jLabel11))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel12)
+                    .addComponent(jLabel11)
+                    .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28))
         );
         jDialogCheckUpdatesLayout.setVerticalGroup(
             jDialogCheckUpdatesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -700,11 +690,9 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jLabel11)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel12)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
-                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(66, 66, 66)
-                .addComponent(jButton1)
-                .addGap(22, 22, 22))
+                .addGap(18, 18, 18)
+                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -1420,6 +1408,19 @@ public class MainFrame extends javax.swing.JFrame {
         jDialogCheckUpdates.setVisible(true);
         jProgressBar1.setIndeterminate(true);
         jProgressBar1.setMaximum(10);
+        new java.util.Timer().schedule(
+                new java.util.TimerTask() {
+            @Override
+            public void run() {
+                jProgressBar1.setVisible(false);
+                jLabel11.setText("No updates available");
+                jLabel12.setText("");
+                
+            }
+        },
+                50000);
+
+
     }//GEN-LAST:event_jMenuItemHelpCheckForUpdatesActionPerformed
 
     private void jButtonSearchSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchSubmitActionPerformed
@@ -2019,10 +2020,10 @@ public class MainFrame extends javax.swing.JFrame {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
 
-                    javax.swing.UIManager.setLookAndFeel(javax.swing.UIManager.getSystemLookAndFeelClassName());
-                    break;
-                    // This was the original code, the above lines were contained in this if statement
-                    // if ("Nimbus".equals(info.getName())) {...
+                javax.swing.UIManager.setLookAndFeel(javax.swing.UIManager.getSystemLookAndFeelClassName());
+                break;
+                // This was the original code, the above lines were contained in this if statement
+                // if ("Nimbus".equals(info.getName())) {...
             }
         } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(MainFrame.class
@@ -2053,7 +2054,6 @@ public class MainFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroupAddSex;
     private javax.swing.ButtonGroup buttonGroupEmployeeType;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonAddConfirmNo;
     private javax.swing.JButton jButtonAddConfirmYes;
     private javax.swing.JButton jButtonAddSubmit;
