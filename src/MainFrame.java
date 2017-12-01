@@ -665,7 +665,6 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         jDialogCheckUpdates.setMinimumSize(new java.awt.Dimension(363, 200));
-        jDialogCheckUpdates.setPreferredSize(new java.awt.Dimension(363, 200));
 
         jLabel11.setText("Checking for updates...");
 
@@ -692,11 +691,13 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jLabel12)
                 .addGap(18, 18, 18)
                 .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
+        setMinimumSize(new java.awt.Dimension(1000, 720));
+        setPreferredSize(new java.awt.Dimension(1000, 720));
 
         jTabbedPaneMain.setBackground(new java.awt.Color(16, 152, 247));
         jTabbedPaneMain.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
@@ -721,6 +722,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabelHomePayrollTotal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabelHomePayrollTotal.setText("Yearly Payroll: $0");
+
+        jPanel1.setBackground(new java.awt.Color(0, 204, 204));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -1765,6 +1768,8 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonEditSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditSubmitActionPerformed
         // TODO add your handling code here:
+        Double oldTotalSalary = 0.0;
+        Double salaryDifference = 0.0;
         EmployeeInfo empSearched = theHashTable.getEmployee(Integer.parseInt(jTextFieldSearchEmployeeNumber.getText()));
         empSearched.setEmpNum(Integer.parseInt(jTextFieldEditEmployeeNumber.getText()));
         empSearched.setFirstName(jTextFieldEditFirstName.getText());
@@ -1774,12 +1779,19 @@ public class MainFrame extends javax.swing.JFrame {
         empSearched.setDeductRate(Double.parseDouble(jTextFieldEditDeductRate.getText()));
         if (empSearched instanceof FullTimeEmployee) {
             FullTimeEmployee FTEmpSearched = (FullTimeEmployee) empSearched;
+            oldTotalSalary = FTEmpSearched.calcGrossAnnualIncome();
             FTEmpSearched.setYearlySalary(Double.parseDouble(jTextFieldEditFullTimeEmployeeYearlySalary.getText()));
+            salaryDifference = FTEmpSearched.calcGrossAnnualIncome() - oldTotalSalary;
+            theHashTable.setYearlyPayroll(salaryDifference);
+            
         } else {
             PartTimeEmployee PTEmpSearched = (PartTimeEmployee) empSearched;
+            oldTotalSalary = PTEmpSearched.calcGrossAnnualIncome();
             PTEmpSearched.setHourlyWage(Double.parseDouble(jTextFieldEditPartTimeEmployeeHourlyWage.getText()));
             PTEmpSearched.setHoursPerWeek(Double.parseDouble(jTextFieldEditPartTimeEmployeeHoursPerWeek.getText()));
             PTEmpSearched.setWeeksPerYear(Integer.parseInt(jTextFieldEditPartTimeEmployeeWeeksPerYear.getText()));
+            salaryDifference = PTEmpSearched.calcGrossAnnualIncome() - oldTotalSalary;
+            theHashTable.setYearlyPayroll(salaryDifference);
         }
         jDialogSearchEdit.setVisible(false);
     }//GEN-LAST:event_jButtonEditSubmitActionPerformed

@@ -17,7 +17,9 @@ public class MyHashTable {
     public double getYearlyPayroll() {
         return yearlyPayroll;
     }
-
+    public void setYearlyPayroll(double yearlyPayrollChange) {
+        yearlyPayroll += yearlyPayrollChange;
+    }
     // CONSTRUCTOR
     public MyHashTable(int howManyBuckets) {
         // Construct the hash table (open hashing/closed addressing) as an array
@@ -227,7 +229,7 @@ public class MyHashTable {
     public String[][] exportHashTable() {
         // returns a 2D array of all the data in the hash table
         // A counter to determine the number of employees we've added so far
-        int employeesAdded = 0;
+        // int employeesAdded = 0;
 
         // Create the two dimensional array to be returned, employee count is the number of employees, 11 is number of info types
         String[][] allEmployees = new String[employeeCount][11];
@@ -242,22 +244,22 @@ public class MyHashTable {
                     // Conditional data collection depending on employee type. The employee type is the first data point on each row
                     if (theEmp instanceof FullTimeEmployee) {
                         FullTimeEmployee theFTEmp = (FullTimeEmployee) theEmp;
-                        allEmployees[employeesAdded][0] = "FTE";
-                        allEmployees[employeesAdded][7] = Double.toString(theFTEmp.getYearlySalary());
+                        allEmployees[i][0] = "FTE";
+                        allEmployees[i][7] = Double.toString(theFTEmp.getYearlySalary());
                     } else {
                         PartTimeEmployee thePTEmp = (PartTimeEmployee) theEmp;
-                        allEmployees[employeesAdded][0] = "PTE";
-                        allEmployees[employeesAdded][8] = Double.toString(thePTEmp.getHourlyWage());
-                        allEmployees[employeesAdded][9] = Double.toString(thePTEmp.getHoursPerWeek());
-                        allEmployees[employeesAdded][10] = Integer.toString(thePTEmp.getWeeksPerYear());
+                        allEmployees[i][0] = "PTE";
+                        allEmployees[i][8] = Double.toString(thePTEmp.getHourlyWage());
+                        allEmployees[i][9] = Double.toString(thePTEmp.getHoursPerWeek());
+                        allEmployees[i][10] = Integer.toString(thePTEmp.getWeeksPerYear());
                     }
-                    allEmployees[employeesAdded][1] = Integer.toString(theEmp.getEmpNum());
-                    allEmployees[employeesAdded][2] = theEmp.getFirstName();
-                    allEmployees[employeesAdded][3] = theEmp.getLastName();
-                    allEmployees[employeesAdded][4] = Integer.toString(theEmp.getSex());
-                    allEmployees[employeesAdded][5] = Integer.toString(theEmp.getWorkLoc());
-                    allEmployees[employeesAdded][6] = Double.toString(theEmp.getDeductRate());
-                    employeesAdded++;
+                    allEmployees[i][1] = Integer.toString(theEmp.getEmpNum());
+                    allEmployees[i][2] = theEmp.getFirstName();
+                    allEmployees[i][3] = theEmp.getLastName();
+                    allEmployees[i][4] = Integer.toString(theEmp.getSex());
+                    allEmployees[i][5] = Integer.toString(theEmp.getWorkLoc());
+                    allEmployees[i][6] = Double.toString(theEmp.getDeductRate());
+                    //employeesAdded++;
                 } // end for
 
             } // end else
