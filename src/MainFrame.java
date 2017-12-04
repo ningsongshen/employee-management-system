@@ -1402,37 +1402,49 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jMenuItemFileOpenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFileOpenActionPerformed
         // TODO add your handling code here:
-
+        // Open the file to open confirm dialog when clicked. The dialog reminds the user to save files before opening a new one.
         jDialogFileOpenConfirm.setVisible(true);
 
     }//GEN-LAST:event_jMenuItemFileOpenActionPerformed
     private void jMenuItemHelpCheckForUpdatesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemHelpCheckForUpdatesActionPerformed
         // TODO add your handling code here:
+        // Check for updates dialog
+        // FAKE NEWS
         jDialogCheckUpdates.setVisible(true);
+        
+        // have progress bar keep running until set time
         jProgressBar1.setIndeterminate(true);
         jProgressBar1.setMaximum(10);
         new java.util.Timer().schedule(
                 new java.util.TimerTask() {
             @Override
             public void run() {
+                // After 50000 thread, the progress bar will hide and text shows up 
                 jProgressBar1.setVisible(false);
                 jLabel11.setText("No updates available");
                 jLabel12.setText("");
                 
             }
         },
-                50000);
+                50000); // 50000 thread stuff times
 
 
     }//GEN-LAST:event_jMenuItemHelpCheckForUpdatesActionPerformed
 
     private void jButtonSearchSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchSubmitActionPerformed
         // TODO add your handling code here:
+        // Search for an employee and display it in the text are when found.
+        
+        
         if (jTextFieldSearchEmployeeNumber.getText() == null) {
+            // If nothing is entered in the textbox
             jTextAreaSearchDisplayEmployee.setText("Please enter an employee number");
         } else {
             try {
+                // Try getting the employee from the hashtable, and outputting it.
                 EmployeeInfo empSearched = theHashTable.getEmployee(Integer.parseInt(jTextFieldSearchEmployeeNumber.getText()));
+                
+                // The below lines are to convert the integer key for sex and workLoc into human readable text. e.g. male is 1, female 2 etc.
                 String sexText;
                 String workLocText;
                 switch (empSearched.getSex()) {
@@ -1472,6 +1484,8 @@ public class MainFrame extends javax.swing.JFrame {
                         workLocText = "Unknown";
                         break;
                 }
+                
+                // If the found employee is a full time, display information with yearly salary
                 if (empSearched instanceof FullTimeEmployee) {
                     FullTimeEmployee FTEmpSearched = (FullTimeEmployee) empSearched;
                     jTextAreaSearchDisplayEmployee.setText("Employee Type: Full Time"
@@ -1481,6 +1495,7 @@ public class MainFrame extends javax.swing.JFrame {
                             + "\nDeduction Rate: " + FTEmpSearched.getDeductRate()
                             + "\n\nYearly Salary: " + FTEmpSearched.getYearlySalary());
                 } else {
+                    // Else, display the part time worker information without the yearly salary
                     PartTimeEmployee PTEmpSearched = (PartTimeEmployee) empSearched;
                     jTextAreaSearchDisplayEmployee.setText("Employee Type: Part Time"
                             + "\nName: " + PTEmpSearched.getFirstName() + " " + PTEmpSearched.getLastName()
@@ -1492,6 +1507,7 @@ public class MainFrame extends javax.swing.JFrame {
                             + "\nWeeks per Year:" + PTEmpSearched.getWeeksPerYear());
                 }
             } catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
+                // If the employee is not found, the output is below. Either nothing is found or error occured possible (arrayindexoutofbounds)
                 jTextAreaSearchDisplayEmployee.setText("Employee not found");
             }
         }
@@ -1600,8 +1616,9 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldAddDeductRateActionPerformed
 
     private void jButtonAddSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddSubmitActionPerformed
-        // get info from fields after hitting submit
-
+        // Get information from add employee fields after hitting submit
+        
+        // Read all the information from the fields
         int empNum = Integer.parseInt(jTextFieldAddEmployeeNumber.getText());
         String firstName = jTextFieldAddFirstName.getText();
         String lastName = jTextFieldAddLastName.getText();
@@ -1609,6 +1626,9 @@ public class MainFrame extends javax.swing.JFrame {
         int workLoc = jComboBoxAddWorkLoc.getSelectedIndex();
         double deductRate = Double.parseDouble(jTextFieldAddDeductRate.getText());
 
+        // Hmmm we don't have error checking
+        
+        // Convert the value from the dropdown into the key value we use to store sex and workLoc?????
         String sexText;
         String workLocText;
         switch (sex) {
@@ -1848,7 +1868,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void jPanelHomeMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelHomeMouseMoved
         // TODO add your handling code here:
         jLabelHomeEmployeeCount.setText("Employees: " + Integer.toString(theHashTable.getEmployeeCount()));
-        jLabelHomePayrollTotal.setText("Yearly Payroll: $" + Double.toString(theHashTable.getYearlyPayroll()));
+        jLabelHomePayrollTotal.setText("Yearly Payroll: $" + new java.math.BigDecimal((Double.toString(theHashTable.getYearlyPayroll()))).toPlainString());
     }//GEN-LAST:event_jPanelHomeMouseMoved
 
     private void jFileChooserSaveFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFileChooserSaveFileActionPerformed
