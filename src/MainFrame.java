@@ -1538,7 +1538,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemFileSaveActionPerformed
 
     private void jMenuItemFileSaveAsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFileSaveAsActionPerformed
-        // TODO add your handling code here:
+
         // Open a file chooser dialog
         //jFileChooser.setVisible(true);
         javax.swing.JFileChooser fileChooser = new javax.swing.JFileChooser();
@@ -1628,7 +1628,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         // Hmmm we don't have error checking
         
-        // Convert the value from the dropdown into the key value we use to store sex and workLoc?????
+        // Convert the value from the dropdown into the key value we use to store sex and workLoc
         String sexText;
         String workLocText;
         switch (sex) {
@@ -1697,8 +1697,9 @@ public class MainFrame extends javax.swing.JFrame {
     private void pressedAddConfirmYes(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pressedAddConfirmYes
         // If when adding an employee the user clicks yes to the confirmation dialog, add the employee to the hashtable.
         if (jRadioButtonAddFullTimeEmployee.isSelected() == true) {
+            
+            // Get the information from the fields for full time
             int empNum = Integer.parseInt(jTextFieldAddEmployeeNumber.getText());
-
             String firstName = jTextFieldAddFirstName.getText();
             String lastName = jTextFieldAddLastName.getText();
             int sex = jComboBoxAddSex.getSelectedIndex();
@@ -1707,8 +1708,11 @@ public class MainFrame extends javax.swing.JFrame {
             double yearlySalary = Double.parseDouble(jTextFieldAddFullTimeEmployeeYearlySalary.getText());
             FullTimeEmployee FTEmployee = new FullTimeEmployee(empNum, firstName, lastName, sex, workLoc, deductRate, yearlySalary);
             theHashTable.addEmployee(FTEmployee);
+            
+            // Erase the information from the full time employee field
             jTextFieldAddFullTimeEmployeeYearlySalary.setText(null);
         } else {
+            // Get part time information
             int empNum = Integer.parseInt(jTextFieldAddEmployeeNumber.getText());
             String firstName = jTextFieldAddFirstName.getText();
             String lastName = jTextFieldAddLastName.getText();
@@ -1720,11 +1724,14 @@ public class MainFrame extends javax.swing.JFrame {
             int weeksPerYear = Integer.parseInt(jTextFieldAddPartTimeEmployeeWeeksPerYear.getText());
             PartTimeEmployee PTEmployee = new PartTimeEmployee(empNum, firstName, lastName, sex, workLoc, deductRate, hourlyWage, hoursPerWeek, weeksPerYear);
             theHashTable.addEmployee(PTEmployee);
+            
+            // Erase the information from the part time employee field after employee is added
             jTextFieldAddPartTimeEmployeeHourlyWage.setText(null);
             jTextFieldAddPartTimeEmployeeHoursPerWeek.setText(null);
             jTextFieldAddPartTimeEmployeeWeeksPerYear.setText(null);
         }
-
+        
+        // Erase the text after the employee has been added
         jDialogAddConfirm.setVisible(false);
         jTextFieldAddEmployeeNumber.setText(null);
         jTextFieldAddFirstName.setText(null);
@@ -1735,17 +1742,24 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_pressedAddConfirmYes
 
     private void jTextFieldSearchEmployeeNumberKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldSearchEmployeeNumberKeyTyped
-        // TODO add your handling code here:
+        
+        
+        // Set the employee name search field to disabled if user types something in the employee number field intending to search for the employee number
         jTextFieldSearchEmployeeName.setText(null);
     }//GEN-LAST:event_jTextFieldSearchEmployeeNumberKeyTyped
 
     private void jTextFieldSearchEmployeeNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldSearchEmployeeNameKeyTyped
         // TODO add your handling code here:
+        // Disable the search by number field if the use intends to search by name (search by name is not available yet)
         jTextFieldSearchEmployeeNumber.setText(null);
     }//GEN-LAST:event_jTextFieldSearchEmployeeNameKeyTyped
 
     private void jButtonSearchDeleteConfirmYespressedAddConfirmYes(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchDeleteConfirmYespressedAddConfirmYes
         // TODO add your handling code here:
+        
+        // Delete employee confirmation box pops up.
+        // If the user clicks yes, removes employee from the hashtable. 
+        // Clears the search box and results area
         theHashTable.removeEmployee(Integer.parseInt(jTextFieldSearchEmployeeNumber.getText()));
         jDialogSearchDeleteConfirm.setVisible(false);
         jTextAreaSearchDisplayEmployee.setText("");
@@ -1753,11 +1767,14 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonSearchDeleteConfirmNopressedAddConfirmNo(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchDeleteConfirmNopressedAddConfirmNo
         // TODO add your handling code here:
+        // Cancel the remove employee operation, hide the dialog box.
         jDialogSearchDeleteConfirm.setVisible(false);
     }//GEN-LAST:event_jButtonSearchDeleteConfirmNopressedAddConfirmNo
 
     private void jButtonSearchDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchDeleteActionPerformed
         // TODO add your handling code here:
+        
+        // If the user presses the delete button after searching for a specific employee, the delete employee dialog will pop up
         jDialogSearchDeleteConfirm.setVisible(true);
 
     }//GEN-LAST:event_jButtonSearchDeleteActionPerformed
@@ -1772,6 +1789,9 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jRadioButtonEditFullTimeEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonEditFullTimeEmployeeActionPerformed
         // TODO add your handling code here:
+        
+        // On the edit employee dialog
+        // If user selects full time emp, part time info boxes are disabled
         jTextFieldEditFullTimeEmployeeYearlySalary.setEnabled(true);
         jTextFieldEditPartTimeEmployeeHourlyWage.setEnabled(false);
         jTextFieldEditPartTimeEmployeeHoursPerWeek.setEnabled(false);
@@ -1780,6 +1800,9 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jRadioButtonEditPartTimeEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonEditPartTimeEmployeeActionPerformed
         // TODO add your handling code here:
+        
+        // On the edit employee dialog
+        // If user selects part time emp, full time info boxes are disabled.
         jTextFieldEditFullTimeEmployeeYearlySalary.setEnabled(false);
         jTextFieldEditPartTimeEmployeeHourlyWage.setEnabled(true);
         jTextFieldEditPartTimeEmployeeHoursPerWeek.setEnabled(true);
