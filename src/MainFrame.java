@@ -774,9 +774,8 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(1, 1, 1));
         setMinimumSize(new java.awt.Dimension(1000, 720));
-        setPreferredSize(new java.awt.Dimension(1000, 720));
 
         jTabbedPaneMain.setBackground(new java.awt.Color(16, 152, 247));
         jTabbedPaneMain.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
@@ -1737,13 +1736,13 @@ public class MainFrame extends javax.swing.JFrame {
         double deductRate = Double.parseDouble(jTextFieldAddDeductRate.getText());
 
         // Hmmm we don't have error checking
-<<<<<<< HEAD
+
         
         // Convert the value from the dropdown into the key value we use to store sex and workLoc
-=======
+
 
         // Convert the value from the dropdown into the key value we use to store sex and workLoc?????
->>>>>>> 0e7285c72f94e01ea7da2bf9c819e91540770a91
+
         String sexText;
         String workLocText;
         switch (sex) {
