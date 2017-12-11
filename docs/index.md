@@ -1,3 +1,5 @@
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
 # Welcome
 
 Welcome to the employee management system. This documentation is divided into many different parts. We recommended you get started with installation. This program is made in java with the JFrame GUI package. Feel free to view the code at github.com/heliotrope3n/employee-management-system. It's open source.
