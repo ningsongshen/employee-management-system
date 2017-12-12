@@ -1,4 +1,4 @@
-<link rel="shortcut icon" type="image/png" href="{{ site.url }}/favicon.png">
+<link rel="shortcut icon" type="image/png" href="{{ site.url }}/employee-management-system/favicon.png">
 
 # Welcome
 
