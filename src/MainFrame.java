@@ -167,7 +167,6 @@ public class MainFrame extends javax.swing.JFrame {
         jMenuFile = new javax.swing.JMenu();
         jMenuItemFileNew = new javax.swing.JMenuItem();
         jMenuItemFileOpen = new javax.swing.JMenuItem();
-        jMenuItemFileSave = new javax.swing.JMenuItem();
         jMenuItemFileSaveAs = new javax.swing.JMenuItem();
         jMenuItemFileExit = new javax.swing.JMenuItem();
         jMenuWindow = new javax.swing.JMenu();
@@ -379,7 +378,6 @@ public class MainFrame extends javax.swing.JFrame {
         buttonGroupEmployeeType.add(jRadioButtonEditFullTimeEmployee);
         jRadioButtonEditFullTimeEmployee.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jRadioButtonEditFullTimeEmployee.setText("Full Time Employee");
-        jRadioButtonEditFullTimeEmployee.setEnabled(false);
         jRadioButtonEditFullTimeEmployee.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jRadioButtonEditFullTimeEmployee.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -397,7 +395,6 @@ public class MainFrame extends javax.swing.JFrame {
         buttonGroupEmployeeType.add(jRadioButtonEditPartTimeEmployee);
         jRadioButtonEditPartTimeEmployee.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jRadioButtonEditPartTimeEmployee.setText("Part Time Employee");
-        jRadioButtonEditPartTimeEmployee.setEnabled(false);
         jRadioButtonEditPartTimeEmployee.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jRadioButtonEditPartTimeEmployee.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -568,7 +565,7 @@ public class MainFrame extends javax.swing.JFrame {
                         .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabelAddPartTimeEmployeeWeeksPerYear1)
                             .addComponent(jTextFieldEditPartTimeEmployeeWeeksPerYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 125, Short.MAX_VALUE)
                 .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonEditSubmit)
                     .addComponent(jButtonEditCancel))
@@ -1463,16 +1460,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
         jMenuFile.add(jMenuItemFileOpen);
 
-        jMenuItemFileSave.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItemFileSave.setText("Save");
-        jMenuItemFileSave.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemFileSaveActionPerformed(evt);
-            }
-        });
-        jMenuFile.add(jMenuItemFileSave);
-
-        jMenuItemFileSaveAs.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItemFileSaveAs.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItemFileSaveAs.setText("Save As");
         jMenuItemFileSaveAs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1663,7 +1651,8 @@ public class MainFrame extends javax.swing.JFrame {
                             + "\nSex: " + sexText
                             + "\nWork Location: " + workLocText
                             + "\nDeduction Rate: " + FTEmpSearched.getDeductRate()
-                            + "\n\nYearly Salary: " + FTEmpSearched.getYearlySalary());
+                            + "\n\nYearly Salary: " + FTEmpSearched.getYearlySalary()
+                            + "\nNet Income: " + FTEmpSearched.calcNetAnnualIncome());
                 } else {
                     // Else, display the part time worker information without the yearly salary
                     PartTimeEmployee PTEmpSearched = (PartTimeEmployee) empSearched;
@@ -1674,7 +1663,8 @@ public class MainFrame extends javax.swing.JFrame {
                             + "\nDeduction Rate: " + PTEmpSearched.getDeductRate()
                             + "\n\nHourly Wage: " + PTEmpSearched.getHourlyWage()
                             + "\nHours per Week: " + PTEmpSearched.getHoursPerWeek()
-                            + "\nWeeks per Year:" + PTEmpSearched.getWeeksPerYear());
+                            + "\nWeeks per Year: " + PTEmpSearched.getWeeksPerYear()
+                            + "\nNet Income: " + PTEmpSearched.calcNetAnnualIncome());
                 }
             } catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
                 // If the employee is not found, the output is below. Either nothing is found or error occured possible (arrayindexoutofbounds)
@@ -1702,33 +1692,6 @@ public class MainFrame extends javax.swing.JFrame {
     private void jComboBoxAddWorkLocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxAddWorkLocActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBoxAddWorkLocActionPerformed
-
-    private void jMenuItemFileSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFileSaveActionPerformed
-        // TODO add your handling code here:
-        String filePath = jLabelFileName.getText().substring(jLabelFileName.getText().lastIndexOf("\"")+1);
-        // Create a textarea to prepare the text to be written to the file. JTextcomponents have the ability to write to a file, and a text area is a JTextComponent
-        javax.swing.JTextArea hashTableData = new javax.swing.JTextArea();
-
-        // Converting the exported hashTableArray into strings that can be printed into a txt file
-        String[][] hashTableArray = theHashTable.exportHashTable();
-        // Run through the entire has table in the same way as display contents and use # as separator
-        // NOTE: unused indices are filled in with null
-        for (int i = 0; i < theHashTable.getEmployeeCount(); i++) {
-            for (int j = 0; j < 11; j++) {
-                hashTableData.append(hashTableArray[i][j] + "/");
-            }
-            hashTableData.append("\n");
-        }
-        
-        try {
-            // Try saving the file
-            java.io.FileWriter fw = new java.io.FileWriter(filePath, true);
-            hashTableData.write(fw);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-    }//GEN-LAST:event_jMenuItemFileSaveActionPerformed
 
     private void jMenuItemFileSaveAsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFileSaveAsActionPerformed
 
@@ -1800,7 +1763,7 @@ public class MainFrame extends javax.swing.JFrame {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
+
     }//GEN-LAST:event_jMenuItemHelpDocumentationActionPerformed
 
     private void jMenuHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuHelpActionPerformed
@@ -1824,7 +1787,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         // Hmmm we don't have error checking
 
-        
+
         // Convert the value from the dropdown into the key value we use to store sex and workLoc
 
 
@@ -1898,7 +1861,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void pressedAddConfirmYes(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pressedAddConfirmYes
         // If when adding an employee the user clicks yes to the confirmation dialog, add the employee to the hashtable.
         if (jRadioButtonAddFullTimeEmployee.isSelected() == true) {
-            
+
             // Get the information from the fields for full time
             int empNum = Integer.parseInt(jTextFieldAddEmployeeNumber.getText());
             String firstName = jTextFieldAddFirstName.getText();
@@ -1909,7 +1872,7 @@ public class MainFrame extends javax.swing.JFrame {
             double yearlySalary = Double.parseDouble(jTextFieldAddFullTimeEmployeeYearlySalary.getText());
             FullTimeEmployee FTEmployee = new FullTimeEmployee(empNum, firstName, lastName, sex, workLoc, deductRate, yearlySalary);
             theHashTable.addEmployee(FTEmployee);
-            
+
             // Erase the information from the full time employee field
             jTextFieldAddFullTimeEmployeeYearlySalary.setText(null);
         } else {
@@ -1925,13 +1888,13 @@ public class MainFrame extends javax.swing.JFrame {
             int weeksPerYear = Integer.parseInt(jTextFieldAddPartTimeEmployeeWeeksPerYear.getText());
             PartTimeEmployee PTEmployee = new PartTimeEmployee(empNum, firstName, lastName, sex, workLoc, deductRate, hourlyWage, hoursPerWeek, weeksPerYear);
             theHashTable.addEmployee(PTEmployee);
-            
+
             // Erase the information from the part time employee field after employee is added
             jTextFieldAddPartTimeEmployeeHourlyWage.setText(null);
             jTextFieldAddPartTimeEmployeeHoursPerWeek.setText(null);
             jTextFieldAddPartTimeEmployeeWeeksPerYear.setText(null);
         }
-        
+
         // Erase the text after the employee has been added
         jDialogAddConfirm.setVisible(false);
         jTextFieldAddEmployeeNumber.setText(null);
@@ -1943,8 +1906,8 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_pressedAddConfirmYes
 
     private void jTextFieldSearchEmployeeNumberKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldSearchEmployeeNumberKeyTyped
-        
-        
+
+
         // Set the employee name search field to disabled if user types something in the employee number field intending to search for the employee number
         jTextFieldSearchEmployeeName.setText(null);
     }//GEN-LAST:event_jTextFieldSearchEmployeeNumberKeyTyped
@@ -1957,7 +1920,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonSearchDeleteConfirmYespressedAddConfirmYes(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchDeleteConfirmYespressedAddConfirmYes
         // TODO add your handling code here:
-        
+
         // Delete employee confirmation box pops up.
         // If the user clicks yes, removes employee from the hashtable. 
         // Clears the search box and results area
@@ -1974,7 +1937,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonSearchDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchDeleteActionPerformed
         // TODO add your handling code here:
-        
+
         // If the user presses the delete button after searching for a specific employee, the delete employee dialog will pop up
         jDialogSearchDeleteConfirm.setVisible(true);
 
@@ -1990,7 +1953,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jRadioButtonEditFullTimeEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonEditFullTimeEmployeeActionPerformed
         // TODO add your handling code here:
-        
+
         // On the edit employee dialog
         // If user selects full time emp, part time info boxes are disabled
         jTextFieldEditFullTimeEmployeeYearlySalary.setEnabled(true);
@@ -2001,7 +1964,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jRadioButtonEditPartTimeEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonEditPartTimeEmployeeActionPerformed
         // TODO add your handling code here:
-        
+
         // On the edit employee dialog
         // If user selects part time emp, full time info boxes are disabled.
         jTextFieldEditFullTimeEmployeeYearlySalary.setEnabled(false);
@@ -2012,29 +1975,61 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonEditSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditSubmitActionPerformed
         // TODO add your handling code here:
+        // Used to calculate difference in payroll on Home tab
         Double oldTotalSalary = 0.0;
         Double salaryDifference = 0.0;
+
         EmployeeInfo empSearched = theHashTable.getEmployee(Integer.parseInt(jTextFieldSearchEmployeeNumber.getText()));
-        empSearched.setEmpNum(Integer.parseInt(jTextFieldEditEmployeeNumber.getText()));
-        empSearched.setFirstName(jTextFieldEditFirstName.getText());
-        empSearched.setLastName(jTextFieldEditLastName.getText());
-        empSearched.setSex(jComboBoxEditSex.getSelectedIndex());
-        empSearched.setWorkLoc(jComboBoxEditWorkLoc.getSelectedIndex());
-        empSearched.setDeductRate(Double.parseDouble(jTextFieldEditDeductRate.getText()));
-        if (empSearched instanceof FullTimeEmployee) {
+        if(empSearched instanceof FullTimeEmployee) {
             FullTimeEmployee FTEmpSearched = (FullTimeEmployee) empSearched;
             oldTotalSalary = FTEmpSearched.calcGrossAnnualIncome();
-            FTEmpSearched.setYearlySalary(Double.parseDouble(jTextFieldEditFullTimeEmployeeYearlySalary.getText()));
-            salaryDifference = FTEmpSearched.calcGrossAnnualIncome() - oldTotalSalary;
-            theHashTable.setYearlyPayroll(salaryDifference);
-
-        } else {
+        } else if (empSearched instanceof PartTimeEmployee){
             PartTimeEmployee PTEmpSearched = (PartTimeEmployee) empSearched;
             oldTotalSalary = PTEmpSearched.calcGrossAnnualIncome();
-            PTEmpSearched.setHourlyWage(Double.parseDouble(jTextFieldEditPartTimeEmployeeHourlyWage.getText()));
-            PTEmpSearched.setHoursPerWeek(Double.parseDouble(jTextFieldEditPartTimeEmployeeHoursPerWeek.getText()));
-            PTEmpSearched.setWeeksPerYear(Integer.parseInt(jTextFieldEditPartTimeEmployeeWeeksPerYear.getText()));
-            salaryDifference = PTEmpSearched.calcGrossAnnualIncome() - oldTotalSalary;
+        }
+        
+        if (jRadioButtonEditFullTimeEmployee.isSelected()) {
+            // Get values from fields
+            int empNum = Integer.parseInt(jTextFieldEditEmployeeNumber.getText());
+            String firstName = jTextFieldEditFirstName.getText();
+            String lastName = jTextFieldEditLastName.getText();
+            int sex = jComboBoxEditSex.getSelectedIndex();
+            int workLoc = jComboBoxEditWorkLoc.getSelectedIndex();
+            Double deductRate = Double.parseDouble(jTextFieldEditDeductRate.getText());
+            Double yearlySalary = Double.parseDouble(jTextFieldEditFullTimeEmployeeYearlySalary.getText());
+            
+            theHashTable.removeEmployee(empSearched.getEmpNum());
+            
+            // Make a new full time employee
+            FullTimeEmployee FTEmployee = new FullTimeEmployee(empNum, firstName, lastName, sex, workLoc, deductRate, yearlySalary);
+            theHashTable.addEmployee(FTEmployee);
+            
+            // Used for calculating the yearly payroll on Home tab
+            
+            salaryDifference = FTEmployee.calcGrossAnnualIncome() - oldTotalSalary;
+            theHashTable.setYearlyPayroll(salaryDifference);
+
+        } else if (jRadioButtonEditPartTimeEmployee.isSelected()) {
+            // Get values from fields
+            int empNum = Integer.parseInt(jTextFieldEditEmployeeNumber.getText());
+            String firstName = jTextFieldEditFirstName.getText();
+            String lastName = jTextFieldEditLastName.getText();
+            int sex = jComboBoxEditSex.getSelectedIndex();
+            int workLoc = jComboBoxEditWorkLoc.getSelectedIndex();
+            Double deductRate = Double.parseDouble(jTextFieldEditDeductRate.getText());
+            Double hourlyWage = Double.parseDouble(jTextFieldEditPartTimeEmployeeHourlyWage.getText());
+            Double hoursPerWeek = Double.parseDouble(jTextFieldEditPartTimeEmployeeHoursPerWeek.getText());
+            int weeksPerYear = Integer.parseInt(jTextFieldEditPartTimeEmployeeWeeksPerYear.getText());
+            
+            // Get the employee searched and remove from hash table
+            theHashTable.removeEmployee(empSearched.getEmpNum());
+            
+            // Make a new part time employee
+            PartTimeEmployee PTEmployee = new PartTimeEmployee(empNum, firstName, lastName, sex, workLoc, deductRate, hourlyWage, hoursPerWeek, weeksPerYear);
+            theHashTable.addEmployee(PTEmployee);
+            
+            // Used for calculating the yearly payroll on Home tab
+            salaryDifference = PTEmployee.calcGrossAnnualIncome() - oldTotalSalary;
             theHashTable.setYearlyPayroll(salaryDifference);
         }
         jDialogSearchEdit.setVisible(false);
@@ -2443,7 +2438,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemFileExit;
     private javax.swing.JMenuItem jMenuItemFileNew;
     private javax.swing.JMenuItem jMenuItemFileOpen;
-    private javax.swing.JMenuItem jMenuItemFileSave;
     private javax.swing.JMenuItem jMenuItemFileSaveAs;
     private javax.swing.JMenuItem jMenuItemHelpAbout;
     private javax.swing.JMenuItem jMenuItemHelpCheckForUpdates;
