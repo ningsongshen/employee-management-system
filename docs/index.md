@@ -10,6 +10,8 @@ Welcome to the employee management system. This documentation is divided into ma
 
 The homepage displays the name of the program. It also has a text area below with information that you, the user, can add about your company. Underneath, there are statistics that are automatically generated from all the employee information available. 
 
+![Screenshot](https://heliotrope3n.github.io/employee-management-system/home.png)
+
 # Adding
 
 To add an employee to the system, click on the 'Add' tab on the left hand side of the page. Many input fields will appear, and information is entered into these fields. You must specify whether this employee is full time or part time, and the available fields will update accordingly. 
@@ -20,7 +22,12 @@ All fields are required. An error message will appear if you leave a field blank
 
 ![Screenshot](https://heliotrope3n.github.io/employee-management-system/adderror.png)
 
+Once you click submit, a confirmation dialogue will open:
+
+![Screenshot](https://heliotrope3n.github.io/employee-management-system/addconfirm.png)
+
 Note: the employee number cannot be edited after creation.
+
 
 # Searching
 
@@ -37,6 +44,8 @@ Editing the employee is the second step in searching for the employee to edit, a
 # Viewing
 
 Viewing all employees can be done by clicking the 'view all' tab on the left hand side of the page. There will be a chart that is empty. To see the employees currently in the system, click the 'refresh' button at the bottom of the page. This action will update the table to reflect the current employees in the system. Make sure you click the 'refresh' button every time you access this page to ensure you have the latest information.
+
+![Screenshot](https://heliotrope3n.github.io/employee-management-system/viewall.png)
 
 # Saving
 
