@@ -14,7 +14,7 @@ The homepage displays the name of the program. It also has a text area below wit
 
 To add an employee to the system, click on the 'Add' tab on the left hand side of the page. Many input fields will appear, and information is entered into these fields. You must specify whether this employee is full time or part time, and the available fields will update accordingly. 
 
-![Screenshot](https://heliotrope3n.github.io/heliotrope3/employee-management-system/img.png)
+![Screenshot](https://heliotrope3n.github.io/heliotrope3/employee-management-system/add.png)
 
 All fields are required. An error message will appear if you leave a field blank or input an invalid entry.
 
