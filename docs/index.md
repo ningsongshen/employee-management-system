@@ -6,6 +6,15 @@ Welcome to the employee management system. This documentation is divided into ma
 
 # Installation
 
+### Developers:
+
+1. Install Java.
+2. Install and IDE (Eclipse or Netbeans)
+3. Open the project called 'employee-management-system')
+4. In the file directory of the IDE, navigate to  and open:
+	employee-management-system >> src >> <default package> >> MainFrame.java
+5. Press the 'run' button.
+
 # The Homepage
 
 The homepage displays the name of the program. It also has a text area below with information that you, the user, can add about your company. Underneath, there are statistics that are automatically generated from all the employee information available. 
@@ -51,17 +60,43 @@ Viewing all employees can be done by clicking the 'view all' tab on the left han
 
 To save the entire system to a specific location, press 'Save As'. A file chooser dialog will pop up, and ask for a location and a name. The program will then save the file at your specified location and name. To save the file again, choose the same file name and location to save. The 'save' function does not currently work. Make sure to save before you exit the program, or you risk the loss of all your data. To ensure data security and stability, please DO NOT edit the file by opening it in another program. There is a risk of changing the file format, and this could cause data loss.
 
+![Screenshot](https://heliotrope3n.github.io/employee-management-system/saveas.png)
+
+### Developers:
+
+When a database is saved as, the hashtable data is stored in a text file with the suffix -[DO NOT EDIT].txt
+The information is in the following format:
+
+	employeeType/employeeNumber/firstName/lastName/sex/workLocation/deductionRate/yearlySalary/hourlyWage/hourPerWeek/weeksPerYear
+
+Each attribute is separated with a / delimeter and each employee is stored on a new line.
+Note: the format of the information stored is generic for all employee types. any information that is not associated with a specific employee type will be saved as null (i.e. for a line that stores a full time employee, the attributes for hourlyWage, hoursPerWeek, and weeksPerYear will be saved as null).
+
+
+![Screenshot](https://heliotrope3n.github.io/employee-management-system/archive.png)
+
 # Opening
 
 Click on File > Open. This will pop up a confirmation dialog warning of the deletion of the current information is the new system is opened. Make sure to save the current data before opening a new system. A file chooser will pop up once you acknowledge the warning, and choose the file with the name that you saved last time. It will have a [DO NOT EDIT] appended to it. This action will open your file and load it into the system. Then, you are ready to do everything else like before: add, save, modify, etc.
+
+![Screenshot](https://heliotrope3n.github.io/employee-management-system/open.png)
+
+The home tab will be updates to display the file path of your archive file:
+
+![Screenshot](https://heliotrope3n.github.io/employee-management-system/openedhome.png)
 
 # Updating
 
 To update the program to its latest version, click on Help > Check for Updates. This action will automatically search online for available updates, and start updating if one is found. If no updates are found, you will be informed of that. The updates button will only check once every instance. To check for updates again, please restart the program.
 
+
+![Screenshot](https://heliotrope3n.github.io/employee-management-system/update.png)
+
 # Customizing
 
 The program has a unique and special feature that will allow you to customize the program. Adding your own customizations means adding your favourite colours, company colours, or adding colours that are easy on the eye. Currently, only the background colour customizer is available, and others will be added in future updates.
+
+![Screenshot](https://heliotrope3n.github.io/employee-management-system/preferences.png)
 
 # Multiple Instances
 
@@ -70,3 +105,4 @@ To open another instance of the program, press File > New. This is a completely 
 # Exiting
 
 To exit the program, you have a few options. The first is to press the X in the top right corner. Another is to click File > Exit. This will safely exit the program.
+
