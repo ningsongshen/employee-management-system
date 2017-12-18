@@ -177,7 +177,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         jDialogAddConfirm.setBounds(new java.awt.Rectangle(450, 300, 0, 0));
         jDialogAddConfirm.setMinimumSize(new java.awt.Dimension(450, 300));
-        jDialogAddConfirm.setPreferredSize(new java.awt.Dimension(450, 300));
         jDialogAddConfirm.setResizable(false);
 
         jButtonAddConfirmYes.setText("OK");
@@ -349,7 +348,7 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelAddWorkLoc1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelAddWorkLoc1.setText("Location:");
 
-        jComboBoxEditWorkLoc.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Mississauga", "Toronto", "Ottawa", "Halifax", "Miami" }));
+        jComboBoxEditWorkLoc.setModel(new javax.swing.DefaultComboBoxModel(new String[] { " ", "Mississauga", "Toronto", "Ottawa", "Halifax", "Miami" }));
         jComboBoxEditWorkLoc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxEditWorkLocActionPerformed(evt);
@@ -591,7 +590,6 @@ public class MainFrame extends javax.swing.JFrame {
         jDialogFileOpenConfirm.setBounds(new java.awt.Rectangle(450, 300, 0, 0));
         jDialogFileOpenConfirm.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jDialogFileOpenConfirm.setMinimumSize(new java.awt.Dimension(400, 150));
-        jDialogFileOpenConfirm.setPreferredSize(new java.awt.Dimension(400, 150));
 
         jButtonOpenConfirmOK.setText("OK");
         jButtonOpenConfirmOK.addActionListener(new java.awt.event.ActionListener() {
