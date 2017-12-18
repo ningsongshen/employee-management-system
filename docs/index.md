@@ -106,7 +106,7 @@ The home tab will be updates to display the file path of your archive file:
 
 # Updating <a name="updating"></a>
 
-To update the program to its latest version, click on Help > Check for Updates. This action will automatically search online for available updates, and start updating if one is found. If no updates are found, you will be informed of that. The updates button will only check once every instance. To check for updates again, please restart the program.
+To update the program to its latest version, click on Help > Check for Updates. This action will automatically update the system if one is found. If no updates are found, you will be informed of that. The updates button will only check once every instance. To check for updates again, please restart the program.
 
 
 ![Screenshot](https://heliotrope3n.github.io/employee-management-system/update.png)
@@ -123,5 +123,5 @@ To open another instance of the program, press File > New. This is a completely 
 
 # Exiting <a name="exiting"></a>
 
-To exit the program, you have a few options. The first is to press the X in the top right corner. Another is to click File > Exit. This will safely exit the program.
+To exit a window, click the X button on the top right. If you have multiple windows open and wish to exit all of them, go to File > Exit All Windows or press ctrl + shift + E.
 
