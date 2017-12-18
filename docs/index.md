@@ -18,7 +18,7 @@ Welcome to the employee management system! This documentation is divided into ma
 9. [Opening](#opening)
 10. [Updating](#updating)
 11. [Customizing](#customizing)
-12. [Mulitple Instances](#multiple-instances)
+12. [Mulitple Windows](#multiple-windows)
 13. [Exiting](#exiting)
 
 
@@ -117,7 +117,7 @@ The program has a unique and special feature that will allow you to customize th
 
 ![Screenshot](https://heliotrope3n.github.io/employee-management-system/preferences.png)
 
-# Multiple Instances <a name="multiple-instances"></a>
+# Multiple Windows <a name="multiple-windows"></a>
 
 To open another instance of the program, press File > New. This is a completely new instance, and is unaffected by the original instance. Use it to work on two different files concurrently.
 
