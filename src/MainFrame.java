@@ -1199,9 +1199,9 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jLabelAddPartTimeEmployeeWeeksPerYear))
                 .addGap(20, 20, 20)
                 .addComponent(jLabelAddEntryError, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButtonAddSubmit)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonAddSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                 .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelAddLayout.createSequentialGroup()
                         .addGap(34, 34, 34)
@@ -1243,6 +1243,7 @@ public class MainFrame extends javax.swing.JFrame {
         jButtonSearchSubmit.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButtonSearchSubmit.setText("Search");
         jButtonSearchSubmit.setOpaque(false);
+        jButtonSearchSubmit.setPreferredSize(new java.awt.Dimension(71, 31));
         jButtonSearchSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSearchSubmitActionPerformed(evt);
@@ -1251,7 +1252,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         jTextAreaSearchDisplayEmployee.setColumns(20);
         jTextAreaSearchDisplayEmployee.setRows(5);
-        jTextAreaSearchDisplayEmployee.setText("Employee Type:\nName:\nSex:\nWork Location:\nDeduction Rate:\n\n");
         jScrollPane2.setViewportView(jTextAreaSearchDisplayEmployee);
 
         jButtonSearchEdit.setBackground(new java.awt.Color(255, 255, 255));
@@ -1315,14 +1315,14 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jLabelSearchEmployeeNumber)
                     .addComponent(jTextFieldSearchEmployeeNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jButtonSearchSubmit)
+                .addComponent(jButtonSearchSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanelSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonSearchEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonSearchDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
+                .addGroup(jPanelSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButtonSearchDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonSearchEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
                 .addGroup(jPanelSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelSearchLayout.createSequentialGroup()
                         .addGap(34, 34, 34)
@@ -1361,7 +1361,7 @@ public class MainFrame extends javax.swing.JFrame {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "Employee Number", "First Name", "Last Name", "Sex", "Location", "Net Income"
+                "Employee Number", "First Name", "Last Name", "Sex", "Location", "Deduction Rate"
             }
         ) {
             Class[] types = new Class [] {
@@ -1427,11 +1427,11 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(jPanelViewLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14)
-                .addComponent(jButtonViewAllUpdateTable)
+                .addGap(18, 18, 18)
+                .addComponent(jButtonViewAllUpdateTable, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPaneViewAllEmployees, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 118, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
                 .addGroup(jPanelViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelViewLayout.createSequentialGroup()
                         .addGap(34, 34, 34)
@@ -1485,7 +1485,7 @@ public class MainFrame extends javax.swing.JFrame {
         jMenuFile.add(jMenuItemFileSaveAs);
 
         jMenuItemFileExit.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItemFileExit.setText("Exit");
+        jMenuItemFileExit.setText("Exit All Windows");
         jMenuItemFileExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItemFileExitActionPerformed(evt);
@@ -1735,7 +1735,8 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemFileSaveAsActionPerformed
     
     private void jMenuItemFileExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFileExitActionPerformed
-        dispose(); // Destroy the JFrame object
+
+        java.lang.System.exit(0); // Close all windows
     }//GEN-LAST:event_jMenuItemFileExitActionPerformed
     
     private void jMenuWindowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuWindowActionPerformed
@@ -2009,10 +2010,15 @@ public class MainFrame extends javax.swing.JFrame {
     
     private void jPanelSearchMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelSearchMouseMoved
         // TODO add your handling code here:
-        if ((jTextFieldSearchEmployeeNumber.getText() == null) || (jTextFieldSearchEmployeeNumber.getText().equals(""))) {
-            jButtonSearchEdit.setEnabled(false);
+        jTextAreaSearchDisplayEmployee.setEditable(false);
+        if (jTextAreaSearchDisplayEmployee.getText().equals("Employee not found") || jTextAreaSearchDisplayEmployee.getText().equals(""
+            )) {
+             jButtonSearchEdit.setEnabled(false);
             jButtonSearchDelete.setEnabled(false);
-        } else {
+        }// else if ((jTextFieldSearchEmployeeNumber.getText() == null) || (jTextFieldSearchEmployeeNumber.getText().equals(""))) {
+            //jButtonSearchEdit.setEnabled(false);
+            //jButtonSearchDelete.setEnabled(false);
+         else {
             jButtonSearchEdit.setEnabled(true);
             jButtonSearchDelete.setEnabled(true);
         }
