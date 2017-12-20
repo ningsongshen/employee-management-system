@@ -1950,7 +1950,7 @@ public class MainFrame extends javax.swing.JFrame {
         jTextFieldEditFirstName.setText(empSearched.getFirstName());
         jTextFieldEditLastName.setText(empSearched.getLastName());
         jComboBoxEditSex.setSelectedIndex(empSearched.getSex());
-        jComboBoxEditWorkLoc.setSelectedItem((Integer.toString(empSearched.getWorkLoc())));
+        jComboBoxEditWorkLoc.setSelectedIndex((empSearched.getWorkLoc()));
         jTextFieldEditDeductRate.setText(Double.toString(empSearched.getDeductRate()));
         if (empSearched instanceof FullTimeEmployee) {
             jRadioButtonEditFullTimeEmployee.setSelected(true);
