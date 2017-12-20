@@ -328,6 +328,7 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelAddEmployeeNumber1.setText("Employee Number:");
 
         jTextFieldEditEmployeeNumber.setEditable(false);
+        jTextFieldEditEmployeeNumber.setToolTipText("Employee number cannot be edited");
         jTextFieldEditEmployeeNumber.setEnabled(false);
 
         jLabelAddFirstName1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -356,7 +357,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jTextFieldEditDeductRate.setText("0.21");
-        jTextFieldEditDeductRate.setToolTipText("Decimal value");
+        jTextFieldEditDeductRate.setToolTipText("Decimal value percentage");
         jTextFieldEditDeductRate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldEditDeductRateActionPerformed(evt);
@@ -371,6 +372,7 @@ public class MainFrame extends javax.swing.JFrame {
         buttonGroupEmployeeType.add(jRadioButtonEditFullTimeEmployee);
         jRadioButtonEditFullTimeEmployee.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jRadioButtonEditFullTimeEmployee.setText("Full Time Employee");
+        jRadioButtonEditFullTimeEmployee.setToolTipText("Change to full time employee");
         jRadioButtonEditFullTimeEmployee.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jRadioButtonEditFullTimeEmployee.setOpaque(false);
         jRadioButtonEditFullTimeEmployee.addActionListener(new java.awt.event.ActionListener() {
@@ -389,6 +391,7 @@ public class MainFrame extends javax.swing.JFrame {
         buttonGroupEmployeeType.add(jRadioButtonEditPartTimeEmployee);
         jRadioButtonEditPartTimeEmployee.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jRadioButtonEditPartTimeEmployee.setText("Part Time Employee");
+        jRadioButtonEditPartTimeEmployee.setToolTipText("Change to part time employee");
         jRadioButtonEditPartTimeEmployee.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jRadioButtonEditPartTimeEmployee.setOpaque(false);
         jRadioButtonEditPartTimeEmployee.addActionListener(new java.awt.event.ActionListener() {
@@ -417,6 +420,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jButtonEditSubmit.setBackground(new java.awt.Color(255, 255, 255));
         jButtonEditSubmit.setText("Save Changes");
+        jButtonEditSubmit.setToolTipText("Save and apply changes");
         jButtonEditSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonEditSubmitActionPerformed(evt);
@@ -721,6 +725,7 @@ public class MainFrame extends javax.swing.JFrame {
         jDialogPreferences.setMinimumSize(new java.awt.Dimension(600, 350));
 
         jButtonPreferencesApply.setText("Apply");
+        jButtonPreferencesApply.setToolTipText("Apply changes");
         jButtonPreferencesApply.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonPreferencesApplyActionPerformed(evt);
@@ -742,6 +747,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jButtonPreferencesRestore.setText("Restore Default");
+        jButtonPreferencesRestore.setToolTipText("");
         jButtonPreferencesRestore.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonPreferencesRestoreActionPerformed(evt);
@@ -795,6 +801,7 @@ public class MainFrame extends javax.swing.JFrame {
         jTabbedPaneMain.setBackground(new java.awt.Color(16, 152, 247));
         jTabbedPaneMain.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
         jTabbedPaneMain.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+        jTabbedPaneMain.setToolTipText("");
         jTabbedPaneMain.setAutoscrolls(true);
         jTabbedPaneMain.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jTabbedPaneMain.setMinimumSize(new java.awt.Dimension(200, 30));
@@ -882,6 +889,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo.png"))); // NOI18N
+        jLabel14.setToolTipText("Employee Database");
         jLabel14.setMinimumSize(new java.awt.Dimension(30, 30));
 
         javax.swing.GroupLayout jPanelHomeLayout = new javax.swing.GroupLayout(jPanelHome);
@@ -952,6 +960,7 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelAddEmployeeNumber.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelAddEmployeeNumber.setText("Employee Number*:");
 
+        jTextFieldAddEmployeeNumber.setToolTipText("Integer number");
         jTextFieldAddEmployeeNumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldAddEmployeeNumberActionPerformed(evt);
@@ -961,6 +970,8 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelAddFirstName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelAddFirstName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelAddFirstName.setText("First Name:");
+
+        jTextFieldAddFirstName.setToolTipText("");
 
         jLabelAddLastName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelAddLastName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -979,7 +990,7 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelAddDeductRate.setText("Deduct Rate*:");
 
         jTextFieldAddDeductRate.setText("0.21");
-        jTextFieldAddDeductRate.setToolTipText("Decimal value");
+        jTextFieldAddDeductRate.setToolTipText("Decimal value percentage");
         jTextFieldAddDeductRate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldAddDeductRateActionPerformed(evt);
@@ -988,6 +999,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jButtonAddSubmit.setBackground(new java.awt.Color(255, 255, 255));
         jButtonAddSubmit.setText("Submit");
+        jButtonAddSubmit.setToolTipText("Add new employee");
         jButtonAddSubmit.setOpaque(false);
         jButtonAddSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1017,6 +1029,7 @@ public class MainFrame extends javax.swing.JFrame {
         buttonGroupEmployeeType.add(jRadioButtonAddPartTimeEmployee);
         jRadioButtonAddPartTimeEmployee.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jRadioButtonAddPartTimeEmployee.setText("Part Time Employee");
+        jRadioButtonAddPartTimeEmployee.setToolTipText("Set new employee as part time");
         jRadioButtonAddPartTimeEmployee.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jRadioButtonAddPartTimeEmployee.setOpaque(false);
         jRadioButtonAddPartTimeEmployee.addActionListener(new java.awt.event.ActionListener() {
@@ -1030,6 +1043,7 @@ public class MainFrame extends javax.swing.JFrame {
         jRadioButtonAddFullTimeEmployee.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jRadioButtonAddFullTimeEmployee.setSelected(true);
         jRadioButtonAddFullTimeEmployee.setText("Full Time Employee");
+        jRadioButtonAddFullTimeEmployee.setToolTipText("Set new employee as full time");
         jRadioButtonAddFullTimeEmployee.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jRadioButtonAddFullTimeEmployee.setOpaque(false);
         jRadioButtonAddFullTimeEmployee.addActionListener(new java.awt.event.ActionListener() {
@@ -1037,6 +1051,8 @@ public class MainFrame extends javax.swing.JFrame {
                 jRadioButtonAddFullTimeEmployeeActionPerformed(evt);
             }
         });
+
+        jTextFieldAddFullTimeEmployeeYearlySalary.setToolTipText("");
 
         jLabelAddFullTimeEmployeeYearlySalary.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelAddFullTimeEmployeeYearlySalary.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -1059,6 +1075,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo.png"))); // NOI18N
+        jLabel15.setToolTipText("Employee Database");
         jLabel15.setMinimumSize(new java.awt.Dimension(30, 30));
 
         jLabel16.setText("Powered by");
@@ -1226,6 +1243,7 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelSearchEmployeeNumber.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelSearchEmployeeNumber.setText("Employee Number:");
 
+        jTextFieldSearchEmployeeNumber.setToolTipText("Enter existing employee number");
         jTextFieldSearchEmployeeNumber.setMinimumSize(new java.awt.Dimension(50, 20));
         jTextFieldSearchEmployeeNumber.setPreferredSize(new java.awt.Dimension(70, 20));
         jTextFieldSearchEmployeeNumber.addActionListener(new java.awt.event.ActionListener() {
@@ -1242,6 +1260,7 @@ public class MainFrame extends javax.swing.JFrame {
         jButtonSearchSubmit.setBackground(new java.awt.Color(255, 255, 255));
         jButtonSearchSubmit.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButtonSearchSubmit.setText("Search");
+        jButtonSearchSubmit.setToolTipText("Search database");
         jButtonSearchSubmit.setOpaque(false);
         jButtonSearchSubmit.setPreferredSize(new java.awt.Dimension(71, 31));
         jButtonSearchSubmit.addActionListener(new java.awt.event.ActionListener() {
@@ -1256,6 +1275,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jButtonSearchEdit.setBackground(new java.awt.Color(255, 255, 255));
         jButtonSearchEdit.setText("Edit");
+        jButtonSearchEdit.setToolTipText("Edit searched employee");
         jButtonSearchEdit.setOpaque(false);
         jButtonSearchEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1265,6 +1285,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jButtonSearchDelete.setBackground(new java.awt.Color(255, 255, 255));
         jButtonSearchDelete.setText("Delete");
+        jButtonSearchDelete.setToolTipText("Remove employee from database");
         jButtonSearchDelete.setOpaque(false);
         jButtonSearchDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1273,6 +1294,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo.png"))); // NOI18N
+        jLabel17.setToolTipText("Employee Database");
         jLabel17.setMinimumSize(new java.awt.Dimension(30, 30));
 
         jLabel18.setText("Powered by");
@@ -1361,7 +1383,7 @@ public class MainFrame extends javax.swing.JFrame {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "Employee Number", "First Name", "Last Name", "Sex", "Location", "Deduction Rate"
+                "Employee Number", "First Name", "Last Name", "Sex", "Work Location", "Deduction Rate"
             }
         ) {
             Class[] types = new Class [] {
@@ -1388,6 +1410,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jButtonViewAllUpdateTable.setBackground(new java.awt.Color(255, 255, 255));
         jButtonViewAllUpdateTable.setText("Refresh Table");
+        jButtonViewAllUpdateTable.setToolTipText("Refresh");
         jButtonViewAllUpdateTable.setOpaque(false);
         jButtonViewAllUpdateTable.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1396,6 +1419,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo.png"))); // NOI18N
+        jLabel19.setToolTipText("Employee Database");
         jLabel19.setMinimumSize(new java.awt.Dimension(30, 30));
 
         jLabel20.setText("Powered by");
@@ -1950,7 +1974,7 @@ public class MainFrame extends javax.swing.JFrame {
         jTextFieldEditFirstName.setText(empSearched.getFirstName());
         jTextFieldEditLastName.setText(empSearched.getLastName());
         jComboBoxEditSex.setSelectedIndex(empSearched.getSex());
-        jComboBoxEditWorkLoc.setSelectedItem((Integer.toString(empSearched.getWorkLoc())));
+        jComboBoxEditWorkLoc.setSelectedIndex((empSearched.getWorkLoc()));
         jTextFieldEditDeductRate.setText(Double.toString(empSearched.getDeductRate()));
         if (empSearched instanceof FullTimeEmployee) {
             jRadioButtonEditFullTimeEmployee.setSelected(true);
