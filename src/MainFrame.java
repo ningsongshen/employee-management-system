@@ -822,7 +822,7 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel3.setText("Powered by");
 
         jLabelFileName.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabelFileName.setText("File Name: ");
+        jLabelFileName.setText("File Path: ");
 
         jLabelHomePayrollTotal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelHomePayrollTotal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -1310,7 +1310,7 @@ public class MainFrame extends javax.swing.JFrame {
                         .addGroup(jPanelSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabelSearchHeading)
                             .addComponent(jButtonSearchEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 359, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                        .addGap(48, 48, 48)
                         .addComponent(jButtonSearchDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 359, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanelSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(jPanelSearchLayout.createSequentialGroup()
@@ -2059,7 +2059,7 @@ public class MainFrame extends javax.swing.JFrame {
         // Set the file chooser to open
         int userSelection = fileChooser.showOpenDialog(jFileChooserOpenFile);
         java.io.File s = fileChooser.getSelectedFile();
-        jLabelFileName.setText("File Name: " + s.getAbsolutePath());
+        jLabelFileName.setText("File Path: " + s.getAbsolutePath());
         
         theHashTable = new MyHashTable(2);
 
