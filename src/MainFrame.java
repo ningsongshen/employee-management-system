@@ -101,6 +101,11 @@ public class MainFrame extends javax.swing.JFrame {
         jButtonPreferencesOK = new javax.swing.JButton();
         jButtonPreferencesRestore = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
+        jDialogExit = new javax.swing.JDialog();
+        jLabel21 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         jTabbedPaneMain = new javax.swing.JTabbedPane();
         jPanelHome = new javax.swing.JPanel();
         jLabelHomeHeading = new javax.swing.JLabel();
@@ -694,6 +699,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jDialogCheckUpdates.setMinimumSize(new java.awt.Dimension(363, 200));
 
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel11.setText("Checking for updates...");
 
         jLabel12.setText("Please do not close the program or shut down your computer.");
@@ -792,6 +798,62 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jButtonPreferencesOK)
                     .addComponent(jButtonPreferencesRestore))
                 .addGap(29, 29, 29))
+        );
+
+        jDialogExit.setMinimumSize(new java.awt.Dimension(400, 200));
+
+        jLabel21.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel21.setText("Would you like to save your data before exiting?");
+
+        jButton1.setText("Save As");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("Exit without Saving");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("Cancel");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jDialogExitLayout = new javax.swing.GroupLayout(jDialogExit.getContentPane());
+        jDialogExit.getContentPane().setLayout(jDialogExitLayout);
+        jDialogExitLayout.setHorizontalGroup(
+            jDialogExitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogExitLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(jLabel21)
+                .addContainerGap(70, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogExitLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton3)
+                .addGap(24, 24, 24))
+        );
+        jDialogExitLayout.setVerticalGroup(
+            jDialogExitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogExitLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(jLabel21)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addGroup(jDialogExitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2)
+                    .addComponent(jButton3))
+                .addGap(46, 46, 46))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -1759,8 +1821,8 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemFileSaveAsActionPerformed
     
     private void jMenuItemFileExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFileExitActionPerformed
-
-        java.lang.System.exit(0); // Close all windows
+        jDialogExit.setVisible(true);
+        
     }//GEN-LAST:event_jMenuItemFileExitActionPerformed
     
     private void jMenuWindowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuWindowActionPerformed
@@ -2356,6 +2418,65 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldAddEmployeeNumberActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        jFileChooserSaveFile.setVisible(false);
+        jDialogExit.setVisible(false);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        // Open a file chooser dialog
+        //jFileChooser.setVisible(true);
+        javax.swing.JFileChooser fileChooser = new javax.swing.JFileChooser();
+        fileChooser.setDialogTitle("Specify a file to save");
+
+        // Set the file chooser to save
+        int userSelection = fileChooser.showSaveDialog(jFileChooserSaveFile);
+
+        // Create a textarea to prepare the text to be written to the file. JTextcomponents have the ability to write to a file, and a text area is a JTextComponent
+        javax.swing.JTextArea hashTableData = new javax.swing.JTextArea();
+
+        // Converting the exported hashTableArray into strings that can be printed into a txt file
+        String[][] hashTableArray = theHashTable.exportHashTable();
+        // Run through the entire has table in the same way as display contents and use # as separator
+        // NOTE: unused indices are filled in with null
+        for (int i = 0; i < theHashTable.getEmployeeCount(); i++) {
+            for (int j = 0; j < 11; j++) {
+                hashTableData.append(hashTableArray[i][j] + "/");
+            }
+            hashTableData.append("\n");
+        }
+        
+        if (userSelection == javax.swing.JFileChooser.APPROVE_OPTION) {
+            // If the user says ok to saving the file
+            java.io.File fileToSave = fileChooser.getSelectedFile();
+            if (fileToSave == null) {
+                return;
+            }
+            // Append .txt to the file name
+
+            // Automatically save the file as a txt file
+            fileToSave = new java.io.File(fileToSave.getParentFile(), fileToSave.getName() + "-[DO NOT EDIT].txt");
+            
+            
+            try {
+                // Try saving the file
+                hashTableData.write(new java.io.OutputStreamWriter(new java.io.FileOutputStream(fileToSave),
+                        "utf-8"));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            java.lang.System.exit(0); // Close all windows
+        }
+       
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        java.lang.System.exit(0); // Close all windows
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2402,6 +2523,9 @@ public class MainFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroupAddSex;
     private javax.swing.ButtonGroup buttonGroupEmployeeType;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButtonAddConfirmNo;
     private javax.swing.JButton jButtonAddConfirmYes;
     private javax.swing.JButton jButtonAddSubmit;
@@ -2428,6 +2552,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JComboBox jComboBoxEditWorkLoc;
     private javax.swing.JDialog jDialogAddConfirm;
     private javax.swing.JDialog jDialogCheckUpdates;
+    private javax.swing.JDialog jDialogExit;
     private javax.swing.JDialog jDialogExitConfrirm;
     private javax.swing.JDialog jDialogFileOpenConfirm;
     private javax.swing.JDialog jDialogPreferences;
@@ -2448,6 +2573,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
