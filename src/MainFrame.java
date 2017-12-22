@@ -385,7 +385,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jRadioButtonEditFullTimeEmployee.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroupEmployeeType.add(jRadioButtonEditFullTimeEmployee);
-        jRadioButtonEditFullTimeEmployee.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jRadioButtonEditFullTimeEmployee.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jRadioButtonEditFullTimeEmployee.setText("Full Time Employee");
         jRadioButtonEditFullTimeEmployee.setToolTipText("Change to full time employee");
         jRadioButtonEditFullTimeEmployee.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -404,7 +404,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jRadioButtonEditPartTimeEmployee.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroupEmployeeType.add(jRadioButtonEditPartTimeEmployee);
-        jRadioButtonEditPartTimeEmployee.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jRadioButtonEditPartTimeEmployee.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jRadioButtonEditPartTimeEmployee.setText("Part Time Employee");
         jRadioButtonEditPartTimeEmployee.setToolTipText("Change to part time employee");
         jRadioButtonEditPartTimeEmployee.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -466,13 +466,18 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(jDialogSearchEditLayout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jRadioButtonEditPartTimeEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jDialogSearchEditLayout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jDialogSearchEditLayout.createSequentialGroup()
+                                .addComponent(jButtonEditSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButtonEditCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabelEditEntryError, javax.swing.GroupLayout.PREFERRED_SIZE, 486, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jRadioButtonEditFullTimeEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelAddHeading1, javax.swing.GroupLayout.PREFERRED_SIZE, 685, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jDialogSearchEditLayout.createSequentialGroup()
-                            .addGap(49, 49, 49)
-                            .addComponent(jLabelAddLastName1)
-                            .addGap(18, 18, 18)
-                            .addComponent(jTextFieldEditLastName))
+                    .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jDialogSearchEditLayout.createSequentialGroup()
                             .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(jDialogSearchEditLayout.createSequentialGroup()
@@ -482,63 +487,53 @@ public class MainFrame extends javax.swing.JFrame {
                                     .addComponent(jLabelAddFirstName1)
                                     .addGap(21, 21, 21)))
                             .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jTextFieldEditFirstName)
-                                .addComponent(jTextFieldEditEmployeeNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jDialogSearchEditLayout.createSequentialGroup()
+                                .addComponent(jTextFieldEditEmployeeNumber, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
+                                .addComponent(jTextFieldEditFirstName)))
+                        .addGroup(jDialogSearchEditLayout.createSequentialGroup()
+                            .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogSearchEditLayout.createSequentialGroup()
+                                    .addGap(49, 49, 49)
+                                    .addComponent(jLabelAddLastName1)
+                                    .addGap(18, 18, 18))
+                                .addGroup(jDialogSearchEditLayout.createSequentialGroup()
+                                    .addGap(88, 88, 88)
+                                    .addComponent(jLabelAddSex1)
+                                    .addGap(20, 20, 20)))
+                            .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jComboBoxEditSex, 0, 125, Short.MAX_VALUE)
+                                .addComponent(jTextFieldEditLastName)))
                         .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jDialogSearchEditLayout.createSequentialGroup()
-                                .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jDialogSearchEditLayout.createSequentialGroup()
-                                        .addGap(59, 59, 59)
-                                        .addComponent(jLabelAddWorkLoc1))
-                                    .addGroup(jDialogSearchEditLayout.createSequentialGroup()
-                                        .addGap(35, 35, 35)
-                                        .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jDialogSearchEditLayout.createSequentialGroup()
-                                                .addGap(19, 19, 19)
-                                                .addComponent(jLabelAddFullTimeEmployeeYearlySalary1)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(jTextFieldEditFullTimeEmployeeYearlySalary, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(jRadioButtonEditFullTimeEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(jDialogSearchEditLayout.createSequentialGroup()
-                                                .addComponent(jLabelAddDeductRate1)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jTextFieldEditDeductRate, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                .addGap(101, 101, 101)
-                                .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jDialogSearchEditLayout.createSequentialGroup()
-                                        .addGap(48, 48, 48)
-                                        .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(jDialogSearchEditLayout.createSequentialGroup()
-                                                .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogSearchEditLayout.createSequentialGroup()
-                                                        .addComponent(jLabelAddPartTimeEmployeeHourlyWage1)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
-                                                    .addGroup(jDialogSearchEditLayout.createSequentialGroup()
-                                                        .addComponent(jLabelAddPartTimeEmployeeHoursPerWeek1)
-                                                        .addGap(10, 10, 10)))
-                                                .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                    .addComponent(jTextFieldEditPartTimeEmployeeHoursPerWeek)
-                                                    .addComponent(jTextFieldEditPartTimeEmployeeHourlyWage, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                            .addGroup(jDialogSearchEditLayout.createSequentialGroup()
-                                                .addComponent(jLabelAddPartTimeEmployeeWeeksPerYear1)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(jTextFieldEditPartTimeEmployeeWeeksPerYear, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                    .addComponent(jRadioButtonEditPartTimeEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogSearchEditLayout.createSequentialGroup()
-                                .addComponent(jLabelEditEntryError, javax.swing.GroupLayout.PREFERRED_SIZE, 486, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButtonEditSubmit)
-                                .addGap(18, 18, 18)))
-                        .addComponent(jButtonEditCancel))
-                    .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jComboBoxEditWorkLoc, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jDialogSearchEditLayout.createSequentialGroup()
-                            .addGap(88, 88, 88)
-                            .addComponent(jLabelAddSex1)
+                                .addComponent(jLabelAddDeductRate1)
+                                .addGap(21, 21, 21)
+                                .addComponent(jTextFieldEditDeductRate, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jDialogSearchEditLayout.createSequentialGroup()
+                                .addGap(24, 24, 24)
+                                .addComponent(jLabelAddWorkLoc1)
+                                .addGap(21, 21, 21)
+                                .addComponent(jComboBoxEditWorkLoc, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jDialogSearchEditLayout.createSequentialGroup()
+                            .addComponent(jLabelAddFullTimeEmployeeYearlySalary1)
                             .addGap(18, 18, 18)
-                            .addComponent(jComboBoxEditSex, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(87, Short.MAX_VALUE))
+                            .addComponent(jTextFieldEditFullTimeEmployeeYearlySalary, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jDialogSearchEditLayout.createSequentialGroup()
+                                .addGap(8, 8, 8)
+                                .addComponent(jLabelAddPartTimeEmployeeWeeksPerYear1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jTextFieldEditPartTimeEmployeeWeeksPerYear, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogSearchEditLayout.createSequentialGroup()
+                                .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogSearchEditLayout.createSequentialGroup()
+                                        .addComponent(jLabelAddPartTimeEmployeeHourlyWage1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                                    .addGroup(jDialogSearchEditLayout.createSequentialGroup()
+                                        .addComponent(jLabelAddPartTimeEmployeeHoursPerWeek1)
+                                        .addGap(10, 10, 10)))
+                                .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jTextFieldEditPartTimeEmployeeHoursPerWeek, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextFieldEditPartTimeEmployeeHourlyWage, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
         jDialogSearchEditLayout.setVerticalGroup(
             jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -561,7 +556,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelAddSex1)
                     .addComponent(jComboBoxEditSex, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelAddWorkLoc1)
                     .addComponent(jComboBoxEditWorkLoc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -569,35 +564,33 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelAddDeductRate1)
                     .addComponent(jTextFieldEditDeductRate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(70, 70, 70)
-                .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jDialogSearchEditLayout.createSequentialGroup()
-                        .addComponent(jRadioButtonEditFullTimeEmployee)
-                        .addGap(18, 18, 18)
-                        .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelAddFullTimeEmployeeYearlySalary1)
-                            .addComponent(jTextFieldEditFullTimeEmployeeYearlySalary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jDialogSearchEditLayout.createSequentialGroup()
-                        .addComponent(jRadioButtonEditPartTimeEmployee)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelAddPartTimeEmployeeHourlyWage1)
-                            .addComponent(jTextFieldEditPartTimeEmployeeHourlyWage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelAddPartTimeEmployeeHoursPerWeek1)
-                            .addComponent(jTextFieldEditPartTimeEmployeeHoursPerWeek, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabelAddPartTimeEmployeeWeeksPerYear1)
-                            .addComponent(jTextFieldEditPartTimeEmployeeWeeksPerYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 119, Short.MAX_VALUE)
-                .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButtonEditSubmit)
-                        .addComponent(jButtonEditCancel))
-                    .addComponent(jLabelEditEntryError, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(53, 53, 53))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addComponent(jRadioButtonEditFullTimeEmployee)
+                .addGap(18, 18, 18)
+                .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldEditFullTimeEmployeeYearlySalary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelAddFullTimeEmployeeYearlySalary1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addComponent(jRadioButtonEditPartTimeEmployee)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelAddPartTimeEmployeeHourlyWage1)
+                    .addComponent(jTextFieldEditPartTimeEmployeeHourlyWage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelAddPartTimeEmployeeHoursPerWeek1)
+                    .addComponent(jTextFieldEditPartTimeEmployeeHoursPerWeek, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(14, 14, 14)
+                .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelAddPartTimeEmployeeWeeksPerYear1)
+                    .addComponent(jTextFieldEditPartTimeEmployeeWeeksPerYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabelEditEntryError, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonEditSubmit)
+                    .addComponent(jButtonEditCancel))
+                .addGap(37, 37, 37))
         );
 
         jFileChooserSaveFile.addActionListener(new java.awt.event.ActionListener() {
@@ -867,7 +860,6 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         jDialogAbout.setMinimumSize(new java.awt.Dimension(470, 350));
-        jDialogAbout.setPreferredSize(new java.awt.Dimension(450, 303));
 
         jLabel22.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel22.setText("Employee Management System");
@@ -2012,102 +2004,7 @@ public class MainFrame extends javax.swing.JFrame {
         jDialogSearchDeleteConfirm.setVisible(true);
         
     }//GEN-LAST:event_jButtonSearchDeleteActionPerformed
-    
-    private void jComboBoxEditWorkLocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxEditWorkLocActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBoxEditWorkLocActionPerformed
-    
-    private void jTextFieldEditDeductRateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldEditDeductRateActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldEditDeductRateActionPerformed
-    
-    private void jRadioButtonEditFullTimeEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonEditFullTimeEmployeeActionPerformed
-        // TODO add your handling code here:
-
-        // On the edit employee dialog
-        // If user selects full time emp, part time info boxes are disabled
-        jTextFieldEditFullTimeEmployeeYearlySalary.setEnabled(true);
-        jTextFieldEditPartTimeEmployeeHourlyWage.setEnabled(false);
-        jTextFieldEditPartTimeEmployeeHoursPerWeek.setEnabled(false);
-        jTextFieldEditPartTimeEmployeeWeeksPerYear.setEnabled(false);
-    }//GEN-LAST:event_jRadioButtonEditFullTimeEmployeeActionPerformed
-    
-    private void jRadioButtonEditPartTimeEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonEditPartTimeEmployeeActionPerformed
-        // TODO add your handling code here:
-
-        // On the edit employee dialog
-        // If user selects part time emp, full time info boxes are disabled.
-        jTextFieldEditFullTimeEmployeeYearlySalary.setEnabled(false);
-        jTextFieldEditPartTimeEmployeeHourlyWage.setEnabled(true);
-        jTextFieldEditPartTimeEmployeeHoursPerWeek.setEnabled(true);
-        jTextFieldEditPartTimeEmployeeWeeksPerYear.setEnabled(true);
-    }//GEN-LAST:event_jRadioButtonEditPartTimeEmployeeActionPerformed
-    
-    private void jButtonEditSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditSubmitActionPerformed
-        // TODO add your handling code here:
-        // Used to calculate difference in payroll on Home tab
-        Double oldTotalSalary = 0.0;
-        Double salaryDifference = 0.0;
-        try {
-        EmployeeInfo empSearched = theHashTable.getEmployee(Integer.parseInt(jTextFieldSearchEmployeeNumber.getText()));
-        if (empSearched instanceof FullTimeEmployee) {
-            FullTimeEmployee FTEmpSearched = (FullTimeEmployee) empSearched;
-            oldTotalSalary = FTEmpSearched.calcGrossAnnualIncome();
-        } else if (empSearched instanceof PartTimeEmployee) {
-            PartTimeEmployee PTEmpSearched = (PartTimeEmployee) empSearched;
-            oldTotalSalary = PTEmpSearched.calcGrossAnnualIncome();
-        }
-        
-        if (jRadioButtonEditFullTimeEmployee.isSelected()) {
-            // Get values from fields
-            int empNum = Integer.parseInt(jTextFieldEditEmployeeNumber.getText());
-            String firstName = jTextFieldEditFirstName.getText();
-            String lastName = jTextFieldEditLastName.getText();
-            int sex = jComboBoxEditSex.getSelectedIndex();
-            int workLoc = jComboBoxEditWorkLoc.getSelectedIndex();
-            Double deductRate = Double.parseDouble(jTextFieldEditDeductRate.getText());
-            Double yearlySalary = Double.parseDouble(jTextFieldEditFullTimeEmployeeYearlySalary.getText());
-            
-            theHashTable.removeEmployee(empSearched.getEmpNum());
-
-            // Make a new full time employee
-            FullTimeEmployee FTEmployee = new FullTimeEmployee(empNum, firstName, lastName, sex, workLoc, deductRate, yearlySalary);
-            theHashTable.addEmployee(FTEmployee);
-
-            // Used for calculating the yearly payroll on Home tab
-            
-            salaryDifference = FTEmployee.calcGrossAnnualIncome() - oldTotalSalary;
-            theHashTable.setYearlyPayroll(salaryDifference);
-            
-        } else if (jRadioButtonEditPartTimeEmployee.isSelected()) {
-            // Get values from fields
-            int empNum = Integer.parseInt(jTextFieldEditEmployeeNumber.getText());
-            String firstName = jTextFieldEditFirstName.getText();
-            String lastName = jTextFieldEditLastName.getText();
-            int sex = jComboBoxEditSex.getSelectedIndex();
-            int workLoc = jComboBoxEditWorkLoc.getSelectedIndex();
-            Double deductRate = Double.parseDouble(jTextFieldEditDeductRate.getText());
-            Double hourlyWage = Double.parseDouble(jTextFieldEditPartTimeEmployeeHourlyWage.getText());
-            Double hoursPerWeek = Double.parseDouble(jTextFieldEditPartTimeEmployeeHoursPerWeek.getText());
-            int weeksPerYear = Integer.parseInt(jTextFieldEditPartTimeEmployeeWeeksPerYear.getText());
-
-            // Get the employee searched and remove from hash table
-            theHashTable.removeEmployee(empSearched.getEmpNum());
-
-            // Make a new part time employee
-            PartTimeEmployee PTEmployee = new PartTimeEmployee(empNum, firstName, lastName, sex, workLoc, deductRate, hourlyWage, hoursPerWeek, weeksPerYear);
-            theHashTable.addEmployee(PTEmployee);
-
-            // Used for calculating the yearly payroll on Home tab
-            salaryDifference = PTEmployee.calcGrossAnnualIncome() - oldTotalSalary;
-            theHashTable.setYearlyPayroll(salaryDifference);
-        }
-        jDialogSearchEdit.setVisible(false);
-        } catch (Exception e) {
-            jLabelEditEntryError.setText("Missing required fields and/or entries invalid - edit and submit again");
-        }
-    }//GEN-LAST:event_jButtonEditSubmitActionPerformed
-    
+                        
     private void jButtonSearchEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchEditActionPerformed
         // TODO add your handling code here:
         jDialogSearchEdit.setVisible(true);
@@ -2140,12 +2037,7 @@ public class MainFrame extends javax.swing.JFrame {
             jTextFieldEditPartTimeEmployeeWeeksPerYear.setText(Integer.toString(PTEmpSearched.getWeeksPerYear()));
         }
     }//GEN-LAST:event_jButtonSearchEditActionPerformed
-    
-    private void jButtonEditCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditCancelActionPerformed
-        // TODO add your handling code here:
-        jDialogSearchEdit.setVisible(false);
-    }//GEN-LAST:event_jButtonEditCancelActionPerformed
-    
+        
     private void jButtonViewAllUpdateTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonViewAllUpdateTableActionPerformed
         // TODO add your handling code here:
         String[] columnNames = {"Employee Number", "First Name", "Last Name", "Sex", "Work Location", "Deduction Rate"};
@@ -2367,10 +2259,6 @@ public class MainFrame extends javax.swing.JFrame {
         jDialogPreferences.setVisible(false);
     }//GEN-LAST:event_jButtonPreferencesCancelActionPerformed
 
-    private void jLabelEditEntryErrorMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelEditEntryErrorMouseMoved
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabelEditEntryErrorMouseMoved
-
     private void jPanelAddFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jPanelAddFocusGained
         // TODO add your handling code here:
         jLabelAddEntryError.setVisible(false);
@@ -2561,6 +2449,110 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         jDialogAbout.setVisible(false);
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jLabelEditEntryErrorMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelEditEntryErrorMouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabelEditEntryErrorMouseMoved
+
+    private void jButtonEditCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditCancelActionPerformed
+        // TODO add your handling code here:
+        jDialogSearchEdit.setVisible(false);
+    }//GEN-LAST:event_jButtonEditCancelActionPerformed
+
+    private void jButtonEditSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditSubmitActionPerformed
+        // TODO add your handling code here:
+        // Used to calculate difference in payroll on Home tab
+        Double oldTotalSalary = 0.0;
+        Double salaryDifference = 0.0;
+        try {
+            EmployeeInfo empSearched = theHashTable.getEmployee(Integer.parseInt(jTextFieldSearchEmployeeNumber.getText()));
+            if (empSearched instanceof FullTimeEmployee) {
+                FullTimeEmployee FTEmpSearched = (FullTimeEmployee) empSearched;
+                oldTotalSalary = FTEmpSearched.calcGrossAnnualIncome();
+            } else if (empSearched instanceof PartTimeEmployee) {
+                PartTimeEmployee PTEmpSearched = (PartTimeEmployee) empSearched;
+                oldTotalSalary = PTEmpSearched.calcGrossAnnualIncome();
+            }
+
+            if (jRadioButtonEditFullTimeEmployee.isSelected()) {
+                // Get values from fields
+                int empNum = Integer.parseInt(jTextFieldEditEmployeeNumber.getText());
+                String firstName = jTextFieldEditFirstName.getText();
+                String lastName = jTextFieldEditLastName.getText();
+                int sex = jComboBoxEditSex.getSelectedIndex();
+                int workLoc = jComboBoxEditWorkLoc.getSelectedIndex();
+                Double deductRate = Double.parseDouble(jTextFieldEditDeductRate.getText());
+                Double yearlySalary = Double.parseDouble(jTextFieldEditFullTimeEmployeeYearlySalary.getText());
+
+                theHashTable.removeEmployee(empSearched.getEmpNum());
+
+                // Make a new full time employee
+                FullTimeEmployee FTEmployee = new FullTimeEmployee(empNum, firstName, lastName, sex, workLoc, deductRate, yearlySalary);
+                theHashTable.addEmployee(FTEmployee);
+
+                // Used for calculating the yearly payroll on Home tab
+
+                salaryDifference = FTEmployee.calcGrossAnnualIncome() - oldTotalSalary;
+                theHashTable.setYearlyPayroll(salaryDifference);
+
+            } else if (jRadioButtonEditPartTimeEmployee.isSelected()) {
+                // Get values from fields
+                int empNum = Integer.parseInt(jTextFieldEditEmployeeNumber.getText());
+                String firstName = jTextFieldEditFirstName.getText();
+                String lastName = jTextFieldEditLastName.getText();
+                int sex = jComboBoxEditSex.getSelectedIndex();
+                int workLoc = jComboBoxEditWorkLoc.getSelectedIndex();
+                Double deductRate = Double.parseDouble(jTextFieldEditDeductRate.getText());
+                Double hourlyWage = Double.parseDouble(jTextFieldEditPartTimeEmployeeHourlyWage.getText());
+                Double hoursPerWeek = Double.parseDouble(jTextFieldEditPartTimeEmployeeHoursPerWeek.getText());
+                int weeksPerYear = Integer.parseInt(jTextFieldEditPartTimeEmployeeWeeksPerYear.getText());
+
+                // Get the employee searched and remove from hash table
+                theHashTable.removeEmployee(empSearched.getEmpNum());
+
+                // Make a new part time employee
+                PartTimeEmployee PTEmployee = new PartTimeEmployee(empNum, firstName, lastName, sex, workLoc, deductRate, hourlyWage, hoursPerWeek, weeksPerYear);
+                theHashTable.addEmployee(PTEmployee);
+
+                // Used for calculating the yearly payroll on Home tab
+                salaryDifference = PTEmployee.calcGrossAnnualIncome() - oldTotalSalary;
+                theHashTable.setYearlyPayroll(salaryDifference);
+            }
+            jDialogSearchEdit.setVisible(false);
+        } catch (Exception e) {
+            jLabelEditEntryError.setText("Missing required fields and/or entries invalid - edit and submit again");
+        }
+    }//GEN-LAST:event_jButtonEditSubmitActionPerformed
+
+    private void jRadioButtonEditPartTimeEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonEditPartTimeEmployeeActionPerformed
+        // TODO add your handling code here:
+
+        // On the edit employee dialog
+        // If user selects part time emp, full time info boxes are disabled.
+        jTextFieldEditFullTimeEmployeeYearlySalary.setEnabled(false);
+        jTextFieldEditPartTimeEmployeeHourlyWage.setEnabled(true);
+        jTextFieldEditPartTimeEmployeeHoursPerWeek.setEnabled(true);
+        jTextFieldEditPartTimeEmployeeWeeksPerYear.setEnabled(true);
+    }//GEN-LAST:event_jRadioButtonEditPartTimeEmployeeActionPerformed
+
+    private void jRadioButtonEditFullTimeEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonEditFullTimeEmployeeActionPerformed
+        // TODO add your handling code here:
+
+        // On the edit employee dialog
+        // If user selects full time emp, part time info boxes are disabled
+        jTextFieldEditFullTimeEmployeeYearlySalary.setEnabled(true);
+        jTextFieldEditPartTimeEmployeeHourlyWage.setEnabled(false);
+        jTextFieldEditPartTimeEmployeeHoursPerWeek.setEnabled(false);
+        jTextFieldEditPartTimeEmployeeWeeksPerYear.setEnabled(false);
+    }//GEN-LAST:event_jRadioButtonEditFullTimeEmployeeActionPerformed
+
+    private void jTextFieldEditDeductRateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldEditDeductRateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldEditDeductRateActionPerformed
+
+    private void jComboBoxEditWorkLocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxEditWorkLocActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxEditWorkLocActionPerformed
 
     /**
      * @param args the command line arguments
