@@ -333,7 +333,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(21, 21, 21))
         );
 
-        jDialogSearchEdit.setMinimumSize(new java.awt.Dimension(900, 900));
+        jDialogSearchEdit.setMinimumSize(new java.awt.Dimension(812, 589));
 
         jLabelAddHeading1.setFont(new java.awt.Font("Franklin Gothic Medium Cond", 0, 24)); // NOI18N
         jLabelAddHeading1.setText("Edit Employee");
@@ -407,7 +407,7 @@ public class MainFrame extends javax.swing.JFrame {
         jRadioButtonEditPartTimeEmployee.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jRadioButtonEditPartTimeEmployee.setText("Part Time Employee");
         jRadioButtonEditPartTimeEmployee.setToolTipText("Change to part time employee");
-        jRadioButtonEditPartTimeEmployee.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jRadioButtonEditPartTimeEmployee.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jRadioButtonEditPartTimeEmployee.setOpaque(false);
         jRadioButtonEditPartTimeEmployee.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -533,7 +533,7 @@ public class MainFrame extends javax.swing.JFrame {
                                 .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(jTextFieldEditPartTimeEmployeeHoursPerWeek, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextFieldEditPartTimeEmployeeHourlyWage, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(92, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jDialogSearchEditLayout.setVerticalGroup(
             jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -564,13 +564,13 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelAddDeductRate1)
                     .addComponent(jTextFieldEditDeductRate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addGap(18, 18, Short.MAX_VALUE)
                 .addComponent(jRadioButtonEditFullTimeEmployee)
-                .addGap(18, 18, 18)
+                .addGap(40, 40, 40)
                 .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextFieldEditFullTimeEmployeeYearlySalary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelAddFullTimeEmployeeYearlySalary1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addGap(18, 39, Short.MAX_VALUE)
                 .addComponent(jRadioButtonEditPartTimeEmployee)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
