@@ -253,82 +253,93 @@
                       </Group>
                       <Component id="jRadioButtonEditFullTimeEmployee" min="-2" pref="161" max="-2" attributes="0"/>
                       <Component id="jLabelAddHeading1" alignment="0" min="-2" pref="685" max="-2" attributes="0"/>
-                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabelAddEmployeeNumber1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jLabelAddFirstName1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jTextFieldEditEmployeeNumber" pref="125" max="32767" attributes="0"/>
-                                  <Component id="jTextFieldEditFirstName" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                                      <Component id="jLabelAddLastName1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
-                                      <Component id="jLabelAddSex1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jComboBoxEditSex" pref="125" max="32767" attributes="0"/>
-                                  <Component id="jTextFieldEditLastName" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabelAddDeductRate1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                                  <Component id="jTextFieldEditDeductRate" min="-2" pref="125" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                                  <Component id="jLabelAddWorkLoc1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                                  <Component id="jComboBoxEditWorkLoc" min="-2" pref="125" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="jLabelAddFullTimeEmployeeYearlySalary1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jTextFieldEditFullTimeEmployeeYearlySalary" min="-2" pref="125" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                                  <Component id="jLabelAddPartTimeEmployeeWeeksPerYear1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextFieldEditPartTimeEmployeeWeeksPerYear" min="-2" pref="125" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabelAddEmployeeNumber1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jLabelAddFirstName1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jTextFieldEditEmployeeNumber" pref="125" max="32767" attributes="0"/>
+                                      <Component id="jTextFieldEditFirstName" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="1" attributes="0">
-                                          <Component id="jLabelAddPartTimeEmployeeHourlyWage1" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                                          <Component id="jLabelAddLastName1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jLabelAddPartTimeEmployeeHoursPerWeek1" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
+                                          <Component id="jLabelAddSex1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="jTextFieldEditPartTimeEmployeeHoursPerWeek" alignment="1" min="-2" pref="125" max="-2" attributes="0"/>
-                                      <Component id="jTextFieldEditPartTimeEmployeeHourlyWage" alignment="1" min="-2" pref="125" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jComboBoxEditSex" pref="125" max="32767" attributes="0"/>
+                                      <Component id="jTextFieldEditLastName" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
+                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabelAddDeductRate1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldEditDeductRate" min="-2" pref="125" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                      <Component id="jLabelAddWorkLoc1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jComboBoxEditWorkLoc" min="-2" pref="125" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="jLabelAddFullTimeEmployeeYearlySalary1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldEditFullTimeEmployeeYearlySalary" min="-2" pref="125" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                                      <Component id="jLabelAddPartTimeEmployeeWeeksPerYear1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldEditPartTimeEmployeeWeeksPerYear" min="-2" pref="125" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="jLabelAddPartTimeEmployeeHourlyWage1" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="jLabelAddPartTimeEmployeeHoursPerWeek1" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="jTextFieldEditPartTimeEmployeeHoursPerWeek" alignment="1" min="-2" pref="125" max="-2" attributes="0"/>
+                                          <Component id="jTextFieldEditPartTimeEmployeeHourlyWage" alignment="1" min="-2" pref="125" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jLabel36" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jLabel37" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jLabel38" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jLabel39" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jLabel40" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jLabel41" alignment="0" pref="122" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -350,11 +361,13 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabelAddFirstName1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextFieldEditFirstName" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel36" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jTextFieldEditLastName" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabelAddLastName1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel37" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -377,6 +390,7 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jTextFieldEditFullTimeEmployeeYearlySalary" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabelAddFullTimeEmployeeYearlySalary1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel38" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" pref="39" max="32767" attributes="0"/>
                   <Component id="jRadioButtonEditPartTimeEmployee" min="-2" max="-2" attributes="0"/>
@@ -384,16 +398,19 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabelAddPartTimeEmployeeHourlyWage1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextFieldEditPartTimeEmployeeHourlyWage" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel39" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabelAddPartTimeEmployeeHoursPerWeek1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextFieldEditPartTimeEmployeeHoursPerWeek" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel40" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabelAddPartTimeEmployeeWeeksPerYear1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextFieldEditPartTimeEmployeeWeeksPerYear" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel41" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jLabelEditEntryError" min="-2" pref="23" max="-2" attributes="0"/>
@@ -431,6 +448,9 @@
             <Property name="toolTipText" type="java.lang.String" value="Employee number cannot be edited"/>
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldEditEmployeeNumberActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextFieldEditFirstName">
         </Component>
@@ -517,7 +537,7 @@
               <Font name="Tahoma" size="14" style="0"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="4"/>
-            <Property name="text" type="java.lang.String" value="Deduct Rate:"/>
+            <Property name="text" type="java.lang.String" value="Deduct Rate*:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JRadioButton" name="jRadioButtonEditFullTimeEmployee">
@@ -546,7 +566,7 @@
               <Font name="Tahoma" size="14" style="0"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="4"/>
-            <Property name="text" type="java.lang.String" value="Yearly Salary:"/>
+            <Property name="text" type="java.lang.String" value="Yearly Salary*:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextFieldEditFullTimeEmployeeYearlySalary">
@@ -580,7 +600,7 @@
               <Font name="Tahoma" size="14" style="0"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="4"/>
-            <Property name="text" type="java.lang.String" value="Hourly Wage:"/>
+            <Property name="text" type="java.lang.String" value="Hourly Wage*:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextFieldEditPartTimeEmployeeHourlyWage">
@@ -599,7 +619,7 @@
               <Font name="Tahoma" size="14" style="0"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="4"/>
-            <Property name="text" type="java.lang.String" value="Hours per Week:"/>
+            <Property name="text" type="java.lang.String" value="Hours per Week*:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabelAddPartTimeEmployeeWeeksPerYear1">
@@ -608,7 +628,7 @@
               <Font name="Tahoma" size="14" style="0"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="4"/>
-            <Property name="text" type="java.lang.String" value="Weeks per Year:"/>
+            <Property name="text" type="java.lang.String" value="Weeks per Year*:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextFieldEditPartTimeEmployeeWeeksPerYear">
@@ -652,6 +672,36 @@
           <Events>
             <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jLabelEditEntryErrorMouseMoved"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel36">
+          <Properties>
+            <Property name="text" type="java.lang.String" value=" "/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel37">
+          <Properties>
+            <Property name="text" type="java.lang.String" value=" "/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel38">
+          <Properties>
+            <Property name="text" type="java.lang.String" value=" "/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel39">
+          <Properties>
+            <Property name="text" type="java.lang.String" value=" "/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel40">
+          <Properties>
+            <Property name="text" type="java.lang.String" value=" "/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel41">
+          <Properties>
+            <Property name="text" type="java.lang.String" value=" "/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
@@ -1614,28 +1664,36 @@
                                   </Group>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabelAddHeading" alignment="0" min="-2" pref="685" max="-2" attributes="0"/>
-                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                          <Component id="jButtonAddSubmit" alignment="1" min="-2" pref="269" max="-2" attributes="0"/>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Group type="102" alignment="1" attributes="0">
-                                                      <Component id="jLabelAddPartTimeEmployeeHourlyWage" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" alignment="1" attributes="0">
-                                                      <Group type="103" groupAlignment="1" attributes="0">
-                                                          <Component id="jLabelAddPartTimeEmployeeWeeksPerYear" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jLabelAddPartTimeEmployeeHoursPerWeek" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="jButtonAddSubmit" alignment="1" min="-2" pref="269" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="1" attributes="0">
+                                                      <Group type="102" alignment="1" attributes="0">
+                                                          <Component id="jLabelAddPartTimeEmployeeHourlyWage" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
                                                       </Group>
-                                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                                      <Group type="102" alignment="1" attributes="0">
+                                                          <Group type="103" groupAlignment="1" attributes="0">
+                                                              <Component id="jLabelAddPartTimeEmployeeWeeksPerYear" min="-2" max="-2" attributes="0"/>
+                                                              <Component id="jLabelAddPartTimeEmployeeHoursPerWeek" min="-2" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="jTextFieldAddPartTimeEmployeeWeeksPerYear" max="32767" attributes="0"/>
+                                                      <Component id="jTextFieldAddPartTimeEmployeeHoursPerWeek" alignment="1" max="32767" attributes="0"/>
+                                                      <Component id="jTextFieldAddPartTimeEmployeeHourlyWage" alignment="0" min="-2" pref="128" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
-                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                  <Component id="jTextFieldAddPartTimeEmployeeWeeksPerYear" max="32767" attributes="0"/>
-                                                  <Component id="jTextFieldAddPartTimeEmployeeHoursPerWeek" alignment="1" max="32767" attributes="0"/>
-                                                  <Component id="jTextFieldAddPartTimeEmployeeHourlyWage" alignment="0" min="-2" pref="128" max="-2" attributes="0"/>
-                                              </Group>
+                                          </Group>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jLabel31" min="-2" pref="189" max="-2" attributes="0"/>
+                                              <Component id="jLabel30" alignment="0" min="-2" pref="189" max="-2" attributes="0"/>
+                                              <Component id="jLabel32" min="-2" pref="189" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Component id="jRadioButtonAddPartTimeEmployee" alignment="0" min="-2" pref="191" max="-2" attributes="0"/>
@@ -1668,8 +1726,20 @@
                                                       <Component id="jComboBoxAddWorkLoc" alignment="0" max="32767" attributes="0"/>
                                                       <Component id="jTextFieldAddEmployeeNumber" max="32767" attributes="0"/>
                                                   </Group>
-                                                  <EmptySpace min="-2" pref="380" max="-2" attributes="0"/>
-                                                  <Component id="jLabelAddEmployeeNumberError" min="-2" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Group type="102" attributes="0">
+                                                          <EmptySpace min="-2" pref="380" max="-2" attributes="0"/>
+                                                          <Component id="jLabelAddEmployeeNumberError" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                          <Component id="jLabel34" min="-2" pref="189" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                          <Component id="jLabel35" min="-2" pref="189" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -1677,7 +1747,9 @@
                                           <Component id="jLabelAddFullTimeEmployeeYearlySalary" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="jTextFieldAddFullTimeEmployeeYearlySalary" min="-2" pref="128" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="415" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="jLabel33" min="-2" pref="189" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="216" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -1702,11 +1774,13 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabelAddFirstName" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextFieldAddFirstName" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel34" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jTextFieldAddLastName" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelAddLastName" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel35" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -1729,6 +1803,7 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabelAddFullTimeEmployeeYearlySalary" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextFieldAddFullTimeEmployeeYearlySalary" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel33" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                       <Component id="jRadioButtonAddPartTimeEmployee" min="-2" max="-2" attributes="0"/>
@@ -1736,16 +1811,19 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabelAddPartTimeEmployeeHourlyWage" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextFieldAddPartTimeEmployeeHourlyWage" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel32" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabelAddPartTimeEmployeeHoursPerWeek" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextFieldAddPartTimeEmployeeHoursPerWeek" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel30" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jTextFieldAddPartTimeEmployeeWeeksPerYear" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelAddPartTimeEmployeeWeeksPerYear" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel31" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                       <Component id="jLabelAddEntryError" min="-2" pref="19" max="-2" attributes="0"/>
@@ -1821,7 +1899,7 @@
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="4"/>
-                <Property name="text" type="java.lang.String" value="Sex*:"/>
+                <Property name="text" type="java.lang.String" value="Sex:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelAddWorkLoc">
@@ -1830,7 +1908,7 @@
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="4"/>
-                <Property name="text" type="java.lang.String" value="Location*:"/>
+                <Property name="text" type="java.lang.String" value="Location:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelAddDeductRate">
@@ -2029,6 +2107,36 @@
               <Events>
                 <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jLabelAddEntryErrorMouseMoved"/>
               </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel30">
+              <Properties>
+                <Property name="text" type="java.lang.String" value=" "/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel31">
+              <Properties>
+                <Property name="text" type="java.lang.String" value=" "/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel32">
+              <Properties>
+                <Property name="text" type="java.lang.String" value=" "/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel33">
+              <Properties>
+                <Property name="text" type="java.lang.String" value=" "/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel34">
+              <Properties>
+                <Property name="text" type="java.lang.String" value=" "/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel35">
+              <Properties>
+                <Property name="text" type="java.lang.String" value=" "/>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>

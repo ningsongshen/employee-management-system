@@ -13,7 +13,7 @@ import java.util.Date;
 import java.text.SimpleDateFormat;
 
 public class MainFrame extends javax.swing.JFrame {
-    
+
     MyHashTable theHashTable = new MyHashTable(2);
 
     /**
@@ -78,6 +78,12 @@ public class MainFrame extends javax.swing.JFrame {
         jButtonEditSubmit = new javax.swing.JButton();
         jButtonEditCancel = new javax.swing.JButton();
         jLabelEditEntryError = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
         jFileChooserSaveFile = new javax.swing.JFileChooser();
         jFileChooserOpenFile = new javax.swing.JFileChooser();
         jDialogFileOpenConfirm = new javax.swing.JDialog();
@@ -159,6 +165,12 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabelAddEntryError = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
         jPanelSearch = new javax.swing.JPanel();
         jLabelSearchHeading = new javax.swing.JLabel();
         jLabelSearchEmployeeNumber = new javax.swing.JLabel();
@@ -345,6 +357,11 @@ public class MainFrame extends javax.swing.JFrame {
         jTextFieldEditEmployeeNumber.setEditable(false);
         jTextFieldEditEmployeeNumber.setToolTipText("Employee number cannot be edited");
         jTextFieldEditEmployeeNumber.setEnabled(false);
+        jTextFieldEditEmployeeNumber.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldEditEmployeeNumberActionPerformed(evt);
+            }
+        });
 
         jLabelAddFirstName1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelAddFirstName1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -381,7 +398,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabelAddDeductRate1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelAddDeductRate1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabelAddDeductRate1.setText("Deduct Rate:");
+        jLabelAddDeductRate1.setText("Deduct Rate*:");
 
         jRadioButtonEditFullTimeEmployee.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroupEmployeeType.add(jRadioButtonEditFullTimeEmployee);
@@ -398,7 +415,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabelAddFullTimeEmployeeYearlySalary1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelAddFullTimeEmployeeYearlySalary1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabelAddFullTimeEmployeeYearlySalary1.setText("Yearly Salary:");
+        jLabelAddFullTimeEmployeeYearlySalary1.setText("Yearly Salary*:");
 
         jTextFieldEditFullTimeEmployeeYearlySalary.setEnabled(false);
 
@@ -417,7 +434,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabelAddPartTimeEmployeeHourlyWage1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelAddPartTimeEmployeeHourlyWage1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabelAddPartTimeEmployeeHourlyWage1.setText("Hourly Wage:");
+        jLabelAddPartTimeEmployeeHourlyWage1.setText("Hourly Wage*:");
 
         jTextFieldEditPartTimeEmployeeHourlyWage.setEnabled(false);
 
@@ -425,11 +442,11 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabelAddPartTimeEmployeeHoursPerWeek1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelAddPartTimeEmployeeHoursPerWeek1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabelAddPartTimeEmployeeHoursPerWeek1.setText("Hours per Week:");
+        jLabelAddPartTimeEmployeeHoursPerWeek1.setText("Hours per Week*:");
 
         jLabelAddPartTimeEmployeeWeeksPerYear1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelAddPartTimeEmployeeWeeksPerYear1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabelAddPartTimeEmployeeWeeksPerYear1.setText("Weeks per Year:");
+        jLabelAddPartTimeEmployeeWeeksPerYear1.setText("Weeks per Year*:");
 
         jTextFieldEditPartTimeEmployeeWeeksPerYear.setEnabled(false);
 
@@ -459,6 +476,18 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jLabel36.setText(" ");
+
+        jLabel37.setText(" ");
+
+        jLabel38.setText(" ");
+
+        jLabel39.setText(" ");
+
+        jLabel40.setText(" ");
+
+        jLabel41.setText(" ");
+
         javax.swing.GroupLayout jDialogSearchEditLayout = new javax.swing.GroupLayout(jDialogSearchEdit.getContentPane());
         jDialogSearchEdit.getContentPane().setLayout(jDialogSearchEditLayout);
         jDialogSearchEditLayout.setHorizontalGroup(
@@ -477,62 +506,71 @@ public class MainFrame extends javax.swing.JFrame {
                             .addComponent(jLabelEditEntryError, javax.swing.GroupLayout.PREFERRED_SIZE, 486, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jRadioButtonEditFullTimeEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelAddHeading1, javax.swing.GroupLayout.PREFERRED_SIZE, 685, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jDialogSearchEditLayout.createSequentialGroup()
-                            .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jDialogSearchEditLayout.createSequentialGroup()
-                                    .addComponent(jLabelAddEmployeeNumber1)
-                                    .addGap(18, 18, 18))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogSearchEditLayout.createSequentialGroup()
-                                    .addComponent(jLabelAddFirstName1)
-                                    .addGap(21, 21, 21)))
-                            .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jTextFieldEditEmployeeNumber, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
-                                .addComponent(jTextFieldEditFirstName)))
-                        .addGroup(jDialogSearchEditLayout.createSequentialGroup()
-                            .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogSearchEditLayout.createSequentialGroup()
-                                    .addGap(49, 49, 49)
-                                    .addComponent(jLabelAddLastName1)
-                                    .addGap(18, 18, 18))
-                                .addGroup(jDialogSearchEditLayout.createSequentialGroup()
-                                    .addGap(88, 88, 88)
-                                    .addComponent(jLabelAddSex1)
-                                    .addGap(20, 20, 20)))
-                            .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jComboBoxEditSex, 0, 125, Short.MAX_VALUE)
-                                .addComponent(jTextFieldEditLastName)))
-                        .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jDialogSearchEditLayout.createSequentialGroup()
+                        .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jDialogSearchEditLayout.createSequentialGroup()
+                                .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jDialogSearchEditLayout.createSequentialGroup()
+                                        .addComponent(jLabelAddEmployeeNumber1)
+                                        .addGap(18, 18, 18))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogSearchEditLayout.createSequentialGroup()
+                                        .addComponent(jLabelAddFirstName1)
+                                        .addGap(21, 21, 21)))
+                                .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTextFieldEditEmployeeNumber, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldEditFirstName)))
                             .addGroup(jDialogSearchEditLayout.createSequentialGroup()
-                                .addComponent(jLabelAddDeductRate1)
-                                .addGap(21, 21, 21)
-                                .addComponent(jTextFieldEditDeductRate, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jDialogSearchEditLayout.createSequentialGroup()
-                                .addGap(24, 24, 24)
-                                .addComponent(jLabelAddWorkLoc1)
-                                .addGap(21, 21, 21)
-                                .addComponent(jComboBoxEditWorkLoc, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(jDialogSearchEditLayout.createSequentialGroup()
-                            .addComponent(jLabelAddFullTimeEmployeeYearlySalary1)
-                            .addGap(18, 18, 18)
-                            .addComponent(jTextFieldEditFullTimeEmployeeYearlySalary, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jDialogSearchEditLayout.createSequentialGroup()
-                                .addGap(8, 8, 8)
-                                .addComponent(jLabelAddPartTimeEmployeeWeeksPerYear1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextFieldEditPartTimeEmployeeWeeksPerYear, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogSearchEditLayout.createSequentialGroup()
                                 .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogSearchEditLayout.createSequentialGroup()
-                                        .addComponent(jLabelAddPartTimeEmployeeHourlyWage1)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                                        .addGap(49, 49, 49)
+                                        .addComponent(jLabelAddLastName1)
+                                        .addGap(18, 18, 18))
                                     .addGroup(jDialogSearchEditLayout.createSequentialGroup()
-                                        .addComponent(jLabelAddPartTimeEmployeeHoursPerWeek1)
-                                        .addGap(10, 10, 10)))
-                                .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jTextFieldEditPartTimeEmployeeHoursPerWeek, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextFieldEditPartTimeEmployeeHourlyWage, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                        .addGap(88, 88, 88)
+                                        .addComponent(jLabelAddSex1)
+                                        .addGap(20, 20, 20)))
+                                .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jComboBoxEditSex, 0, 125, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldEditLastName)))
+                            .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jDialogSearchEditLayout.createSequentialGroup()
+                                    .addComponent(jLabelAddDeductRate1)
+                                    .addGap(21, 21, 21)
+                                    .addComponent(jTextFieldEditDeductRate, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jDialogSearchEditLayout.createSequentialGroup()
+                                    .addGap(35, 35, 35)
+                                    .addComponent(jLabelAddWorkLoc1)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jComboBoxEditWorkLoc, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jDialogSearchEditLayout.createSequentialGroup()
+                                .addComponent(jLabelAddFullTimeEmployeeYearlySalary1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jTextFieldEditFullTimeEmployeeYearlySalary, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(jDialogSearchEditLayout.createSequentialGroup()
+                                    .addGap(8, 8, 8)
+                                    .addComponent(jLabelAddPartTimeEmployeeWeeksPerYear1)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jTextFieldEditPartTimeEmployeeWeeksPerYear, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogSearchEditLayout.createSequentialGroup()
+                                    .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogSearchEditLayout.createSequentialGroup()
+                                            .addComponent(jLabelAddPartTimeEmployeeHourlyWage1)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                                        .addGroup(jDialogSearchEditLayout.createSequentialGroup()
+                                            .addComponent(jLabelAddPartTimeEmployeeHoursPerWeek1)
+                                            .addGap(10, 10, 10)))
+                                    .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jTextFieldEditPartTimeEmployeeHoursPerWeek, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextFieldEditPartTimeEmployeeHourlyWage, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(18, 18, 18)
+                        .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel36, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel37, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel38, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel40, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel41, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jDialogSearchEditLayout.setVerticalGroup(
@@ -547,11 +585,13 @@ public class MainFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelAddFirstName1)
-                    .addComponent(jTextFieldEditFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldEditFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel36))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextFieldEditLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelAddLastName1))
+                    .addComponent(jLabelAddLastName1)
+                    .addComponent(jLabel37))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelAddSex1)
@@ -569,21 +609,25 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(40, 40, 40)
                 .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextFieldEditFullTimeEmployeeYearlySalary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelAddFullTimeEmployeeYearlySalary1))
+                    .addComponent(jLabelAddFullTimeEmployeeYearlySalary1)
+                    .addComponent(jLabel38))
                 .addGap(18, 39, Short.MAX_VALUE)
                 .addComponent(jRadioButtonEditPartTimeEmployee)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelAddPartTimeEmployeeHourlyWage1)
-                    .addComponent(jTextFieldEditPartTimeEmployeeHourlyWage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldEditPartTimeEmployeeHourlyWage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel39))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelAddPartTimeEmployeeHoursPerWeek1)
-                    .addComponent(jTextFieldEditPartTimeEmployeeHoursPerWeek, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldEditPartTimeEmployeeHoursPerWeek, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel40))
                 .addGap(14, 14, 14)
                 .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelAddPartTimeEmployeeWeeksPerYear1)
-                    .addComponent(jTextFieldEditPartTimeEmployeeWeeksPerYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldEditPartTimeEmployeeWeeksPerYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel41))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabelEditEntryError, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1112,11 +1156,11 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabelAddSex.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelAddSex.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabelAddSex.setText("Sex*:");
+        jLabelAddSex.setText("Sex:");
 
         jLabelAddWorkLoc.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelAddWorkLoc.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabelAddWorkLoc.setText("Location*:");
+        jLabelAddWorkLoc.setText("Location:");
 
         jLabelAddDeductRate.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelAddDeductRate.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -1222,6 +1266,18 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jLabel30.setText(" ");
+
+        jLabel31.setText(" ");
+
+        jLabel32.setText(" ");
+
+        jLabel33.setText(" ");
+
+        jLabel34.setText(" ");
+
+        jLabel35.setText(" ");
+
         javax.swing.GroupLayout jPanelAddLayout = new javax.swing.GroupLayout(jPanelAdd);
         jPanelAdd.setLayout(jPanelAddLayout);
         jPanelAddLayout.setHorizontalGroup(
@@ -1247,23 +1303,29 @@ public class MainFrame extends javax.swing.JFrame {
                                 .addComponent(jLabelAddDeductRate))
                             .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabelAddHeading, javax.swing.GroupLayout.PREFERRED_SIZE, 685, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jButtonAddSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelAddLayout.createSequentialGroup()
-                                        .addGap(11, 11, 11)
-                                        .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(jPanelAddLayout.createSequentialGroup()
-                                                .addComponent(jLabelAddPartTimeEmployeeHourlyWage)
-                                                .addGap(18, 18, 18))
-                                            .addGroup(jPanelAddLayout.createSequentialGroup()
-                                                .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(jLabelAddPartTimeEmployeeWeeksPerYear)
-                                                    .addComponent(jLabelAddPartTimeEmployeeHoursPerWeek))
-                                                .addGap(18, 18, 18)))
-                                        .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jTextFieldAddPartTimeEmployeeWeeksPerYear)
-                                            .addComponent(jTextFieldAddPartTimeEmployeeHoursPerWeek, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jTextFieldAddPartTimeEmployeeHourlyWage, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGroup(jPanelAddLayout.createSequentialGroup()
+                                    .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jButtonAddSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelAddLayout.createSequentialGroup()
+                                            .addGap(11, 11, 11)
+                                            .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addGroup(jPanelAddLayout.createSequentialGroup()
+                                                    .addComponent(jLabelAddPartTimeEmployeeHourlyWage)
+                                                    .addGap(18, 18, 18))
+                                                .addGroup(jPanelAddLayout.createSequentialGroup()
+                                                    .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                        .addComponent(jLabelAddPartTimeEmployeeWeeksPerYear)
+                                                        .addComponent(jLabelAddPartTimeEmployeeHoursPerWeek))
+                                                    .addGap(18, 18, 18)))
+                                            .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(jTextFieldAddPartTimeEmployeeWeeksPerYear)
+                                                .addComponent(jTextFieldAddPartTimeEmployeeHoursPerWeek, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(jTextFieldAddPartTimeEmployeeHourlyWage, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addComponent(jRadioButtonAddPartTimeEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(jPanelAddLayout.createSequentialGroup()
                                     .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1288,13 +1350,23 @@ public class MainFrame extends javax.swing.JFrame {
                                                 .addComponent(jComboBoxAddSex, 0, 125, Short.MAX_VALUE)
                                                 .addComponent(jComboBoxAddWorkLoc, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addComponent(jTextFieldAddEmployeeNumber))
-                                            .addGap(380, 380, 380)
-                                            .addComponent(jLabelAddEmployeeNumberError))))
+                                            .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(jPanelAddLayout.createSequentialGroup()
+                                                    .addGap(380, 380, 380)
+                                                    .addComponent(jLabelAddEmployeeNumberError))
+                                                .addGroup(jPanelAddLayout.createSequentialGroup()
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                    .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGroup(jPanelAddLayout.createSequentialGroup()
+                                                    .addGap(18, 18, 18)
+                                                    .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelAddLayout.createSequentialGroup()
                                     .addComponent(jLabelAddFullTimeEmployeeYearlySalary)
                                     .addGap(18, 18, 18)
                                     .addComponent(jTextFieldAddFullTimeEmployeeYearlySalary, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(415, 415, 415))))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(216, 216, 216))))
                         .addContainerGap(175, Short.MAX_VALUE))))
         );
         jPanelAddLayout.setVerticalGroup(
@@ -1310,11 +1382,13 @@ public class MainFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelAddFirstName)
-                    .addComponent(jTextFieldAddFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldAddFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel34))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextFieldAddLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelAddLastName))
+                    .addComponent(jLabelAddLastName)
+                    .addComponent(jLabel35))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelAddSex)
@@ -1332,21 +1406,25 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelAddFullTimeEmployeeYearlySalary)
-                    .addComponent(jTextFieldAddFullTimeEmployeeYearlySalary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldAddFullTimeEmployeeYearlySalary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel33))
                 .addGap(40, 40, 40)
                 .addComponent(jRadioButtonAddPartTimeEmployee)
                 .addGap(18, 18, 18)
                 .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelAddPartTimeEmployeeHourlyWage)
-                    .addComponent(jTextFieldAddPartTimeEmployeeHourlyWage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldAddPartTimeEmployeeHourlyWage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel32))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelAddPartTimeEmployeeHoursPerWeek)
-                    .addComponent(jTextFieldAddPartTimeEmployeeHoursPerWeek, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldAddPartTimeEmployeeHoursPerWeek, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel30))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextFieldAddPartTimeEmployeeWeeksPerYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelAddPartTimeEmployeeWeeksPerYear))
+                    .addComponent(jLabelAddPartTimeEmployeeWeeksPerYear)
+                    .addComponent(jLabel31))
                 .addGap(20, 20, 20)
                 .addComponent(jLabelAddEntryError, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1729,12 +1807,12 @@ public class MainFrame extends javax.swing.JFrame {
     private void jMenuFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuFileActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuFileActionPerformed
-    
+
     private void jMenuItemFileOpenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFileOpenActionPerformed
         // TODO add your handling code here:
         // Open the file to open confirm dialog when clicked. The dialog reminds the user to save files before opening a new one.
         jDialogFileOpenConfirm.setVisible(true);
-        
+
     }//GEN-LAST:event_jMenuItemFileOpenActionPerformed
     private void jMenuItemHelpCheckForUpdatesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemHelpCheckForUpdatesActionPerformed
         // TODO add your handling code here:
@@ -1753,19 +1831,19 @@ public class MainFrame extends javax.swing.JFrame {
                 jProgressBar1.setVisible(false);
                 jLabel11.setText("No updates available");
                 jLabel12.setText("");
-                
+
             }
         },
                 50000); // 50000 thread stuff times
 
-        
+
     }//GEN-LAST:event_jMenuItemHelpCheckForUpdatesActionPerformed
-    
+
     private void jButtonSearchSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchSubmitActionPerformed
         // TODO add your handling code here:
         // Search for an employee and display it in the text are when found.
 
-        
+
         if (jTextFieldSearchEmployeeNumber.getText() == null) {
             // If nothing is entered in the textbox
             jTextAreaSearchDisplayEmployee.setText("Please enter an employee number");
@@ -1844,7 +1922,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jButtonSearchSubmitActionPerformed
-                
+
     private void jMenuItemFileSaveAsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFileSaveAsActionPerformed
 
         // Open a file chooser dialog
@@ -1868,7 +1946,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
             hashTableData.append("\n");
         }
-        
+
         if (userSelection == javax.swing.JFileChooser.APPROVE_OPTION) {
             // If the user says ok to saving the file
             java.io.File fileToSave = fileChooser.getSelectedFile();
@@ -1879,8 +1957,8 @@ public class MainFrame extends javax.swing.JFrame {
 
             // Automatically save the file as a txt file
             fileToSave = new java.io.File(fileToSave.getParentFile(), fileToSave.getName() + "-[DO NOT EDIT].txt");
-            
-            
+
+
             try {
                 // Try saving the file
                 hashTableData.write(new java.io.OutputStreamWriter(new java.io.FileOutputStream(fileToSave),
@@ -1890,26 +1968,26 @@ public class MainFrame extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jMenuItemFileSaveAsActionPerformed
-    
+
     private void jMenuItemFileExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFileExitActionPerformed
         jDialogExit.setVisible(true);
-        
+
     }//GEN-LAST:event_jMenuItemFileExitActionPerformed
-    
+
     private void jMenuWindowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuWindowActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuWindowActionPerformed
-    
+
     private void jMenuItemWindowPreferencesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemWindowPreferencesActionPerformed
         // TODO add your handling code here:
         jDialogPreferences.setVisible(true);
     }//GEN-LAST:event_jMenuItemWindowPreferencesActionPerformed
-    
+
     private void jMenuItemHelpAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemHelpAboutActionPerformed
         // TODO add your handling code here:]
         jDialogAbout.setVisible(true);
     }//GEN-LAST:event_jMenuItemHelpAboutActionPerformed
-    
+
     private void jMenuItemHelpDocumentationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemHelpDocumentationActionPerformed
         // TODO add your handling code here:
         try {
@@ -1917,17 +1995,17 @@ public class MainFrame extends javax.swing.JFrame {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
+
     }//GEN-LAST:event_jMenuItemHelpDocumentationActionPerformed
-    
+
     private void jMenuHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuHelpActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuHelpActionPerformed
-            
+
     private void pressedAddConfirmNo(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pressedAddConfirmNo
         jDialogAddConfirm.setVisible(false);
     }//GEN-LAST:event_pressedAddConfirmNo
-    
+
     private void pressedAddConfirmYes(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pressedAddConfirmYes
         // If when adding an employee the user clicks yes to the confirmation dialog, add the employee to the hashtable.
         if (jRadioButtonAddFullTimeEmployee.isSelected() == true) {
@@ -1974,12 +2052,10 @@ public class MainFrame extends javax.swing.JFrame {
         jComboBoxAddWorkLoc.setSelectedItem("Mississauga");
         jTextFieldAddDeductRate.setText("0.21");
     }//GEN-LAST:event_pressedAddConfirmYes
-    
+
     private void jTextFieldSearchEmployeeNumberKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldSearchEmployeeNumberKeyTyped
-
-
     }//GEN-LAST:event_jTextFieldSearchEmployeeNumberKeyTyped
-        
+
     private void jButtonSearchDeleteConfirmYespressedAddConfirmYes(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchDeleteConfirmYespressedAddConfirmYes
         // TODO add your handling code here:
 
@@ -1990,21 +2066,21 @@ public class MainFrame extends javax.swing.JFrame {
         jDialogSearchDeleteConfirm.setVisible(false);
         jTextAreaSearchDisplayEmployee.setText("");
     }//GEN-LAST:event_jButtonSearchDeleteConfirmYespressedAddConfirmYes
-    
+
     private void jButtonSearchDeleteConfirmNopressedAddConfirmNo(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchDeleteConfirmNopressedAddConfirmNo
         // TODO add your handling code here:
         // Cancel the remove employee operation, hide the dialog box.
         jDialogSearchDeleteConfirm.setVisible(false);
     }//GEN-LAST:event_jButtonSearchDeleteConfirmNopressedAddConfirmNo
-    
+
     private void jButtonSearchDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchDeleteActionPerformed
         // TODO add your handling code here:
 
         // If the user presses the delete button after searching for a specific employee, the delete employee dialog will pop up
         jDialogSearchDeleteConfirm.setVisible(true);
-        
+
     }//GEN-LAST:event_jButtonSearchDeleteActionPerformed
-                        
+
     private void jButtonSearchEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchEditActionPerformed
         // TODO add your handling code here:
         jDialogSearchEdit.setVisible(true);
@@ -2037,18 +2113,18 @@ public class MainFrame extends javax.swing.JFrame {
             jTextFieldEditPartTimeEmployeeWeeksPerYear.setText(Integer.toString(PTEmpSearched.getWeeksPerYear()));
         }
     }//GEN-LAST:event_jButtonSearchEditActionPerformed
-        
+
     private void jButtonViewAllUpdateTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonViewAllUpdateTableActionPerformed
         // TODO add your handling code here:
         String[] columnNames = {"Employee Number", "First Name", "Last Name", "Sex", "Work Location", "Deduction Rate"};
         javax.swing.table.TableModel model = new javax.swing.table.DefaultTableModel(theHashTable.exportContents(), columnNames);
         jTableViewAll.setModel(model);
     }//GEN-LAST:event_jButtonViewAllUpdateTableActionPerformed
-    
+
     private void jMenuBarMenuMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuBarMenuMouseMoved
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuBarMenuMouseMoved
-    
+
     private void jPanelHomeMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelHomeMouseMoved
         // TODO add your handling code here:
         jLabelHomeEmployeeCount.setText("Employees: " + Integer.toString(theHashTable.getEmployeeCount()));
@@ -2057,36 +2133,35 @@ public class MainFrame extends javax.swing.JFrame {
         Date date = new Date();
         jLabelHomeDate.setText(formatter.format(date).toString());
     }//GEN-LAST:event_jPanelHomeMouseMoved
-    
+
     private void jFileChooserSaveFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFileChooserSaveFileActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jFileChooserSaveFileActionPerformed
-    
+
     private void jTextFieldSearchEmployeeNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldSearchEmployeeNumberActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldSearchEmployeeNumberActionPerformed
-    
+
     private void jPanelSearchMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelSearchMouseMoved
         // TODO add your handling code here:
         jTextAreaSearchDisplayEmployee.setEditable(false);
-        if (jTextAreaSearchDisplayEmployee.getText().equals("Employee not found") || jTextAreaSearchDisplayEmployee.getText().equals(""
-            )) {
-             jButtonSearchEdit.setEnabled(false);
+        if (jTextAreaSearchDisplayEmployee.getText().equals("Employee not found") || jTextAreaSearchDisplayEmployee.getText().equals("")) {
+            jButtonSearchEdit.setEnabled(false);
             jButtonSearchDelete.setEnabled(false);
         }// else if ((jTextFieldSearchEmployeeNumber.getText() == null) || (jTextFieldSearchEmployeeNumber.getText().equals(""))) {
-            //jButtonSearchEdit.setEnabled(false);
-            //jButtonSearchDelete.setEnabled(false);
-         else {
+        //jButtonSearchEdit.setEnabled(false);
+        //jButtonSearchDelete.setEnabled(false);
+        else {
             jButtonSearchEdit.setEnabled(true);
             jButtonSearchDelete.setEnabled(true);
         }
     }//GEN-LAST:event_jPanelSearchMouseMoved
-    
+
     private void jButtonOpenConfirmOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonOpenConfirmOKActionPerformed
         // TODO add your handling code here:
         // Close the confirmation dialog
         jDialogFileOpenConfirm.setVisible(false);
-        
+
         javax.swing.JFileChooser fileChooser = new javax.swing.JFileChooser();
         fileChooser.setDialogTitle("Specify a file to open");
 
@@ -2094,7 +2169,7 @@ public class MainFrame extends javax.swing.JFrame {
         int userSelection = fileChooser.showOpenDialog(jFileChooserOpenFile);
         java.io.File s = fileChooser.getSelectedFile();
         jLabelFileName.setText("File Path: " + s.getAbsolutePath());
-        
+
         theHashTable = new MyHashTable(2);
 
         // The name of the file to open.
@@ -2142,16 +2217,16 @@ public class MainFrame extends javax.swing.JFrame {
                     // Repeat repeat repeat
                     String firstName = line.substring(currentIndex + 1, line.indexOf("/", currentIndex + 1));
                     currentIndex = line.indexOf("/", currentIndex + 1);
-                    
+
                     String lastName = line.substring(currentIndex + 1, line.indexOf("/", currentIndex + 1));
                     currentIndex = line.indexOf("/", currentIndex + 1);
-                    
+
                     int sex = Integer.parseInt(line.substring(currentIndex + 1, line.indexOf("/", currentIndex + 1)));
                     currentIndex = line.indexOf("/", currentIndex + 1);
-                    
+
                     int workLoc = Integer.parseInt(line.substring(currentIndex + 1, line.indexOf("/", currentIndex + 1)));
                     currentIndex = line.indexOf("/", currentIndex + 1);
-                    
+
                     double deductRate = Double.parseDouble(line.substring(currentIndex + 1, line.indexOf("/", currentIndex + 1)));
                     currentIndex = line.indexOf("/", currentIndex + 1);
 
@@ -2174,10 +2249,10 @@ public class MainFrame extends javax.swing.JFrame {
                         // Do the same for part time employees
                         hourlyWage = Double.parseDouble(line.substring(currentIndex + 1, line.indexOf("/", currentIndex + 1)));
                         currentIndex = line.indexOf("/", currentIndex + 1);
-                        
+
                         hoursPerWeek = Double.parseDouble(line.substring(currentIndex + 1, line.indexOf("/", currentIndex + 1)));
                         currentIndex = line.indexOf("/", currentIndex + 1);
-                        
+
                         weeksPerYear = Integer.parseInt(line.substring(currentIndex + 1, line.indexOf("/", currentIndex + 1)));
                     } catch (NumberFormatException e) {
                         hourlyWage = -1;
@@ -2187,7 +2262,7 @@ public class MainFrame extends javax.swing.JFrame {
 
                     // Create the employee depending on whether or not it is part time or full time and add to hashtable.
                     if (empType.equals("FTE")) {
-                        
+
                         FullTimeEmployee FTemployee = new FullTimeEmployee(empNum, firstName, lastName, sex, workLoc, deductRate, yearlySalary);
                         theHashTable.addEmployee(FTemployee);
                     } else if (empType.equals("PTE")) {
@@ -2211,24 +2286,24 @@ public class MainFrame extends javax.swing.JFrame {
             // Or we could just do this: 
             // ex.printStackTrace();
         }
-        
+
     }//GEN-LAST:event_jButtonOpenConfirmOKActionPerformed
-    
+
     private void jButtonOpenConfirmCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonOpenConfirmCancelActionPerformed
         // TODO add your handling code here:
         jDialogFileOpenConfirm.setVisible(false);
     }//GEN-LAST:event_jButtonOpenConfirmCancelActionPerformed
-    
+
     private void jMenuItemFileNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFileNewActionPerformed
         // TODO add your handling code here:
         MainFrame newFrame = new MainFrame();
         newFrame.setVisible(true);
     }//GEN-LAST:event_jMenuItemFileNewActionPerformed
-    
+
     private void jButtonExitConfirmExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitConfirmExitActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonExitConfirmExitActionPerformed
-        
+
     private void jButtonPreferencesApplyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPreferencesApplyActionPerformed
         // TODO add your handling code here:
         jPanelHome.setBackground(jColorChooserPreferences.getColor());
@@ -2236,7 +2311,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelSearch.setBackground(jColorChooserPreferences.getColor());
         jPanelView.setBackground(jColorChooserPreferences.getColor());
     }//GEN-LAST:event_jButtonPreferencesApplyActionPerformed
-    
+
     private void jButtonPreferencesOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPreferencesOKActionPerformed
         // TODO add your handling code here:
         jPanelHome.setBackground(jColorChooserPreferences.getColor());
@@ -2245,7 +2320,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelView.setBackground(jColorChooserPreferences.getColor());
         jDialogPreferences.setVisible(false);
     }//GEN-LAST:event_jButtonPreferencesOKActionPerformed
-    
+
     private void jButtonPreferencesRestoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPreferencesRestoreActionPerformed
         // TODO add your handling code here:
         jPanelHome.setBackground(Color.white);
@@ -2253,7 +2328,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelSearch.setBackground(Color.white);
         jPanelView.setBackground(Color.white);
     }//GEN-LAST:event_jButtonPreferencesRestoreActionPerformed
-    
+
     private void jButtonPreferencesCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPreferencesCancelActionPerformed
         // TODO add your handling code here:
         jDialogPreferences.setVisible(false);
@@ -2301,8 +2376,24 @@ public class MainFrame extends javax.swing.JFrame {
 
         try {
             jLabelAddEntryError.setText("");
-            ;            // Read all the information from the fields
+            jLabel30.setText("");
+            jLabel31.setText("");
+            jLabel32.setText("");
+            jLabel33.setText("");
+            jLabel34.setText("");
+            jLabel35.setText("");
+            // Read all the information from the fields
             int empNum = Integer.parseInt(jTextFieldAddEmployeeNumber.getText());
+            if (jTextFieldAddFirstName.getText().equals("")) {
+                jLabel34.setText("Please give employee a first name!");
+                jLabelAddEntryError.setText("Missing required fields and/or entries invalid - edit and submit again");
+                return;
+            }
+            if (jTextFieldAddLastName.getText().equals("")) {
+                jLabel35.setText("Please give employee a last name!");
+                jLabelAddEntryError.setText("Missing required fields and/or entries invalid - edit and submit again");
+                return;
+            }
             String firstName = jTextFieldAddFirstName.getText();
             String lastName = jTextFieldAddLastName.getText();
             int sex = jComboBoxAddSex.getSelectedIndex();
@@ -2312,54 +2403,73 @@ public class MainFrame extends javax.swing.JFrame {
             // Hmmm we don't have error checking
 
             // Convert the value from the dropdown into the key value we use to store sex and workLoc
-
-            // Convert the value from the dropdown into the key value we use to store sex and workLoc?????
-
             String sexText;
             String workLocText;
             switch (sex) {
                 case 1:
-                sexText = "Male";
-                break;
+                    sexText = "Male";
+                    break;
                 case 2:
-                sexText = "Female";
-                break;
+                    sexText = "Female";
+                    break;
                 case 3:
-                sexText = "Other";
-                break;
+                    sexText = "Other";
+                    break;
                 case 4:
-                sexText = "Prefer not to say";
-                break;
+                    sexText = "Prefer not to say";
+                    break;
                 default:
-                sexText = "Unknown";
-                break;
+                    sexText = "Unknown";
+                    break;
             }
             switch (workLoc) {
                 case 1:
-                workLocText = "Mississauga";
-                break;
+                    workLocText = "Mississauga";
+                    break;
                 case 2:
-                workLocText = "Toronto";
-                break;
+                    workLocText = "Toronto";
+                    break;
                 case 3:
-                workLocText = "Ottawa";
-                break;
+                    workLocText = "Ottawa";
+                    break;
                 case 4:
-                workLocText = "Halifax";
-                break;
+                    workLocText = "Halifax";
+                    break;
                 case 5:
-                workLocText = "Miami";
-                break;
+                    workLocText = "Miami";
+                    break;
                 default:
-                workLocText = "Unknown";
-                break;
+                    workLocText = "Unknown";
+                    break;
             }
 
             // determine which employee type was selected
+
             if (jRadioButtonAddFullTimeEmployee.isSelected() == true) {
+                if (Double.parseDouble(jTextFieldAddFullTimeEmployeeYearlySalary.getText()) <= 0) {
+                    jLabel33.setText("That's not enough pay!");
+                    jLabelAddEntryError.setText("Missing required fields and/or entries invalid - edit and submit again");
+                    return;
+                }
                 double yearlySalary = Double.parseDouble(jTextFieldAddFullTimeEmployeeYearlySalary.getText());
                 jLabelAddConfirmSalary.setText("Yearly Salary: " + yearlySalary);
+
             } else {
+                if (Double.parseDouble(jTextFieldAddPartTimeEmployeeHourlyWage.getText()) < 14) {
+                    jLabel32.setText("That's not enough pay!");
+                    jLabelAddEntryError.setText("Missing required fields and/or entries invalid - edit and submit again");
+                    return;
+                }
+                if (Integer.parseInt(jTextFieldAddPartTimeEmployeeHoursPerWeek.getText()) >= 112) {
+                    jLabel30.setText("That's too many hours!");
+                    jLabelAddEntryError.setText("Missing required fields and/or entries invalid - edit and submit again");
+                    return;
+                }
+                if (Integer.parseInt(jTextFieldAddPartTimeEmployeeWeeksPerYear.getText()) > 50) {
+                    jLabel31.setText("That's too many weeks!");
+                    jLabelAddEntryError.setText("Missing required fields and/or entries invalid - edit and submit again");
+                    return;
+                }
                 double hourlyWage = Double.parseDouble(jTextFieldAddPartTimeEmployeeHourlyWage.getText());
                 int hoursPerWeek = Integer.parseInt(jTextFieldAddPartTimeEmployeeHoursPerWeek.getText());
                 int weeksPerYear = Integer.parseInt(jTextFieldAddPartTimeEmployeeWeeksPerYear.getText());
@@ -2415,7 +2525,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
             hashTableData.append("\n");
         }
-        
+
         if (userSelection == javax.swing.JFileChooser.APPROVE_OPTION) {
             // If the user says ok to saving the file
             java.io.File fileToSave = fileChooser.getSelectedFile();
@@ -2426,8 +2536,8 @@ public class MainFrame extends javax.swing.JFrame {
 
             // Automatically save the file as a txt file
             fileToSave = new java.io.File(fileToSave.getParentFile(), fileToSave.getName() + "-[DO NOT EDIT].txt");
-            
-            
+
+
             try {
                 // Try saving the file
                 hashTableData.write(new java.io.OutputStreamWriter(new java.io.FileOutputStream(fileToSave),
@@ -2437,7 +2547,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
             java.lang.System.exit(0); // Close all windows
         }
-       
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -2465,6 +2575,14 @@ public class MainFrame extends javax.swing.JFrame {
         Double oldTotalSalary = 0.0;
         Double salaryDifference = 0.0;
         try {
+            jLabelEditEntryError.setText("");
+            jLabel36.setText("");
+            jLabel37.setText("");
+            jLabel38.setText("");
+            jLabel39.setText("");
+            jLabel40.setText("");
+            jLabel41.setText("");
+            // Read all the informat
             EmployeeInfo empSearched = theHashTable.getEmployee(Integer.parseInt(jTextFieldSearchEmployeeNumber.getText()));
             if (empSearched instanceof FullTimeEmployee) {
                 FullTimeEmployee FTEmpSearched = (FullTimeEmployee) empSearched;
@@ -2475,13 +2593,28 @@ public class MainFrame extends javax.swing.JFrame {
             }
 
             if (jRadioButtonEditFullTimeEmployee.isSelected()) {
-                // Get values from fields
+// Get values from fields
                 int empNum = Integer.parseInt(jTextFieldEditEmployeeNumber.getText());
+                if (jTextFieldEditFirstName.getText().equals("")) {
+                    jLabel36.setText("Please give employee a first name!");
+                    jLabelEditEntryError.setText("Missing required fields and/or entries invalid - edit and submit again");
+                    return;
+                }
+                if (jTextFieldEditLastName.getText().equals("")) {
+                    jLabel37.setText("Please give employee a last name!");
+                    jLabelEditEntryError.setText("Missing required fields and/or entries invalid - edit and submit again");
+                    return;
+                }
                 String firstName = jTextFieldEditFirstName.getText();
                 String lastName = jTextFieldEditLastName.getText();
                 int sex = jComboBoxEditSex.getSelectedIndex();
                 int workLoc = jComboBoxEditWorkLoc.getSelectedIndex();
                 Double deductRate = Double.parseDouble(jTextFieldEditDeductRate.getText());
+                if (Double.parseDouble(jTextFieldEditFullTimeEmployeeYearlySalary.getText()) <= 0) {
+                    jLabel38.setText("That's not enough pay!");
+                    jLabelEditEntryError.setText("Missing required fields and/or entries invalid - edit and submit again");
+                    return;
+                }
                 Double yearlySalary = Double.parseDouble(jTextFieldEditFullTimeEmployeeYearlySalary.getText());
 
                 theHashTable.removeEmployee(empSearched.getEmpNum());
@@ -2496,13 +2629,38 @@ public class MainFrame extends javax.swing.JFrame {
                 theHashTable.setYearlyPayroll(salaryDifference);
 
             } else if (jRadioButtonEditPartTimeEmployee.isSelected()) {
-                // Get values from fields
+// Get values from fields
                 int empNum = Integer.parseInt(jTextFieldEditEmployeeNumber.getText());
+                if (jTextFieldEditFirstName.getText().equals("")) {
+                    jLabel36.setText("Please give employee a first name!");
+                    jLabelEditEntryError.setText("Missing required fields and/or entries invalid - edit and submit again");
+                    return;
+                }
+                if (jTextFieldEditLastName.getText().equals("")) {
+                    jLabel37.setText("Please give employee a last name!");
+                    jLabelEditEntryError.setText("Missing required fields and/or entries invalid - edit and submit again");
+                    return;
+                }
                 String firstName = jTextFieldEditFirstName.getText();
                 String lastName = jTextFieldEditLastName.getText();
                 int sex = jComboBoxEditSex.getSelectedIndex();
                 int workLoc = jComboBoxEditWorkLoc.getSelectedIndex();
                 Double deductRate = Double.parseDouble(jTextFieldEditDeductRate.getText());
+                if (Double.parseDouble(jTextFieldEditPartTimeEmployeeHourlyWage.getText()) < 14) {
+                    jLabel39.setText("That's not enough pay!");
+                    jLabelEditEntryError.setText("Missing required fields and/or entries invalid - edit and submit again");
+                    return;
+                }
+                if (Integer.parseInt(jTextFieldEditPartTimeEmployeeHoursPerWeek.getText()) >= 112) {
+                    jLabel40.setText("That's too many hours!");
+                    jLabelEditEntryError.setText("Missing required fields and/or entries invalid - edit and submit again");
+                    return;
+                }
+                if (Integer.parseInt(jTextFieldEditPartTimeEmployeeWeeksPerYear.getText()) > 50) {
+                    jLabel41.setText("That's too many weeks!");
+                    jLabelEditEntryError.setText("Missing required fields and/or entries invalid - edit and submit again");
+                    return;
+                }
                 Double hourlyWage = Double.parseDouble(jTextFieldEditPartTimeEmployeeHourlyWage.getText());
                 Double hoursPerWeek = Double.parseDouble(jTextFieldEditPartTimeEmployeeHoursPerWeek.getText());
                 int weeksPerYear = Integer.parseInt(jTextFieldEditPartTimeEmployeeWeeksPerYear.getText());
@@ -2520,6 +2678,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
             jDialogSearchEdit.setVisible(false);
         } catch (Exception e) {
+            System.out.println(e);
             jLabelEditEntryError.setText("Missing required fields and/or entries invalid - edit and submit again");
         }
     }//GEN-LAST:event_jButtonEditSubmitActionPerformed
@@ -2554,6 +2713,10 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBoxEditWorkLocActionPerformed
 
+    private void jTextFieldEditEmployeeNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldEditEmployeeNumberActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldEditEmployeeNumberActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2565,7 +2728,7 @@ public class MainFrame extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                
+
                 javax.swing.UIManager.setLookAndFeel(javax.swing.UIManager.getSystemLookAndFeelClassName());
                 break;
                 // This was the original code, the above lines were contained in this if statement
@@ -2586,14 +2749,14 @@ public class MainFrame extends javax.swing.JFrame {
         }
         //</editor-fold>
         /* Create and display the form */
-        
-        
-        
+
+
+
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                
+
                 new MainFrame().setVisible(true);
-                
+
             }
         });
     }
@@ -2662,7 +2825,19 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
