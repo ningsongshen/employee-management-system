@@ -84,6 +84,7 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel39 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
         jFileChooserSaveFile = new javax.swing.JFileChooser();
         jFileChooserOpenFile = new javax.swing.JFileChooser();
         jDialogFileOpenConfirm = new javax.swing.JDialog();
@@ -91,7 +92,7 @@ public class MainFrame extends javax.swing.JFrame {
         jButtonOpenConfirmCancel = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jDialogExitConfrirm = new javax.swing.JDialog();
+        jDialogExitConfirm = new javax.swing.JDialog();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jButtonExitConfirmExit = new javax.swing.JButton();
@@ -171,6 +172,7 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
         jPanelSearch = new javax.swing.JPanel();
         jLabelSearchHeading = new javax.swing.JLabel();
         jLabelSearchEmployeeNumber = new javax.swing.JLabel();
@@ -488,6 +490,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel41.setText(" ");
 
+        jLabel43.setText(" ");
+
         javax.swing.GroupLayout jDialogSearchEditLayout = new javax.swing.GroupLayout(jDialogSearchEdit.getContentPane());
         jDialogSearchEdit.getContentPane().setLayout(jDialogSearchEditLayout);
         jDialogSearchEditLayout.setHorizontalGroup(
@@ -564,13 +568,15 @@ public class MainFrame extends javax.swing.JFrame {
                                         .addComponent(jTextFieldEditPartTimeEmployeeHoursPerWeek, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jTextFieldEditPartTimeEmployeeHourlyWage, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGap(18, 18, 18)
-                        .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel36, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel37, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel38, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel40, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel41, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE))))
+                        .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel36, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel37, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel38, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel40, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel41, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE))
+                            .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jDialogSearchEditLayout.setVerticalGroup(
@@ -603,7 +609,8 @@ public class MainFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelAddDeductRate1)
-                    .addComponent(jTextFieldEditDeductRate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldEditDeductRate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel43))
                 .addGap(18, 18, Short.MAX_VALUE)
                 .addComponent(jRadioButtonEditFullTimeEmployee)
                 .addGap(40, 40, 40)
@@ -697,7 +704,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jDialogExitConfrirm.setMinimumSize(new java.awt.Dimension(400, 100));
+        jDialogExitConfirm.setMinimumSize(new java.awt.Dimension(400, 100));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel9.setText("Are you sure you want to exit the program?");
@@ -713,32 +720,32 @@ public class MainFrame extends javax.swing.JFrame {
 
         jButtonExitConfirmCancel.setText("Cancel");
 
-        javax.swing.GroupLayout jDialogExitConfrirmLayout = new javax.swing.GroupLayout(jDialogExitConfrirm.getContentPane());
-        jDialogExitConfrirm.getContentPane().setLayout(jDialogExitConfrirmLayout);
-        jDialogExitConfrirmLayout.setHorizontalGroup(
-            jDialogExitConfrirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialogExitConfrirmLayout.createSequentialGroup()
+        javax.swing.GroupLayout jDialogExitConfirmLayout = new javax.swing.GroupLayout(jDialogExitConfirm.getContentPane());
+        jDialogExitConfirm.getContentPane().setLayout(jDialogExitConfirmLayout);
+        jDialogExitConfirmLayout.setHorizontalGroup(
+            jDialogExitConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogExitConfirmLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addGroup(jDialogExitConfrirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jDialogExitConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel10)
                     .addComponent(jLabel9))
                 .addContainerGap(127, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogExitConfrirmLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogExitConfirmLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButtonExitConfirmExit)
                 .addGap(39, 39, 39)
                 .addComponent(jButtonExitConfirmCancel)
                 .addGap(52, 52, 52))
         );
-        jDialogExitConfrirmLayout.setVerticalGroup(
-            jDialogExitConfrirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialogExitConfrirmLayout.createSequentialGroup()
+        jDialogExitConfirmLayout.setVerticalGroup(
+            jDialogExitConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogExitConfirmLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(jLabel9)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
-                .addGroup(jDialogExitConfrirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jDialogExitConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonExitConfirmExit)
                     .addComponent(jButtonExitConfirmCancel))
                 .addGap(40, 40, 40))
@@ -1278,6 +1285,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel35.setText(" ");
 
+        jLabel42.setText(" ");
+
         javax.swing.GroupLayout jPanelAddLayout = new javax.swing.GroupLayout(jPanelAdd);
         jPanelAdd.setLayout(jPanelAddLayout);
         jPanelAddLayout.setHorizontalGroup(
@@ -1342,7 +1351,10 @@ public class MainFrame extends javax.swing.JFrame {
                                                     .addComponent(jLabelAddSex)))))
                                     .addGap(18, 18, 18)
                                     .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jTextFieldAddDeductRate, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(jPanelAddLayout.createSequentialGroup()
+                                            .addComponent(jTextFieldAddDeductRate, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(jPanelAddLayout.createSequentialGroup()
                                             .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                                 .addComponent(jTextFieldAddFirstName, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1400,7 +1412,8 @@ public class MainFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelAddDeductRate)
-                    .addComponent(jTextFieldAddDeductRate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldAddDeductRate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel42))
                 .addGap(40, 40, 40)
                 .addComponent(jRadioButtonAddFullTimeEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -2382,6 +2395,7 @@ public class MainFrame extends javax.swing.JFrame {
             jLabel33.setText("");
             jLabel34.setText("");
             jLabel35.setText("");
+            jLabel42.setText("");
             // Read all the information from the fields
             int empNum = Integer.parseInt(jTextFieldAddEmployeeNumber.getText());
             if (jTextFieldAddFirstName.getText().equals("")) {
@@ -2391,6 +2405,11 @@ public class MainFrame extends javax.swing.JFrame {
             }
             if (jTextFieldAddLastName.getText().equals("")) {
                 jLabel35.setText("Please give employee a last name!");
+                jLabelAddEntryError.setText("Missing required fields and/or entries invalid - edit and submit again");
+                return;
+            }
+            if (Double.parseDouble(jTextFieldAddDeductRate.getText()) < 0 || Double.parseDouble(jTextFieldAddDeductRate.getText()) >= 1) {
+                jLabel42.setText("Please enter a number between 0 and 1");
                 jLabelAddEntryError.setText("Missing required fields and/or entries invalid - edit and submit again");
                 return;
             }
@@ -2460,7 +2479,7 @@ public class MainFrame extends javax.swing.JFrame {
                     jLabelAddEntryError.setText("Missing required fields and/or entries invalid - edit and submit again");
                     return;
                 }
-                if (Integer.parseInt(jTextFieldAddPartTimeEmployeeHoursPerWeek.getText()) >= 112) {
+                if (Double.parseDouble(jTextFieldAddPartTimeEmployeeHoursPerWeek.getText()) >= 112) {
                     jLabel30.setText("That's too many hours!");
                     jLabelAddEntryError.setText("Missing required fields and/or entries invalid - edit and submit again");
                     return;
@@ -2471,7 +2490,7 @@ public class MainFrame extends javax.swing.JFrame {
                     return;
                 }
                 double hourlyWage = Double.parseDouble(jTextFieldAddPartTimeEmployeeHourlyWage.getText());
-                int hoursPerWeek = Integer.parseInt(jTextFieldAddPartTimeEmployeeHoursPerWeek.getText());
+                double hoursPerWeek = Double.parseDouble(jTextFieldAddPartTimeEmployeeHoursPerWeek.getText());
                 int weeksPerYear = Integer.parseInt(jTextFieldAddPartTimeEmployeeWeeksPerYear.getText());
                 jLabelAddConfirmSalary.setText("Hourly Pay: " + hourlyWage + " Hours per Week: " + hoursPerWeek + " Weeks per Year: " + weeksPerYear);
             }
@@ -2582,6 +2601,7 @@ public class MainFrame extends javax.swing.JFrame {
             jLabel39.setText("");
             jLabel40.setText("");
             jLabel41.setText("");
+            jLabel43.setText("");
             // Read all the informat
             EmployeeInfo empSearched = theHashTable.getEmployee(Integer.parseInt(jTextFieldSearchEmployeeNumber.getText()));
             if (empSearched instanceof FullTimeEmployee) {
@@ -2602,6 +2622,11 @@ public class MainFrame extends javax.swing.JFrame {
                 }
                 if (jTextFieldEditLastName.getText().equals("")) {
                     jLabel37.setText("Please give employee a last name!");
+                    jLabelEditEntryError.setText("Missing required fields and/or entries invalid - edit and submit again");
+                    return;
+                }
+                if (Double.parseDouble(jTextFieldEditDeductRate.getText()) < 0 || Double.parseDouble(jTextFieldEditDeductRate.getText()) >= 1){
+                    jLabel43.setText("Please enter a number between 0 and 1");
                     jLabelEditEntryError.setText("Missing required fields and/or entries invalid - edit and submit again");
                     return;
                 }
@@ -2651,7 +2676,7 @@ public class MainFrame extends javax.swing.JFrame {
                     jLabelEditEntryError.setText("Missing required fields and/or entries invalid - edit and submit again");
                     return;
                 }
-                if (Integer.parseInt(jTextFieldEditPartTimeEmployeeHoursPerWeek.getText()) >= 112) {
+                if (Double.parseDouble(jTextFieldEditPartTimeEmployeeHoursPerWeek.getText()) >= 112) {
                     jLabel40.setText("That's too many hours!");
                     jLabelEditEntryError.setText("Missing required fields and/or entries invalid - edit and submit again");
                     return;
@@ -2795,7 +2820,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JDialog jDialogAddConfirm;
     private javax.swing.JDialog jDialogCheckUpdates;
     private javax.swing.JDialog jDialogExit;
-    private javax.swing.JDialog jDialogExitConfrirm;
+    private javax.swing.JDialog jDialogExitConfirm;
     private javax.swing.JDialog jDialogFileOpenConfirm;
     private javax.swing.JDialog jDialogPreferences;
     private javax.swing.JDialog jDialogSearchDeleteConfirm;
@@ -2838,6 +2863,8 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
