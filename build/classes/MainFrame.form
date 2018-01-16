@@ -162,8 +162,8 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelSearchDeleteConfirmHeading" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelSearchDeleteConfirmMessage" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="46" max="32767" attributes="0"/>
               </Group>
@@ -180,9 +180,9 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelSearchDeleteConfirmHeading" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelSearchDeleteConfirmMessage" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="16" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jButtonSearchDeleteConfirmYes" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -202,7 +202,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSearchDeleteConfirmYespressedAddConfirmYes"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JLabel" name="jLabelSearchDeleteConfirmHeading">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="11" style="1"/>
@@ -211,7 +211,7 @@
             <Property name="name" type="java.lang.String" value="Confirm Employee" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel7">
+        <Component class="javax.swing.JLabel" name="jLabelSearchDeleteConfirmMessage">
           <Properties>
             <Property name="text" type="java.lang.String" value="This action is irreversible."/>
           </Properties>
@@ -252,17 +252,17 @@
                           </Group>
                       </Group>
                       <Component id="jRadioButtonEditFullTimeEmployee" min="-2" pref="161" max="-2" attributes="0"/>
-                      <Component id="jLabelAddHeading1" alignment="0" min="-2" pref="685" max="-2" attributes="0"/>
+                      <Component id="jLabelSearchEditHeading" alignment="0" min="-2" pref="685" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jLabelAddEmployeeNumber1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelSearchEditEmployeeNumber" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
-                                          <Component id="jLabelAddFirstName1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelSearchEditFirstName" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -275,12 +275,12 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="1" attributes="0">
                                           <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                                          <Component id="jLabelAddLastName1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelSearchEditLastName" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
-                                          <Component id="jLabelAddSex1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelSearchEditSex" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -291,37 +291,37 @@
                               </Group>
                               <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabelAddDeductRate1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelSearchEditDeductRate" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                                       <Component id="jTextFieldEditDeductRate" min="-2" pref="125" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                                      <Component id="jLabelAddWorkLoc1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelSearchEditWorkLoc" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="jComboBoxEditWorkLoc" min="-2" pref="125" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jLabelAddFullTimeEmployeeYearlySalary1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabelSearchEditFullTimeEmployeeYearlySalary" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="jTextFieldEditFullTimeEmployeeYearlySalary" min="-2" pref="125" max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                                      <Component id="jLabelAddPartTimeEmployeeWeeksPerYear1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelSearchEditPartTimeEmployeeWeeksPerYear" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="jTextFieldEditPartTimeEmployeeWeeksPerYear" min="-2" pref="125" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <Component id="jLabelAddPartTimeEmployeeHourlyWage1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelSearchEditPartTimeEmployeeHourlyWage" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jLabelAddPartTimeEmployeeHoursPerWeek1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelSearchEditPartTimeEmployeeHoursPerWeek" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
@@ -335,14 +335,14 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jLabel36" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jLabel37" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jLabel38" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jLabel39" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jLabel40" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jLabel41" alignment="0" pref="122" max="32767" attributes="0"/>
+                                  <Component id="jLabelSearchEditFirstNameError" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jLabelSearchEditLastNameError" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jLabelSearchEditFullTimeYearlySalaryError" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jLabelSearchEditPartTimeHourlyWageError" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jLabelSearchEditPartTimeHoursPerWeekError" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jLabelSearchEditPartTimeWeeksPerYearError" alignment="0" pref="122" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="jLabel43" min="-2" pref="247" max="-2" attributes="0"/>
+                              <Component id="jLabelSearchEditDeductRateError" min="-2" pref="247" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -354,67 +354,67 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                  <Component id="jLabelAddHeading1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelSearchEditHeading" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabelAddEmployeeNumber1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelSearchEditEmployeeNumber" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextFieldEditEmployeeNumber" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabelAddFirstName1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelSearchEditFirstName" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextFieldEditFirstName" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel36" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelSearchEditFirstNameError" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jTextFieldEditLastName" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabelAddLastName1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel37" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelSearchEditLastName" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelSearchEditLastNameError" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabelAddSex1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelSearchEditSex" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jComboBoxEditSex" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabelAddWorkLoc1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelSearchEditWorkLoc" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jComboBoxEditWorkLoc" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabelAddDeductRate1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelSearchEditDeductRate" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextFieldEditDeductRate" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel43" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelSearchEditDeductRateError" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="32767" attributes="0"/>
                   <Component id="jRadioButtonEditFullTimeEmployee" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jTextFieldEditFullTimeEmployeeYearlySalary" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabelAddFullTimeEmployeeYearlySalary1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel38" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelSearchEditFullTimeEmployeeYearlySalary" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelSearchEditFullTimeYearlySalaryError" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" pref="39" max="32767" attributes="0"/>
                   <Component id="jRadioButtonEditPartTimeEmployee" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabelAddPartTimeEmployeeHourlyWage1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelSearchEditPartTimeEmployeeHourlyWage" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextFieldEditPartTimeEmployeeHourlyWage" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel39" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelSearchEditPartTimeHourlyWageError" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabelAddPartTimeEmployeeHoursPerWeek1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelSearchEditPartTimeEmployeeHoursPerWeek" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextFieldEditPartTimeEmployeeHoursPerWeek" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel40" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelSearchEditPartTimeHoursPerWeekError" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabelAddPartTimeEmployeeWeeksPerYear1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelSearchEditPartTimeEmployeeWeeksPerYear" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextFieldEditPartTimeEmployeeWeeksPerYear" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel41" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelSearchEditPartTimeWeeksPerYearError" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jLabelEditEntryError" min="-2" pref="23" max="-2" attributes="0"/>
@@ -429,7 +429,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabelAddHeading1">
+        <Component class="javax.swing.JLabel" name="jLabelSearchEditHeading">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Franklin Gothic Medium Cond" size="24" style="0"/>
@@ -437,7 +437,7 @@
             <Property name="text" type="java.lang.String" value="Edit Employee"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabelAddEmployeeNumber1">
+        <Component class="javax.swing.JLabel" name="jLabelSearchEditEmployeeNumber">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="0"/>
@@ -458,7 +458,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="jTextFieldEditFirstName">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabelAddFirstName1">
+        <Component class="javax.swing.JLabel" name="jLabelSearchEditFirstName">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="0"/>
@@ -467,7 +467,7 @@
             <Property name="text" type="java.lang.String" value="First Name:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabelAddLastName1">
+        <Component class="javax.swing.JLabel" name="jLabelSearchEditLastName">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="0"/>
@@ -491,7 +491,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabelAddSex1">
+        <Component class="javax.swing.JLabel" name="jLabelSearchEditSex">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="0"/>
@@ -500,7 +500,7 @@
             <Property name="text" type="java.lang.String" value="Sex:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabelAddWorkLoc1">
+        <Component class="javax.swing.JLabel" name="jLabelSearchEditWorkLoc">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="0"/>
@@ -535,7 +535,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldEditDeductRateActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabelAddDeductRate1">
+        <Component class="javax.swing.JLabel" name="jLabelSearchEditDeductRate">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="0"/>
@@ -564,7 +564,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonEditFullTimeEmployeeActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabelAddFullTimeEmployeeYearlySalary1">
+        <Component class="javax.swing.JLabel" name="jLabelSearchEditFullTimeEmployeeYearlySalary">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="0"/>
@@ -598,7 +598,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonEditPartTimeEmployeeActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabelAddPartTimeEmployeeHourlyWage1">
+        <Component class="javax.swing.JLabel" name="jLabelSearchEditPartTimeEmployeeHourlyWage">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="0"/>
@@ -617,7 +617,7 @@
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabelAddPartTimeEmployeeHoursPerWeek1">
+        <Component class="javax.swing.JLabel" name="jLabelSearchEditPartTimeEmployeeHoursPerWeek">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="0"/>
@@ -626,7 +626,7 @@
             <Property name="text" type="java.lang.String" value="Hours per Week*:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabelAddPartTimeEmployeeWeeksPerYear1">
+        <Component class="javax.swing.JLabel" name="jLabelSearchEditPartTimeEmployeeWeeksPerYear">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="0"/>
@@ -677,37 +677,37 @@
             <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jLabelEditEntryErrorMouseMoved"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel36">
+        <Component class="javax.swing.JLabel" name="jLabelSearchEditFirstNameError">
           <Properties>
             <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel37">
+        <Component class="javax.swing.JLabel" name="jLabelSearchEditLastNameError">
           <Properties>
             <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel38">
+        <Component class="javax.swing.JLabel" name="jLabelSearchEditFullTimeYearlySalaryError">
           <Properties>
             <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel39">
+        <Component class="javax.swing.JLabel" name="jLabelSearchEditPartTimeHourlyWageError">
           <Properties>
             <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel40">
+        <Component class="javax.swing.JLabel" name="jLabelSearchEditPartTimeHoursPerWeekError">
           <Properties>
             <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel41">
+        <Component class="javax.swing.JLabel" name="jLabelSearchEditPartTimeWeeksPerYearError">
           <Properties>
             <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel43">
+        <Component class="javax.swing.JLabel" name="jLabelSearchEditDeductRateError">
           <Properties>
             <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
@@ -747,8 +747,8 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelFileOpenConfirmMessage" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelFileOpenConfirmHeading" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="113" max="32767" attributes="0"/>
               </Group>
@@ -758,9 +758,9 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelFileOpenConfirmHeading" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelFileOpenConfirmMessage" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" pref="30" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jButtonOpenConfirmOK" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -788,7 +788,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonOpenConfirmCancelActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="jLabelFileOpenConfirmHeading">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="11" style="1"/>
@@ -796,7 +796,7 @@
             <Property name="text" type="java.lang.String" value="Are you sure you want to open a new database?"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JLabel" name="jLabelFileOpenConfirmMessage">
           <Properties>
             <Property name="text" type="java.lang.String" value="Any data that is not saved will be lost."/>
           </Properties>
@@ -816,8 +816,8 @@
               <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelExitConfirmMessage" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelExitConfirmHeading" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="127" max="32767" attributes="0"/>
               </Group>
@@ -834,9 +834,9 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                  <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelExitConfirmHeading" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelExitConfirmMessage" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="75" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jButtonExitConfirmExit" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -848,7 +848,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel9">
+        <Component class="javax.swing.JLabel" name="jLabelExitConfirmHeading">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="11" style="1"/>
@@ -856,7 +856,7 @@
             <Property name="text" type="java.lang.String" value="Are you sure you want to exit the program?"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel10">
+        <Component class="javax.swing.JLabel" name="jLabelExitConfirmMessage">
           <Properties>
             <Property name="text" type="java.lang.String" value="Anything not saved will be lost."/>
           </Properties>
@@ -889,8 +889,8 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace pref="38" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelCheckUpdatesMessage" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelCheckUpdatesHeading" min="-2" max="-2" attributes="0"/>
                       <Component id="jProgressBar1" min="-2" pref="297" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
@@ -901,9 +901,9 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                  <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelCheckUpdatesHeading" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelCheckUpdatesMessage" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jProgressBar1" min="-2" pref="28" max="-2" attributes="0"/>
                   <EmptySpace pref="65" max="32767" attributes="0"/>
@@ -914,7 +914,7 @@
       <SubComponents>
         <Component class="javax.swing.JProgressBar" name="jProgressBar1">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel11">
+        <Component class="javax.swing.JLabel" name="jLabelCheckUpdatesHeading">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="11" style="1"/>
@@ -922,7 +922,7 @@
             <Property name="text" type="java.lang.String" value="Checking for updates..."/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel12">
+        <Component class="javax.swing.JLabel" name="jLabelCheckUpdatesMessage">
           <Properties>
             <Property name="text" type="java.lang.String" value="Please do not close the program or shut down your computer."/>
           </Properties>
@@ -955,7 +955,7 @@
                               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelPreferencesHeading" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -965,7 +965,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelPreferencesHeading" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jColorChooserPreferences" min="-2" pref="212" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -1017,7 +1017,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonPreferencesRestoreActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel13">
+        <Component class="javax.swing.JLabel" name="jLabelPreferencesHeading">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Franklin Gothic Medium" size="24" style="1"/>
@@ -1039,16 +1039,16 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                  <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelExitHeading" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="70" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonExitSaveAs" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonExitExitWithoutSaving" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonExitCancel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -1057,12 +1057,12 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                  <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelExitHeading" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="57" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButtonExitSaveAs" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButtonExitExitWithoutSaving" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButtonExitCancel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
               </Group>
@@ -1070,7 +1070,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel21">
+        <Component class="javax.swing.JLabel" name="jLabelExitHeading">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="11" style="1"/>
@@ -1078,28 +1078,28 @@
             <Property name="text" type="java.lang.String" value="Would you like to save your data before exiting?"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="jButtonExitSaveAs">
           <Properties>
             <Property name="text" type="java.lang.String" value="Save As"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonExitSaveAsActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="jButtonExitExitWithoutSaving">
           <Properties>
             <Property name="text" type="java.lang.String" value="Exit without Saving"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonExitExitWithoutSavingActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="jButtonExitCancel">
           <Properties>
             <Property name="text" type="java.lang.String" value="Cancel"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonExitCancelActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
@@ -1117,15 +1117,15 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel26" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton4" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
+                      <Component id="jLabelAboutMessage6" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelAboutMessage5" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelAboutMessage7" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelAboutMessage4" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelAboutMessage3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelAboutMessage2" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelAboutMessage1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelAboutHeading" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButtonAboutOk" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -1135,30 +1135,30 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                  <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelAboutHeading" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelAboutMessage1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelAboutMessage2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelAboutMessage3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jLabel26" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelAboutMessage4" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelAboutMessage5" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelAboutMessage6" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabelAboutMessage7" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonAboutOk" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel22">
+        <Component class="javax.swing.JLabel" name="jLabelAboutHeading">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="11" style="1"/>
@@ -1166,47 +1166,47 @@
             <Property name="text" type="java.lang.String" value="Employee Management System"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel23">
+        <Component class="javax.swing.JLabel" name="jLabelAboutMessage1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Welcome to the Employee Management System!"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel24">
+        <Component class="javax.swing.JLabel" name="jLabelAboutMessage2">
           <Properties>
             <Property name="text" type="java.lang.String" value="This program is made in Java with the JFrame GUI package."/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel25">
+        <Component class="javax.swing.JLabel" name="jLabelAboutMessage3">
           <Properties>
             <Property name="text" type="java.lang.String" value="Feel free to view the code at github.com/heliotrope3n/employee-management-system."/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel26">
+        <Component class="javax.swing.JLabel" name="jLabelAboutMessage4">
           <Properties>
             <Property name="text" type="java.lang.String" value=" It&#x2019;s open source!"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel27">
+        <Component class="javax.swing.JLabel" name="jLabelAboutMessage7">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Employee Management System 1.0.0 2017"/>
+            <Property name="text" type="java.lang.String" value="Employee Management System v1.0.0 2018"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel28">
+        <Component class="javax.swing.JLabel" name="jLabelAboutMessage5">
           <Properties>
             <Property name="text" type="java.lang.String" value="If you like it, please give us a star on Github."/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel29">
+        <Component class="javax.swing.JLabel" name="jLabelAboutMessage6">
           <Properties>
             <Property name="text" type="java.lang.String" value="Hope you find it easier to manage the employees at your organization!"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton4">
+        <Component class="javax.swing.JButton" name="jButtonAboutOk">
           <Properties>
             <Property name="text" type="java.lang.String" value="OK"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonAboutOkActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
@@ -1346,7 +1346,7 @@
     </Menu>
   </NonVisualComponents>
   <Properties>
-    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
       <Color blue="1" green="1" red="1" type="rgb"/>
     </Property>
@@ -1431,27 +1431,27 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelHomeVersion" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <Component id="jLabelHomeHeading" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Component id="jSeparator1" min="-2" pref="694" max="-2" attributes="0"/>
+                              <Component id="jSeparatorHome" min="-2" pref="694" max="-2" attributes="0"/>
                               <EmptySpace pref="166" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jPanelHomeDarkBar" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                              <Component id="jPanel2" max="32767" attributes="0"/>
+                              <Component id="jPanelHomeBackground" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelHomeLogoMessage" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelHomeLogo" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1462,18 +1462,18 @@
                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       <Component id="jLabelHomeHeading" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelHomeVersion" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                      <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
+                      <Component id="jSeparatorHome" min="-2" pref="10" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                          <Component id="jPanelHomeDarkBar" min="-2" max="-2" attributes="0"/>
+                          <Component id="jPanelHomeBackground" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="287" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel3" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel14" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelHomeLogoMessage" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelHomeLogo" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
@@ -1490,26 +1490,26 @@
                 <Property name="text" type="java.lang.String" value="Company Employee Database"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel2">
+            <Component class="javax.swing.JLabel" name="jLabelHomeVersion">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Version 1.0.0"/>
+                <Property name="text" type="java.lang.String" value="Beta Version 1.0.0"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JSeparator" name="jSeparator1">
+            <Component class="javax.swing.JSeparator" name="jSeparatorHome">
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel3">
+            <Component class="javax.swing.JLabel" name="jLabelHomeLogoMessage">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Powered by"/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JPanel" name="jPanel2">
+            <Container class="javax.swing.JPanel" name="jPanelHomeBackground">
 
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelHomeEmployeeStatistics" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                           <Component id="jLabelHomeDate" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
@@ -1536,7 +1536,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelHomeEmployeeStatistics" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabelHomeDate" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -1577,7 +1577,7 @@
                     <Property name="text" type="java.lang.String" value="Employees: "/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel8">
+                <Component class="javax.swing.JLabel" name="jLabelHomeEmployeeStatistics">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="18" style="0"/>
@@ -1594,7 +1594,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="jPanel3">
+            <Container class="javax.swing.JPanel" name="jPanelHomeDarkBar">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="28" green="28" red="28" type="rgb"/>
@@ -1614,7 +1614,7 @@
                 </DimensionLayout>
               </Layout>
             </Container>
-            <Component class="javax.swing.JLabel" name="jLabel14">
+            <Component class="javax.swing.JLabel" name="jLabelHomeLogo">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/logo.png"/>
@@ -1650,9 +1650,9 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelAddLogoMessage" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelAddLogo" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -1700,9 +1700,9 @@
                                           </Group>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLabel31" min="-2" pref="189" max="-2" attributes="0"/>
-                                              <Component id="jLabel30" alignment="0" min="-2" pref="189" max="-2" attributes="0"/>
-                                              <Component id="jLabel32" min="-2" pref="189" max="-2" attributes="0"/>
+                                              <Component id="jLabelAddPartTimeWeeksPerYearError" min="-2" pref="189" max="-2" attributes="0"/>
+                                              <Component id="jLabelAddPartTimeHoursPerWeekError" alignment="0" min="-2" pref="189" max="-2" attributes="0"/>
+                                              <Component id="jLabelAddPartTimeHourlyWageError" min="-2" pref="189" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Component id="jRadioButtonAddPartTimeEmployee" alignment="0" min="-2" pref="191" max="-2" attributes="0"/>
@@ -1729,7 +1729,7 @@
                                               <Group type="102" attributes="0">
                                                   <Component id="jTextFieldAddDeductRate" min="-2" pref="126" max="-2" attributes="0"/>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="jLabel42" min="-2" pref="348" max="-2" attributes="0"/>
+                                                  <Component id="jLabelAddDeductRateError" min="-2" pref="348" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" attributes="0">
                                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -1746,11 +1746,11 @@
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                          <Component id="jLabel34" min="-2" pref="189" max="-2" attributes="0"/>
+                                                          <Component id="jLabelAddFirstNameError" min="-2" pref="189" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                          <Component id="jLabel35" min="-2" pref="189" max="-2" attributes="0"/>
+                                                          <Component id="jLabelAddLastNameError" min="-2" pref="189" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                               </Group>
@@ -1761,7 +1761,7 @@
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="jTextFieldAddFullTimeEmployeeYearlySalary" min="-2" pref="128" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jLabel33" min="-2" pref="189" max="-2" attributes="0"/>
+                                          <Component id="jLabelAddFullTimeYearlySalaryError" min="-2" pref="189" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="216" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -1787,13 +1787,13 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabelAddFirstName" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextFieldAddFirstName" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel34" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelAddFirstNameError" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jTextFieldAddLastName" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelAddLastName" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel35" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelAddLastNameError" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -1809,7 +1809,7 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabelAddDeductRate" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextFieldAddDeductRate" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel42" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelAddDeductRateError" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                       <Component id="jRadioButtonAddFullTimeEmployee" min="-2" pref="28" max="-2" attributes="0"/>
@@ -1817,7 +1817,7 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabelAddFullTimeEmployeeYearlySalary" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextFieldAddFullTimeEmployeeYearlySalary" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel33" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelAddFullTimeYearlySalaryError" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                       <Component id="jRadioButtonAddPartTimeEmployee" min="-2" max="-2" attributes="0"/>
@@ -1825,19 +1825,19 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabelAddPartTimeEmployeeHourlyWage" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextFieldAddPartTimeEmployeeHourlyWage" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel32" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelAddPartTimeHourlyWageError" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabelAddPartTimeEmployeeHoursPerWeek" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextFieldAddPartTimeEmployeeHoursPerWeek" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel30" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelAddPartTimeHoursPerWeekError" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jTextFieldAddPartTimeEmployeeWeeksPerYear" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabelAddPartTimeEmployeeWeeksPerYear" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel31" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelAddPartTimeWeeksPerYearError" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                       <Component id="jLabelAddEntryError" min="-2" pref="19" max="-2" attributes="0"/>
@@ -1847,9 +1847,9 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                              <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelAddLogoMessage" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelAddLogo" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
@@ -2090,7 +2090,7 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabelAddEmployeeNumberError">
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel15">
+            <Component class="javax.swing.JLabel" name="jLabelAddLogo">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/logo.png"/>
@@ -2101,7 +2101,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel16">
+            <Component class="javax.swing.JLabel" name="jLabelAddLogoMessage">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Powered by"/>
               </Properties>
@@ -2122,37 +2122,37 @@
                 <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jLabelAddEntryErrorMouseMoved"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel30">
+            <Component class="javax.swing.JLabel" name="jLabelAddPartTimeHoursPerWeekError">
               <Properties>
                 <Property name="text" type="java.lang.String" value=" "/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel31">
+            <Component class="javax.swing.JLabel" name="jLabelAddPartTimeWeeksPerYearError">
               <Properties>
                 <Property name="text" type="java.lang.String" value=" "/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel32">
+            <Component class="javax.swing.JLabel" name="jLabelAddPartTimeHourlyWageError">
               <Properties>
                 <Property name="text" type="java.lang.String" value=" "/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel33">
+            <Component class="javax.swing.JLabel" name="jLabelAddFullTimeYearlySalaryError">
               <Properties>
                 <Property name="text" type="java.lang.String" value=" "/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel34">
+            <Component class="javax.swing.JLabel" name="jLabelAddFirstNameError">
               <Properties>
                 <Property name="text" type="java.lang.String" value=" "/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel35">
+            <Component class="javax.swing.JLabel" name="jLabelAddLastNameError">
               <Properties>
                 <Property name="text" type="java.lang.String" value=" "/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel42">
+            <Component class="javax.swing.JLabel" name="jLabelAddDeductRateError">
               <Properties>
                 <Property name="text" type="java.lang.String" value=" "/>
               </Properties>
@@ -2200,16 +2200,16 @@
                                   <Component id="jTextFieldSearchEmployeeNumber" pref="635" max="32767" attributes="0"/>
                               </Group>
                               <Component id="jButtonSearchSubmit" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jScrollPane2" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jScrollPaneSearch" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace pref="94" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelSearchLogoMessage" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelSearchLogo" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -2227,7 +2227,7 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jButtonSearchSubmit" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jScrollPane2" min="-2" pref="286" max="-2" attributes="0"/>
+                      <Component id="jScrollPaneSearch" min="-2" pref="286" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="jButtonSearchDelete" min="-2" pref="31" max="-2" attributes="0"/>
@@ -2237,9 +2237,9 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="34" pref="34" max="-2" attributes="0"/>
-                              <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelSearchLogoMessage" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jLabel17" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelSearchLogo" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
@@ -2297,7 +2297,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSearchSubmitActionPerformed"/>
               </Events>
             </Component>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+            <Container class="javax.swing.JScrollPane" name="jScrollPaneSearch">
               <AuxValues>
                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
               </AuxValues>
@@ -2338,7 +2338,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSearchDeleteActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel17">
+            <Component class="javax.swing.JLabel" name="jLabelSearchLogo">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/logo.png"/>
@@ -2349,14 +2349,14 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel18">
+            <Component class="javax.swing.JLabel" name="jLabelSearchLogoMessage">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Powered by"/>
               </Properties>
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="jPanelView">
+        <Container class="javax.swing.JPanel" name="jPanelViewAll">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2381,16 +2381,16 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelViewAllLogoMessage" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelViewAllLogo" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel1" min="-2" pref="230" max="-2" attributes="0"/>
+                              <Component id="jLabelViewAllHeading" min="-2" pref="230" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
@@ -2408,7 +2408,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="jLabelViewAllHeading" min="-2" pref="32" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jButtonViewAllUpdateTable" min="-2" pref="31" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -2417,9 +2417,9 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="34" pref="34" max="-2" attributes="0"/>
-                              <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelViewAllLogoMessage" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jLabel19" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelViewAllLogo" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
@@ -2488,7 +2488,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="jLabel1">
+            <Component class="javax.swing.JLabel" name="jLabelViewAllHeading">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2512,7 +2512,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonViewAllUpdateTableActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel19">
+            <Component class="javax.swing.JLabel" name="jLabelViewAllLogo">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/logo.png"/>
@@ -2523,7 +2523,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel20">
+            <Component class="javax.swing.JLabel" name="jLabelViewAllLogoMessage">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Powered by"/>
               </Properties>

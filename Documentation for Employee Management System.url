@@ -1,0 +1,9 @@
+[DEFAULT]
+BASEURL=https://heliotrope3n.github.io/employee-management-system/
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,11
+[InternetShortcut]
+URL=https://heliotrope3n.github.io/employee-management-system/
+IDList=
+IconFile=https://heliotrope3n.github.io/employee-management-system/favicon.ico
+IconIndex=1
