@@ -327,7 +327,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(jDialogSearchDeleteConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelSearchDeleteConfirmHeading)
                     .addComponent(jLabelSearchDeleteConfirmMessage))
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogSearchDeleteConfirmLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButtonSearchDeleteConfirmYes, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -342,7 +342,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jLabelSearchDeleteConfirmHeading)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabelSearchDeleteConfirmMessage)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addGroup(jDialogSearchDeleteConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonSearchDeleteConfirmYes)
                     .addComponent(jButtonSearchDeleteConfirmNo))
@@ -620,7 +620,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jTextFieldEditFullTimeEmployeeYearlySalary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelSearchEditFullTimeEmployeeYearlySalary)
                     .addComponent(jLabelSearchEditFullTimeYearlySalaryError))
-                .addGap(18, 36, Short.MAX_VALUE)
+                .addGap(18, 39, Short.MAX_VALUE)
                 .addComponent(jRadioButtonEditPartTimeEmployee)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jDialogSearchEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -690,7 +690,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(jDialogFileOpenConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelFileOpenConfirmMessage)
                     .addComponent(jLabelFileOpenConfirmHeading))
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addContainerGap(113, Short.MAX_VALUE))
         );
         jDialogFileOpenConfirmLayout.setVerticalGroup(
             jDialogFileOpenConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -699,7 +699,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jLabelFileOpenConfirmHeading)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabelFileOpenConfirmMessage)
-                .addGap(18, 86, Short.MAX_VALUE)
+                .addGap(18, 30, Short.MAX_VALUE)
                 .addGroup(jDialogFileOpenConfirmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonOpenConfirmOK)
                     .addComponent(jButtonOpenConfirmCancel))
@@ -784,8 +784,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap(65, Short.MAX_VALUE))
         );
 
-        jDialogPreferences.setMinimumSize(new java.awt.Dimension(640, 500));
-        jDialogPreferences.setPreferredSize(new java.awt.Dimension(640, 500));
+        jDialogPreferences.setMinimumSize(new java.awt.Dimension(600, 350));
 
         jButtonPreferencesApply.setText("Apply");
         jButtonPreferencesApply.setToolTipText("Apply changes");
@@ -817,7 +816,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabelPreferencesHeading.setFont(new java.awt.Font("Franklin Gothic Medium Cond", 0, 24)); // NOI18N
+        jLabelPreferencesHeading.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 24)); // NOI18N
         jLabelPreferencesHeading.setText("Preferences");
 
         javax.swing.GroupLayout jDialogPreferencesLayout = new javax.swing.GroupLayout(jDialogPreferences.getContentPane());
@@ -828,7 +827,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jDialogPreferencesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jDialogPreferencesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jColorChooserPreferences, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jColorChooserPreferences, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogPreferencesLayout.createSequentialGroup()
                             .addComponent(jButtonPreferencesRestore)
                             .addGap(31, 31, 31)
@@ -839,15 +838,15 @@ public class MainFrame extends javax.swing.JFrame {
                             .addComponent(jButtonPreferencesCancel)
                             .addGap(10, 10, 10)))
                     .addComponent(jLabelPreferencesHeading))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jDialogPreferencesLayout.setVerticalGroup(
             jDialogPreferencesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDialogPreferencesLayout.createSequentialGroup()
-                .addContainerGap(41, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabelPreferencesHeading)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jColorChooserPreferences, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jColorChooserPreferences, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jDialogPreferencesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonPreferencesApply)
@@ -984,7 +983,6 @@ public class MainFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(1, 1, 1));
         setMinimumSize(new java.awt.Dimension(1000, 720));
-        setPreferredSize(new java.awt.Dimension(700, 694));
 
         jTabbedPaneMain.setBackground(new java.awt.Color(16, 152, 247));
         jTabbedPaneMain.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
@@ -1094,7 +1092,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jLabelHomeHeading, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanelHomeLayout.createSequentialGroup()
                         .addComponent(jSeparatorHome, javax.swing.GroupLayout.PREFERRED_SIZE, 694, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
+                        .addContainerGap(166, Short.MAX_VALUE))
                     .addGroup(jPanelHomeLayout.createSequentialGroup()
                         .addComponent(jPanelHomeDarkBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
@@ -1383,7 +1381,7 @@ public class MainFrame extends javax.swing.JFrame {
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addComponent(jLabelAddFullTimeYearlySalaryError, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(216, 216, 216))))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(175, Short.MAX_VALUE))))
         );
         jPanelAddLayout.setVerticalGroup(
             jPanelAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1547,7 +1545,7 @@ public class MainFrame extends javax.swing.JFrame {
                             .addComponent(jTextFieldSearchEmployeeNumber, javax.swing.GroupLayout.DEFAULT_SIZE, 635, Short.MAX_VALUE))
                         .addComponent(jButtonSearchSubmit, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jScrollPaneSearch, javax.swing.GroupLayout.Alignment.LEADING)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(94, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelSearchLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabelSearchLogoMessage)
@@ -1672,7 +1670,7 @@ public class MainFrame extends javax.swing.JFrame {
                         .addGroup(jPanelViewAllLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jScrollPaneViewAllEmployees, javax.swing.GroupLayout.DEFAULT_SIZE, 766, Short.MAX_VALUE)
                             .addComponent(jButtonViewAllUpdateTable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(0, 94, Short.MAX_VALUE))))
         );
         jPanelViewAllLayout.setVerticalGroup(
             jPanelViewAllLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1696,7 +1694,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         jMenuBarMenu.setBackground(new java.awt.Color(100, 100, 100));
         jMenuBarMenu.setBorder(null);
-        jMenuBarMenu.setPreferredSize(new java.awt.Dimension(276, 19));
         jMenuBarMenu.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 jMenuBarMenuMouseMoved(evt);
@@ -1810,7 +1807,7 @@ public class MainFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(0, 0, 0)
-                .addComponent(jTabbedPaneMain, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE))
+                .addComponent(jTabbedPaneMain, javax.swing.GroupLayout.DEFAULT_SIZE, 981, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1830,7 +1827,6 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         // Open the file to open confirm dialog when clicked. The dialog reminds the user to save files before opening a new one.
         jDialogFileOpenConfirm.setLocationRelativeTo(jTabbedPaneMain);
-        jDialogFileOpenConfirm.getContentPane().setBackground(Color.WHITE);
         jDialogFileOpenConfirm.setVisible(true);
 
     }//GEN-LAST:event_jMenuItemFileOpenActionPerformed
@@ -1839,7 +1835,6 @@ public class MainFrame extends javax.swing.JFrame {
         // Check for updates dialog
         // FAKE NEWS
         jDialogCheckUpdates.setLocationRelativeTo(jTabbedPaneMain);
-        jDialogCheckUpdates.getContentPane().setBackground(Color.WHITE);
         jDialogCheckUpdates.setVisible(true);
         
 
@@ -1994,7 +1989,6 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jMenuItemFileExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFileExitActionPerformed
         jDialogExit.setLocationRelativeTo(jTabbedPaneMain);
-        jDialogExit.getContentPane().setBackground(Color.WHITE);
         jDialogExit.setVisible(true);
     }//GEN-LAST:event_jMenuItemFileExitActionPerformed
 
@@ -2011,7 +2005,6 @@ public class MainFrame extends javax.swing.JFrame {
     private void jMenuItemHelpAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemHelpAboutActionPerformed
         // TODO add your handling code here:
         jDialogAbout.setLocationRelativeTo(jTabbedPaneMain);
-        jDialogAbout.getContentPane().setBackground(Color.WHITE);
         jDialogAbout.setVisible(true);
     }//GEN-LAST:event_jMenuItemHelpAboutActionPerformed
 
@@ -2105,7 +2098,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         // If the user presses the delete button after searching for a specific employee, the delete employee dialog will pop up
         jDialogSearchDeleteConfirm.setLocationRelativeTo(jTabbedPaneMain);
-        jDialogSearchDeleteConfirm.getContentPane().setBackground(Color.WHITE);
         jDialogSearchDeleteConfirm.setVisible(true);
 
     }//GEN-LAST:event_jButtonSearchDeleteActionPerformed
@@ -2118,7 +2110,6 @@ public class MainFrame extends javax.swing.JFrame {
         jTextFieldEditPartTimeEmployeeHoursPerWeek.setText("");
         jTextFieldEditPartTimeEmployeeWeeksPerYear.setText("");
         jDialogSearchEdit.setLocationRelativeTo(jTabbedPaneMain);
-        jDialogSearchEdit.getContentPane().setBackground(Color.WHITE);
         jDialogSearchEdit.setVisible(true);
         EmployeeInfo empSearched = theHashTable.getEmployee(Integer.parseInt(jTextFieldSearchEmployeeNumber.getText()));
         jTextFieldEditEmployeeNumber.setText(Integer.toString(empSearched.getEmpNum()));
