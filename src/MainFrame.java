@@ -296,7 +296,8 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         jDialogSearchDeleteConfirm.setBounds(new java.awt.Rectangle(550, 300, 0, 0));
-        jDialogSearchDeleteConfirm.setMinimumSize(new java.awt.Dimension(400, 300));
+        jDialogSearchDeleteConfirm.setMinimumSize(new java.awt.Dimension(400, 170));
+        jDialogSearchDeleteConfirm.setPreferredSize(new java.awt.Dimension(346, 170));
 
         jButtonSearchDeleteConfirmYes.setText("Yes");
         jButtonSearchDeleteConfirmYes.addActionListener(new java.awt.event.ActionListener() {
@@ -349,7 +350,8 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(21, 21, 21))
         );
 
-        jDialogSearchEdit.setMinimumSize(new java.awt.Dimension(812, 589));
+        jDialogSearchEdit.setMinimumSize(new java.awt.Dimension(350, 620));
+        jDialogSearchEdit.setPreferredSize(new java.awt.Dimension(350, 620));
 
         jLabelSearchEditHeading.setFont(new java.awt.Font("Franklin Gothic Medium Cond", 0, 24)); // NOI18N
         jLabelSearchEditHeading.setText("Edit Employee");
@@ -784,7 +786,11 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap(65, Short.MAX_VALUE))
         );
 
-        jDialogPreferences.setMinimumSize(new java.awt.Dimension(600, 350));
+        jDialogPreferences.setMinimumSize(new java.awt.Dimension(650, 500));
+        jDialogPreferences.setPreferredSize(new java.awt.Dimension(650, 500));
+
+        jColorChooserPreferences.setMinimumSize(new java.awt.Dimension(500, 500));
+        jColorChooserPreferences.setPreferredSize(new java.awt.Dimension(500, 500));
 
         jButtonPreferencesApply.setText("Apply");
         jButtonPreferencesApply.setToolTipText("Apply changes");
@@ -816,7 +822,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabelPreferencesHeading.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 24)); // NOI18N
+        jLabelPreferencesHeading.setFont(new java.awt.Font("Franklin Gothic Medium Cond", 0, 24)); // NOI18N
         jLabelPreferencesHeading.setText("Preferences");
 
         javax.swing.GroupLayout jDialogPreferencesLayout = new javax.swing.GroupLayout(jDialogPreferences.getContentPane());
@@ -827,7 +833,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jDialogPreferencesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jDialogPreferencesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jColorChooserPreferences, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jColorChooserPreferences, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogPreferencesLayout.createSequentialGroup()
                             .addComponent(jButtonPreferencesRestore)
                             .addGap(31, 31, 31)
@@ -846,7 +852,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabelPreferencesHeading)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jColorChooserPreferences, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jColorChooserPreferences, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jDialogPreferencesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonPreferencesApply)
@@ -856,7 +862,8 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(29, 29, 29))
         );
 
-        jDialogExit.setMinimumSize(new java.awt.Dimension(400, 200));
+        jDialogExit.setMinimumSize(new java.awt.Dimension(400, 170));
+        jDialogExit.setPreferredSize(new java.awt.Dimension(370, 170));
 
         jLabelExitHeading.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabelExitHeading.setText("Would you like to save your data before exiting?");
@@ -1708,6 +1715,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jMenuItemFileNew.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItemFileNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/new.gif"))); // NOI18N
         jMenuItemFileNew.setText("New");
         jMenuItemFileNew.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1717,6 +1725,7 @@ public class MainFrame extends javax.swing.JFrame {
         jMenuFile.add(jMenuItemFileNew);
 
         jMenuItemFileOpen.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItemFileOpen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/open.gif"))); // NOI18N
         jMenuItemFileOpen.setText("Open");
         jMenuItemFileOpen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1726,6 +1735,7 @@ public class MainFrame extends javax.swing.JFrame {
         jMenuFile.add(jMenuItemFileOpen);
 
         jMenuItemFileSaveAs.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItemFileSaveAs.setIcon(new javax.swing.ImageIcon(getClass().getResource("/saveas.gif"))); // NOI18N
         jMenuItemFileSaveAs.setText("Save As");
         jMenuItemFileSaveAs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1735,6 +1745,7 @@ public class MainFrame extends javax.swing.JFrame {
         jMenuFile.add(jMenuItemFileSaveAs);
 
         jMenuItemFileExit.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItemFileExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/exit.gif"))); // NOI18N
         jMenuItemFileExit.setText("Exit All Windows");
         jMenuItemFileExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1753,6 +1764,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jMenuItemWindowPreferences.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItemWindowPreferences.setIcon(new javax.swing.ImageIcon(getClass().getResource("/preferences.gif"))); // NOI18N
         jMenuItemWindowPreferences.setText("Preferences");
         jMenuItemWindowPreferences.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1771,6 +1783,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jMenuItemHelpCheckForUpdates.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItemHelpCheckForUpdates.setIcon(new javax.swing.ImageIcon(getClass().getResource("/update.gif"))); // NOI18N
         jMenuItemHelpCheckForUpdates.setText("Check for Updates");
         jMenuItemHelpCheckForUpdates.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1780,6 +1793,7 @@ public class MainFrame extends javax.swing.JFrame {
         jMenuHelp.add(jMenuItemHelpCheckForUpdates);
 
         jMenuItemHelpAbout.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItemHelpAbout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/about.gif"))); // NOI18N
         jMenuItemHelpAbout.setText("About");
         jMenuItemHelpAbout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1789,6 +1803,7 @@ public class MainFrame extends javax.swing.JFrame {
         jMenuHelp.add(jMenuItemHelpAbout);
 
         jMenuItemHelpDocumentation.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItemHelpDocumentation.setIcon(new javax.swing.ImageIcon(getClass().getResource("/documentaton.gif"))); // NOI18N
         jMenuItemHelpDocumentation.setText("Documentation");
         jMenuItemHelpDocumentation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1835,6 +1850,7 @@ public class MainFrame extends javax.swing.JFrame {
         // Check for updates dialog
         // FAKE NEWS
         jDialogCheckUpdates.setLocationRelativeTo(jTabbedPaneMain);
+        jDialogCheckUpdates.getContentPane().setBackground(Color.white);
         jDialogCheckUpdates.setVisible(true);
         
 
@@ -1989,6 +2005,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jMenuItemFileExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFileExitActionPerformed
         jDialogExit.setLocationRelativeTo(jTabbedPaneMain);
+        jDialogExit.getContentPane().setBackground(Color.white);
         jDialogExit.setVisible(true);
     }//GEN-LAST:event_jMenuItemFileExitActionPerformed
 
@@ -1999,12 +2016,14 @@ public class MainFrame extends javax.swing.JFrame {
     private void jMenuItemWindowPreferencesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemWindowPreferencesActionPerformed
         // TODO add your handling code here:
         jDialogPreferences.setLocationRelativeTo(jTabbedPaneMain);
+        jDialogPreferences.getContentPane().setBackground(Color.white);
         jDialogPreferences.setVisible(true);
     }//GEN-LAST:event_jMenuItemWindowPreferencesActionPerformed
 
     private void jMenuItemHelpAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemHelpAboutActionPerformed
         // TODO add your handling code here:
         jDialogAbout.setLocationRelativeTo(jTabbedPaneMain);
+        jDialogAbout.getContentPane().setBackground(Color.white);
         jDialogAbout.setVisible(true);
     }//GEN-LAST:event_jMenuItemHelpAboutActionPerformed
 
@@ -2098,6 +2117,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         // If the user presses the delete button after searching for a specific employee, the delete employee dialog will pop up
         jDialogSearchDeleteConfirm.setLocationRelativeTo(jTabbedPaneMain);
+        jDialogSearchDeleteConfirm.getContentPane().setBackground(Color.white);
         jDialogSearchDeleteConfirm.setVisible(true);
 
     }//GEN-LAST:event_jButtonSearchDeleteActionPerformed
@@ -2110,6 +2130,7 @@ public class MainFrame extends javax.swing.JFrame {
         jTextFieldEditPartTimeEmployeeHoursPerWeek.setText("");
         jTextFieldEditPartTimeEmployeeWeeksPerYear.setText("");
         jDialogSearchEdit.setLocationRelativeTo(jTabbedPaneMain);
+        jDialogSearchEdit.getContentPane().setBackground(Color.white);
         jDialogSearchEdit.setVisible(true);
         EmployeeInfo empSearched = theHashTable.getEmployee(Integer.parseInt(jTextFieldSearchEmployeeNumber.getText()));
         jTextFieldEditEmployeeNumber.setText(Integer.toString(empSearched.getEmpNum()));
@@ -2517,6 +2538,7 @@ public class MainFrame extends javax.swing.JFrame {
             jLabelAddConfirmWorkLoc.setText("Work Location: " + workLocText);
             jLabelAddConfirmDeductRate.setText("Deduction Rate: " + deductRate);
             jDialogAddConfirm.setLocationRelativeTo(jTabbedPaneMain);
+            jDialogAddConfirm.getContentPane().setBackground(Color.white);
             jDialogAddConfirm.setVisible(true);
         } catch (Exception e) {
             jLabelAddEntryError.setText("Missing required fields and/or entries invalid - edit and submit again");
