@@ -24,6 +24,7 @@ public class MainFrame extends javax.swing.JFrame {
         this.setDefaultCloseOperation(javax.swing.JFrame.DISPOSE_ON_CLOSE);
         java.awt.Dimension dim = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+        
     }
 
     /**
@@ -1849,6 +1850,7 @@ public class MainFrame extends javax.swing.JFrame {
         jDialogCheckUpdates.setLocationRelativeTo(jTabbedPaneMain);
         jDialogCheckUpdates.getContentPane().setBackground(Color.white);
         jDialogCheckUpdates.setVisible(true);
+        jDialogCheckUpdates.getContentPane().setBackground(jColorChooserPreferences.getColor());
         
 
         // have progress bar keep running until set time
@@ -2004,6 +2006,7 @@ public class MainFrame extends javax.swing.JFrame {
         jDialogExit.setLocationRelativeTo(jTabbedPaneMain);
         jDialogExit.getContentPane().setBackground(Color.white);
         jDialogExit.setVisible(true);
+        jDialogExit.getContentPane().setBackground(jColorChooserPreferences.getColor());
     }//GEN-LAST:event_jMenuItemFileExitActionPerformed
 
     private void jMenuWindowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuWindowActionPerformed
@@ -2022,6 +2025,7 @@ public class MainFrame extends javax.swing.JFrame {
         jDialogAbout.setLocationRelativeTo(jTabbedPaneMain);
         jDialogAbout.getContentPane().setBackground(Color.white);
         jDialogAbout.setVisible(true);
+        jDialogAbout.getContentPane().setBackground(jColorChooserPreferences.getColor());
     }//GEN-LAST:event_jMenuItemHelpAboutActionPerformed
 
     private void jMenuItemHelpDocumentationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemHelpDocumentationActionPerformed
@@ -2116,6 +2120,7 @@ public class MainFrame extends javax.swing.JFrame {
         jDialogSearchDeleteConfirm.setLocationRelativeTo(jTabbedPaneMain);
         jDialogSearchDeleteConfirm.getContentPane().setBackground(Color.white);
         jDialogSearchDeleteConfirm.setVisible(true);
+        jDialogSearchDeleteConfirm.getContentPane().setBackground(jColorChooserPreferences.getColor());
 
     }//GEN-LAST:event_jButtonSearchDeleteActionPerformed
 
@@ -2129,6 +2134,7 @@ public class MainFrame extends javax.swing.JFrame {
         jDialogSearchEdit.setLocationRelativeTo(jTabbedPaneMain);
         jDialogSearchEdit.getContentPane().setBackground(Color.white);
         jDialogSearchEdit.setVisible(true);
+        jDialogSearchEdit.getContentPane().setBackground(jColorChooserPreferences.getColor());
         EmployeeInfo empSearched = theHashTable.getEmployee(Integer.parseInt(jTextFieldSearchEmployeeNumber.getText()));
         jTextFieldEditEmployeeNumber.setText(Integer.toString(empSearched.getEmpNum()));
         jTextFieldEditFirstName.setText(empSearched.getFirstName());
@@ -2350,7 +2356,9 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonExitConfirmExitActionPerformed
 
     private void jButtonPreferencesApplyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPreferencesApplyActionPerformed
-        // TODO add your handling code here:
+        // Change the colour of all panels and dialogs to selected colour
+        jLabelHomeColourIndicator.setText("Current Background: RGB(" + String.valueOf(jColorChooserPreferences.getColor().getRed()) + ", " + String.valueOf(jColorChooserPreferences.getColor().getGreen()) + ", " + String.valueOf(jColorChooserPreferences.getColor().getBlue()) + ")");
+        // Change the colour of all panels to selected colour
         jPanelHome.setBackground(jColorChooserPreferences.getColor());
         jPanelAdd.setBackground(jColorChooserPreferences.getColor());
         jPanelSearch.setBackground(jColorChooserPreferences.getColor());
@@ -2360,6 +2368,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void jButtonPreferencesOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPreferencesOKActionPerformed
         // TODO add your handling code here:
         jLabelHomeColourIndicator.setText("Current Background: RGB(" + String.valueOf(jColorChooserPreferences.getColor().getRed()) + ", " + String.valueOf(jColorChooserPreferences.getColor().getGreen()) + ", " + String.valueOf(jColorChooserPreferences.getColor().getBlue()) + ")");
+        // Change the colour of all panels to selected colour
         jPanelHome.setBackground(jColorChooserPreferences.getColor());
         jPanelAdd.setBackground(jColorChooserPreferences.getColor());
         jPanelSearch.setBackground(jColorChooserPreferences.getColor());
@@ -2369,6 +2378,8 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonPreferencesRestoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPreferencesRestoreActionPerformed
         // TODO add your handling code here:
+        jLabelHomeColourIndicator.setText("Current Background: RGB(255, 255, 255)" );
+        // Change the colour of all panels to selected colour
         jPanelHome.setBackground(Color.white);
         jPanelAdd.setBackground(Color.white);
         jPanelSearch.setBackground(Color.white);
@@ -2538,6 +2549,7 @@ public class MainFrame extends javax.swing.JFrame {
             jDialogAddConfirm.setLocationRelativeTo(jTabbedPaneMain);
             jDialogAddConfirm.getContentPane().setBackground(Color.white);
             jDialogAddConfirm.setVisible(true);
+            jDialogAddConfirm.getContentPane().setBackground(jColorChooserPreferences.getColor());
         } catch (Exception e) {
             jLabelAddEntryError.setText("Missing required fields and/or entries invalid - edit and submit again");
         }
@@ -2686,8 +2698,8 @@ public class MainFrame extends javax.swing.JFrame {
 
                 // Used for calculating the yearly payroll on Home tab
 
-                salaryDifference = FTEmployee.calcGrossAnnualIncome() - oldTotalSalary;
-                theHashTable.setYearlyPayroll(salaryDifference);
+                //salaryDifference = FTEmployee.calcGrossAnnualIncome() - oldTotalSalary;
+                //theHashTable.setYearlyPayroll(salaryDifference);
 
             } else if (jRadioButtonEditPartTimeEmployee.isSelected()) {
 // Get values from fields
@@ -2734,8 +2746,8 @@ public class MainFrame extends javax.swing.JFrame {
                 theHashTable.addEmployee(PTEmployee);
 
                 // Used for calculating the yearly payroll on Home tab
-                salaryDifference = PTEmployee.calcGrossAnnualIncome() - oldTotalSalary;
-                theHashTable.setYearlyPayroll(salaryDifference);
+                //salaryDifference = PTEmployee.calcGrossAnnualIncome() - oldTotalSalary;
+                //theHashTable.setYearlyPayroll(salaryDifference);
             }
             jDialogSearchEdit.setVisible(false);
         } catch (Exception e) {

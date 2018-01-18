@@ -17,9 +17,9 @@ public class MyHashTable {
     public double getYearlyPayroll() {
         return yearlyPayroll;
     }
-    public void setYearlyPayroll(double yearlyPayrollChange) {
-        yearlyPayroll += yearlyPayrollChange;
-    }
+    //public void setYearlyPayroll(double yearlyPayrollChange) {
+        //yearlyPayroll += yearlyPayrollChange;
+    //}
     // CONSTRUCTOR
     public MyHashTable(int howManyBuckets) {
         // Construct the hash table (open hashing/closed addressing) as an array
@@ -111,6 +111,14 @@ public class MyHashTable {
                 continue;
             } else {
                 EmployeeInfo removed = buckets[theBucket].get(m);
+                if (removed instanceof FullTimeEmployee) {
+                    FullTimeEmployee FTERemoved = (FullTimeEmployee) removed;
+                    yearlyPayroll -= FTERemoved.calcGrossAnnualIncome();
+                }
+                else {
+                    PartTimeEmployee PTERemoved = (PartTimeEmployee) removed;
+                    yearlyPayroll -= PTERemoved.calcGrossAnnualIncome();
+                } 
                 buckets[theBucket].remove(m);
                 // Decrease the tally of number of employees
                 employeeCount--;
