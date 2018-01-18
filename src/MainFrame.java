@@ -137,6 +137,7 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelHomeEmployeeCount = new javax.swing.JLabel();
         jLabelHomeEmployeeStatistics = new javax.swing.JLabel();
         jLabelHomeDate = new javax.swing.JLabel();
+        jLabelHomeColourIndicator = new javax.swing.JLabel();
         jPanelHomeDarkBar = new javax.swing.JPanel();
         jLabelHomeLogo = new javax.swing.JLabel();
         jPanelAdd = new javax.swing.JPanel();
@@ -1026,6 +1027,9 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabelHomeDate.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
+        jLabelHomeColourIndicator.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelHomeColourIndicator.setText("Current Background: RGB(255, 255, 255)");
+
         javax.swing.GroupLayout jPanelHomeBackgroundLayout = new javax.swing.GroupLayout(jPanelHomeBackground);
         jPanelHomeBackground.setLayout(jPanelHomeBackgroundLayout);
         jPanelHomeBackgroundLayout.setHorizontalGroup(
@@ -1039,13 +1043,15 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(jPanelHomeBackgroundLayout.createSequentialGroup()
                 .addGap(44, 44, 44)
                 .addGroup(jPanelHomeBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelHomeBackgroundLayout.createSequentialGroup()
-                        .addComponent(jLabelFileName)
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jLabelHomeEmployeeCount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanelHomeBackgroundLayout.createSequentialGroup()
-                        .addComponent(jLabelHomePayrollTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(275, 275, 275)))
+                        .addComponent(jLabelHomePayrollTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE)
+                        .addGap(275, 275, 275))
+                    .addGroup(jPanelHomeBackgroundLayout.createSequentialGroup()
+                        .addGroup(jPanelHomeBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelHomeColourIndicator)
+                            .addComponent(jLabelFileName))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanelHomeBackgroundLayout.setVerticalGroup(
@@ -1061,7 +1067,9 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jLabelHomePayrollTotal)
                 .addGap(18, 18, 18)
                 .addComponent(jLabelFileName)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabelHomeColourIndicator)
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         jPanelHomeDarkBar.setBackground(new java.awt.Color(40, 40, 40));
@@ -1074,7 +1082,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
         jPanelHomeDarkBarLayout.setVerticalGroup(
             jPanelHomeDarkBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 174, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         jLabelHomeLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo.png"))); // NOI18N
@@ -1085,13 +1093,15 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelHome.setLayout(jPanelHomeLayout);
         jPanelHomeLayout.setHorizontalGroup(
             jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelHomeLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabelHomeLogoMessage)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabelHomeLogo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50))
             .addGroup(jPanelHomeLayout.createSequentialGroup()
                 .addGap(38, 38, 38)
                 .addGroup(jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelHomeLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabelHomeVersion)
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jLabelHomeHeading, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanelHomeLayout.createSequentialGroup()
                         .addComponent(jSeparatorHome, javax.swing.GroupLayout.PREFERRED_SIZE, 694, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1100,13 +1110,11 @@ public class MainFrame extends javax.swing.JFrame {
                         .addComponent(jPanelHomeDarkBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
                         .addComponent(jPanelHomeBackground, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(94, 94, 94))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelHomeLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabelHomeLogoMessage)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabelHomeLogo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50))
+                        .addGap(94, 94, 94))
+                    .addGroup(jPanelHomeLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabelHomeVersion)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanelHomeLayout.setVerticalGroup(
             jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1118,10 +1126,10 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(11, 11, 11)
                 .addComponent(jSeparatorHome, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23)
-                .addGroup(jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanelHomeDarkBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanelHomeBackground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 287, Short.MAX_VALUE)
+                .addGroup(jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanelHomeDarkBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelHomeBackground, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 246, Short.MAX_VALUE)
                 .addGroup(jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelHomeLogoMessage, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabelHomeLogo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -2351,6 +2359,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonPreferencesOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPreferencesOKActionPerformed
         // TODO add your handling code here:
+        jLabelHomeColourIndicator.setText("Current Background: RGB(" + String.valueOf(jColorChooserPreferences.getColor().getRed()) + ", " + String.valueOf(jColorChooserPreferences.getColor().getGreen()) + ", " + String.valueOf(jColorChooserPreferences.getColor().getBlue()) + ")");
         jPanelHome.setBackground(jColorChooserPreferences.getColor());
         jPanelAdd.setBackground(jColorChooserPreferences.getColor());
         jPanelSearch.setBackground(jColorChooserPreferences.getColor());
@@ -2901,6 +2910,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelFileName;
     private javax.swing.JLabel jLabelFileOpenConfirmHeading;
     private javax.swing.JLabel jLabelFileOpenConfirmMessage;
+    private javax.swing.JLabel jLabelHomeColourIndicator;
     private javax.swing.JLabel jLabelHomeDate;
     private javax.swing.JLabel jLabelHomeEmployeeCount;
     private javax.swing.JLabel jLabelHomeEmployeeStatistics;
